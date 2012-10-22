@@ -1,0 +1,1314 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://library.ucsd.edu/ontology/dams/#" xmlns:o="http://library.ucsd.edu/ontology/dams/#o'" xmlns:Hallman="http://library.ucsd.edu/ontology/dams/#Hallman," xmlns:Kinematic_Sunyaev-Zel="http://library.ucsd.edu/ontology/dams/#Kinematic_Sunyaev-Zel'" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:RD0010_data_set="http://library.ucsd.edu/ontology/dams/#RD0010_data_set," xmlns:So="http://library.ucsd.edu/ontology/dams/#So," xmlns:Sunyaev-Zel="http://library.ucsd.edu/ontology/dams/#Sunyaev-Zel'" xmlns:error="http://org.semanticweb.owlapi/error#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:System="http://library.ucsd.edu/ontology/dams/#University_of_Colorado_(System)." xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:Burns="http://library.ucsd.edu/ontology/dams/#Burns," xmlns:_binary="http://library.ucsd.edu/ontology/dams/#This_data_represents_a_snapshot" xmlns:Harkness="http://library.ucsd.edu/ontology/dams/#Harkness," xmlns:Uniiversity_of_California="http://library.ucsd.edu/ontology/dams/#Uniiversity_of_California," xmlns:dams="http://library.ucsd.edu/ontology/dams/#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:Brian_William="http://library.ucsd.edu/ontology/dams/#O'Shea,_Brian_W._(Brian_William)," xmlns:Sunyaev_Zel="http://library.ucsd.edu/ontology/dams/#Sunyaev_Zel'" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:Norman="http://library.ucsd.edu/ontology/dams/#Norman," xml:base="http://library.ucsd.edu/ontology/dams/">
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Associated_name">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Role"/>
+    <rdfs:label xml:lang="en">associated_name</rdfs:label>
+    <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asn</code>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated name</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.loc.gov/marc/relators/relaterm.html</authorityURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marc_relator_terms</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Boundary_condition_parameters">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">boundary_condition_parameters</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boundary condition parameters</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Burns,_Jack_O.">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">burns_jack_o</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burns, Jack O.</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/n90694888</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcnaf</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Clusters">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">clusters</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clusters</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#galaxies_clusters"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Complete_data_set">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">complete_data_set</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete data set</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Cosmic_bacground_radiation">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">cosmic_background_radiation</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cosmic background radiation</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/sh88007683</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmic_background_radiation_topic"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Cosmololgy">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">cosmology</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cosmology</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/sh85033169</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmology"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmology_observations"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Creator">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Role"/>
+    <rdfs:label xml:lang="en">creator</rdfs:label>
+    <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cre</code>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creator</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.loc.gov/marc/relators/relaterm.html</authorityURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marc_relator_terms</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Dark_matter_density">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">dark_matter_density</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark matter density</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Data_at_Redshift=2.75_(RD0010)">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">data_at_Redshift=2.75_RD0010</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data at Redshift=2.75 (RD0010)</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Derived_data">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">derived_data</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derived data</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Galaxies">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">galaxies</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galaxies</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/sh85052763</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#galaxies_clusters"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Gas_density">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">gas_density</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gas density</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Grid_hierarchy_and_metadata">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">grid_hierarchy_and_metadata</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grid hierarchy and metadata</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Grid_hierarchy_statistics">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">grid_hierarchy_statistics</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grid hierarchy statistics</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Grid_metadata">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">grid_metadata</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grid metadata</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Hallman,_Eric_J.">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">hallman_eric_j</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hallman, Eric J.</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Halo_statistics">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">halo_statistics</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Halo statistics</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Harkness,_Robert">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">harkness_robert</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harkness, Robert</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Hydrodynamics">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">hydrodynamics</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrodynamics</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/sh85063393</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#hydrodynamics-topic"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Kinematic_Sunyaev-Zel'dovich_effect">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">Kinematic_Sunyaev-Zel'dovich_effect</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kinematic Sunyaev-Zel'dovich effect</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Los_Alamos_National_Laboratory._Theoretical_Astrophyiscs_Group_T-6">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">los_alamos_national_laboratory_theoretical_astrophysics_group_t-6</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Alamos National Laboratory. Theoretical Astrophysics Group T-6</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Norman,_Michael_L.">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">norman_michael_l</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norman, Michael L.</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/n85360486</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcnaf</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Numerical_methods_and_algorithms">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">numerical_methods_and_algorithms</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical methods and algorithms</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Topic</type>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/n2002014344</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#numerical_methods_and_algorithms_topic"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#O'Shea,_Brian_W._(Brian_William),_1978-">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">o'shea_brian_w_brian_william_1978-</rdfs:label>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> http://lccn.loc.gov/no2008083372</valueURI>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Shea, Brian W. (Brian William), 1978-</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcnaf</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Observation">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">observations</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Observations</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmology_observations"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Parameters">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">parameters</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parameters</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Projections">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">projections</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projections</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_each_axis_through_the_entire_simulation_volume">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">projections_of_various_fields_along_each_axis_through_the_entire_simulation_volume</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projections of various fields along each axis through the entire simulation volume</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_the_x-axis_for_the_back_half_of_simulated_volume">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">projections_of_various_fields_along_the_x-axis_for_the_back_half_of_simulated_volume</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projections of various fields along the x-axis for the back half of simulated volume</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_the_x-axis_for_the_front_half_of_simulated_volume">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">projections_of_various_fields_along_the_x-axis_for_the_front_half_of_simulated_volume</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projections of various fields along the x-axis for the front half of simulated volume</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_the_y-axis_for_the_back_half_of_simulated_volume">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">projections_of_various_fields_along_the_y-axis_for_the_back_half_of_simulated_volume</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projections of various fields along the y-axis for the back half of simulated volume</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_the_y-axis_for_the_front_half_of_simulated_volume">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">projections_of_various_fields_along_the_y-axis_for_the_front_half_of_simulated_volume</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projections of various fields along the y-axis for the front half of simulated volume</value>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</displayLabel>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_the_z-axis_for_the_back_half_of_simulated_volume">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">projections_of_various_fields_along_the_z-axis_for_the_back_half_of_simulated_volume</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projections of various fields along the z-axis for the back half of simulated volume</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_the_z-axis_for_the_front_half_of_simulated_volume">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">projections_of_various_fields_along_the_z-axis_for_the_front_half_of_simulated_volume</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projections of various fields along the z-axis for the front half of simulated volume</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.RadialProfiles.VirialStats">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.RadialProfiles.VirialStats</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-04</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">428 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.RadialProfiles.h5">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.RadialProfiles.h5</rdfs:label>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">173 mb</size>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-04</dateCreatedByApplication>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.boundary">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.boundary</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-10-26</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">236 bytes</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.combined_halo_info.txt">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.combined_halo_info.txt</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-04</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">766 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.hierarchy">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.hierarchy</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-10-26</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49.7 mb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.hierarchy.stats">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.hierarchy.stats</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-10-26</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">340 bytes</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.szdecinfo.txt">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.szdecinfo.txt</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-04</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">397 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.tar">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.tar</rdfs:label>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13.5 gb</size>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-10-25</dateCreatedByApplication>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+    <md5checksum rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e56e8790af1de7229abecb23ce4760f9</md5checksum>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.tar.md5">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.tar.md5</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-10-26</dateCreatedByApplication>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45 bytes</type>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.txt">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.txt</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-10-26</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7.11 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.x.l2.back</rdfs:label>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">196,612 kb</size>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-04</dateCreatedByApplication>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.Dark_Matter_Density">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.x.l2.back.project.Dark_Matter_Density</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-05</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3,737 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.Density">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.x.l2.back.project.Density</rdfs:label>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2,875 kb</size>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-05</dateCreatedByApplication>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.SZ_Kinetic">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.x.l2.back.project.SZ_Kinetic</rdfs:label>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2,229 kb</size>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-05</dateCreatedByApplication>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.SZ_Y_Effect">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.x.l2.back.project.SZ_Y_Effect</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-05</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5,311 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.Temp_X_Ray_Weighted">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.x.l2.back.project.Temp_X_Ray_Weighted</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-05</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4,056 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.X_Ray_Luminosity">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">RD0010.x.l2.back.project.X_Ray_Luminosity</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-06-05</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3,276 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_access">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_access</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Access</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This data set is available for to the general research community, via UC San Diego's Research Data Curation Program.  Inquiries about using the dataset may be directed to rci-ref@ucsd.edu.</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conditions_governing_access</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_contents">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#ScopeContentNote"/>
+    <rdfs:label xml:lang="en">RD0010_contents</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contents</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This data represent a snapshot, or instant in time, from the cosmology simulation. This snapshot was taken at a redshift of 2.75, which is 2.3 billion years after the Big Bang. At this point, the simulation had created 77,132 grids and 8 galaxy clusters with masses of at least 10^14 solar masses.
+
+The primary contents are the parameter files, hierarchy file (description of grid sizes and spatial locations), and grid data. For a complete description of the contents, refer to the Scope and Contents note for the collection.
+
+In the Derived Data subcomponent, there are text, binary, and images files representing halo properties and the projections of various physical fields.</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scope_and_contents</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_data_set,_including_parameters_and_grid_data">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">rd0010_data_set_including_parameters_and_grid_data</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RD0010 data set, including parameters and grid data</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_dataset_checksum">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">rd0010_dataset_ checksum</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RD0010 dataset checksum</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_languagesNote">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_languagesNote</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language(s)</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The materials in this data set are either in English or have no linguistic content.  </value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language_of_materials</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Parameters"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C1_1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C1_1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.txt"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Simulation_Parameters"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C1_2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C1_2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Boundary_condition_parameters"/>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.boundary"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C1_3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C1_3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Grid_hierarchy_and_metadata"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C1_3_1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C1_3_1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Grid_metadata"/>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.hierarchy"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C1_3_2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C1_3_2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Grid_hierarchy_statistics"/>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.hierarchy.stats"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Complete_data_set"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C2_1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C2_1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.tar"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_data_set,_including_parameters_and_grid_data"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Derived_data"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Halo_statistics"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_1_1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_1_1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.combined_halo_info.txt"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#summary_statistics_for_all_halos"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_1_2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_1_2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.RadialProfiles.h5"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_technical_requirements_halo_radial_profiles"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#radial_profiles_of_all_halos"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_1_3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_1_3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.RadialProfiles.VirialStats"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#summary_statistics_at_the_virial_radius_for_all_halos"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_1_4">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_1_4</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.szdecinfo.txt"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Sunyaev_Zel'dovich_effect_decrement_for_all_halos"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Projections"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_the_x-axis_for_the_back_half_of_simulated_volume"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_1_1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_1_1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Dark_matter_density"/>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.Dark_Matter_Density"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_1_2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_1_2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Gas_density"/>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.Density"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_1_3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_1_3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Kinematic_Sunyaev-Zel'dovich_effect"/>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.SZ_Kinetic"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_1_4">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_1_4</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.SZ_Y_Effect"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Sunyaev-Zel'dovich_effect"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_1_5">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_1_5</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.Temp_X_Ray_Weighted"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#X-ray_weighted_temperature"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_1_6">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_1_6</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.x.l2.back.project.X_Ray_Luminosity"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#X-ray_luminosity"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Projections_of_various_fields_along_each_axis_through_the_entire_simulation_volume"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Gas_density"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-1-1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-1-1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_Density_x_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#x-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-1-2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-1-2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_Density_y_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#y-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-1-3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-1-3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_Density_z_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#z-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Kinematic_Sunyaev-Zel'dovich_effect"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-2-1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-2-1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_SZKinetic_x_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#x-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-2-2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-2-2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_SZKinetic_y_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#y-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-2-3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-2-3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_SZKinetic_z_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#z-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#Sunyaev-Zel'dovich_effect"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-3-1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-3-1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_SZY_x_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#x-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-3-2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-3-2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_SZY_y_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#y-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-3-3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-3-3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_SZY_z_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#z-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-4">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-4</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</order>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#temperatur"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-4-1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-4-1</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_Temperature_x_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#x-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-4-2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-4-2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_Temperature_y_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#y-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3_2_2-4-3">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C3_2_2-4-3</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#proj_Temperature_z_RD0010"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#z-axis_projection"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_object_c2_2">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Component"/>
+    <rdfs:label xml:lang="en">RD0010_object_C2_2</rdfs:label>
+    <order rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</order>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010.tar.md5"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_dataset_checksum"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_physicalCharacteristicsTechnicalRequirements">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_physicalCharacteristicsTechnicalRequirements</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical Requirements</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The parameter files are plain text, and can be accessed using a text editor or web browser. The complete snapshot is contained in an archive file in the &lt;a href="http://en.wikipedia.org/wiki/Tar_%28file_format%29"&gt;tar file format&lt;/a&gt;. Within the archive, the parameter and manifest file are plain text, while the grid files are binary files in the &lt;a href="http://www.hdfgroup.org/HDF5/"HDF5 format&lt;/a&gt;. Accessing the grid files requires either the HDF5 libraries or utilities. N.B: This only provides access to raw values; an additional layer is required to build the Enzo data model (e.g., YT).</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical_characteristics_and_technical_requirements</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD0010_use">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_use</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;&lt;br /&gt;This work is licensed under a &lt;a rel="license" href="http://creativecommons.org/licenses/by/3.0/"&gt;Creative Commons Attribution 3.0 Unported License&lt;/a&gt;.
+</value>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rights</displayLabel>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conditions_governing_use</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#RD010_object">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Object"/>
+    <rdfs:label xml:lang="en">RD010_object</rdfs:label>
+    <typeOfResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mixed_material</typeOfResource>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_access"/>
+    <scopeContentNote rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_contents"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_languagesNote"/>
+    <hasComponent rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_object_C1"/>
+    <hasComponent rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_object_C2"/>
+    <hasComponent rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_object_C3"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_physicalCharacteristicsTechnicalRequirements"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_use"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_preferred_citation"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_related_materials"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#burns"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmic_background_radiation_topic"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmology"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmology_observations"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#galaxies_clusters"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#hallman"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#harkness"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#hydrodynamics-topic"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#los_alamos"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#norman"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#numerical_methods_and_algorithms_topic"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#o'shea"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#research_data_processing"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#research_data_sets_genre"/>
+    <collection rdf:resource="http://library.ucsd.edu/ontology/dams/#santa_fe_light_cone_simulation_project_files"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#sdsc"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#so"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#ucolo"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#ucsd"/>
+    <repository rdf:resource="http://library.ucsd.edu/ontology/dams/#ucsd_research_data_curation_program"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#wagner"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Research_data_processing">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">research</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research data processing</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/sh85113021</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#research_data_processing"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Research_data_sets">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">research_data_sets</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research data sets</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre</type>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">local</authority>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#Research_data_sets"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#San_Diego_Supercomputer_Center">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">san_diego_supercomputer_center</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Diego Supercomputer Center</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/n97100109</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcnaf</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_arrangement">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_arrangement</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arrangement</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The data set is arranged into 30 components:  1: Historical documents, 2: Data processing tools; 3-29: Data at redshift 3.0 to Data at redshift 0.0</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arrangement</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_collection_contents">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#ScopeContentNote"/>
+    <rdfs:label xml:lang="en">SantaFe_collection_contents</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope and Contents</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The project files consists of data in three broad categories: the simulation data ("Data at Redshift" components); project administrative and background documents (Historical Documents) related to the project; analysis tools and example scripts (Data Processing Tools) for processing the data. All these materials were created between 2005 and 2012, beginning with a proposal for the LUSciD Project, continuing on to the simulation data, and ending with the recent analysis tools. The historical documents are proposals and progress reports that were part of grants or requests for computational resources supporting the research. The component for analysis tools and example scripts contains the source code to yt (http://yt-project.org/), which was used to produce the example data analysis results. The results are a combination of structured text, binary files, and images. The historical documents and analysis tools are described in greater detail in their component descriptions.  
+
+The scientific motivations for the light cone simulation are described in the Project Background.  Here we describe how the simulation data was generated. The simulation was the final in a group of simulations, with each one designed to meet certain requirements, such as resolution. Earlier simulations tied to the LUsciD Project were performed on the Lawrence Livermore National Laboratory cluster Thunder. This calculation for the Santa Fe Light Cone Simulation was a demonstration of the software's ability to perform adaptive refinement throughout the volume, and as a result, was run on the San Diego Supercomputer Center's DataStar system and the National Center for Supercomputing Applications Altix, Cobalt.
+
+The simulation was initialized at high redshift, assuming a standard cosmological model incorporating dark energy and cold dark matter. The physical volume represented was a periodic cube 512 comoving megaparsecs on a side. The simulation was evolved to the present day, using models for gravity and adiabatic gas dynamics. At specific points, snapshots of the simulation were saved, and a subset of those are contained in this collection. 
+
+These snapshots are organized by time (or, equivalently, redshift) at the top level, and named from RD0009 to RD0036; lower numbers (e.g., RD0009) represent times from early in the universe's evolution, while higher numbers are closer to the present day. Each snapshot has an archive (tar) file of the original data, a checksum of the archive, and text files of the parameters, grid hierarchy, and boundary conditions. The parameter, hierarchy, and boundary files are also in the archive file, but are available separately for convenience in a component named Parameters. 
+
+The archive files are in the &lt;a href="http://en.wikipedia.org/wiki/Tar_%28file_format%29"&gt;tar file format&lt;/a&gt;, and are named according to their containing snapshot, e.g. RD0009.tar. A text file in the same compoment contains an MD5 checksum of the archive file, with a name ending in "md5", e.g., RD0009.tar.md5. The archive files include the original simulation outputs, consisting of plain ASCII files, or binary files in the &lt;a href="http://www.hdfgroup.org/HDF5/"HDF5 format&lt;/a&gt;.
+
+The contents of each project component labeled RD00NN is the same:
+
+ * RD00NN (parameters, ASCII): All of the simulation parameters are listed in these files as key-value pairs, using a "key = value" format. The input parameter are identical across all parameter files, while variables such as the current time, or redshift, change.
+
+ * RD00NN.hierarchy (grid metadata, ASCII): A list of the grid data structures, their spatial position, file names, and numerical size.
+
+ * RD00NN.cpu0XXX (physical data, HDF5): These files hold the physical fields (density, velocity, etc.) for each grid.
+
+ * RD00NN.boundary (boundary conditions, ASCII): Boundary metadata.
+
+ * RD00NN.boundary.hdf  (boundary conditions, HDF5): Boundary data for necessary fields
+
+ * manifest.txt (checksums, ASCII): A list of MD5 checksums for all of the above files.</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scope_and_content</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_contents_projections_entire_simulation_volume">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#ScopeContentNote"/>
+    <rdfs:label xml:lang="en">SantaFe_contents_projections_entire_simulation_volume</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contents</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Each image is annotated with a color bar and red-shift.  </value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scope_and_contents</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_preferred_citation">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#PreferredCitationNote"/>
+    <rdfs:label xml:lang="en">SantaFe_preferred_citation</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cite as:  Rick Wagner, Eric J. Hallman, Brian W. O'Shea, Jack O. Burns, Michael L. Norman, Robert Harkness, and Geoffrey So.  "Data at Redshift = 3 (RD0009) from the Santa Fe Light Cone Simulation Project.."  (Data version 1.0, published 2012) UC San Diego, Research Cyberinfrastructure Data Program. Version 1.0, published 2012.  (http://dx.doi.org/10.5060/&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;)  </value>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preferred Citation</displayLabel>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">preferred_citation</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_processing_information">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_processing_information</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Processing Information</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The project lead gathered on the Triton Resource at the San Diego Supercomputer Center all data generated by the Santa Fe Light Cone Simulation project deemed essential to representing the simulation project and facilitating re-use of the data.  Data files were categorized and arranged to represent each snapshot (Data at redshift) comprising the simulation.  The files for each snapshot include files specifying the parameters for each snapshop, binary data files constituting the results of applying the parameters, and derived data products generated from processing of the results.   Files deemed irrelevant to representation of the project and / or use of the data were removed from the data set.  In addition to data files, scripts necessary for processing the data were added to the collection, as were products generated using the scripts.  The former are included in the component labeled "Data Processing Tools, " whereas the latter are typically included in a sub-component labeled "Derived Products" for each of the primary "Data at redshift" components.  One component labeled "Holistic Analysis Results" contains products derived from two or more snapshots.  Finally, a variety of project files, including email, memoranda, and proposals, have been incorporated and are listed in the component labeled "Historical documents."  
+The Santa Fe Light Cone simulation files were transferred in two phases from the SDSC server to the RCI data storage space.  In the first phase, the parameter and binary data files for each snapshot were transferred.  In the second phase, data processing tools, derived products and historical documents were transferred and incorporated into the first set of set of files transferred.  The transfer of all files were monitored for accuracy.  
+
+The entire collection was arranged into thiry components and described completely using the Archivists' Toolkit application.  Component and sub-component descriptions were linked to digital object records composed in the AT and containing links to the files constituting the data set.    The AT description was used to generate an Encoded Archival Description (EAD) document for the complete data set and a METS document for each primary component.  The EAD was uploaded to the Online Archive of California (OAC), whereas the METS records and the digital content files they reference where uploaded to the UC San Diego Digital Asset Management System (DAMS).  A researcher is thus enabled to access the data files either through the OAC or the UCSD DAMS.  Finally, all files and descriptive records for the simulation project were ingested into the Chronopolis digital preservation network for long term preservation management.  </value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">processing_information</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_related_materials">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_related_materials</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Components</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The following components comprise the Santa Fe Lightcone Simulation Project:
+
+Historical Documents
+Data Processing Tools
+Data at Redshift = 3 (RD0009)
+Data at Redshift = 2.75 (RD0010)
+Data at Redshift = 2.5 (RD0011)
+Data at Redshift = 2.4 (RD0012)
+Data at Redshift = 2.3 (RD0013)
+Data at Redshift = 2.2 (RD0014)
+Data at Redshift = 2.1 (RD0015)
+Data at Redshift = 2 (RD0016)
+Data at Redshift = 1.9 (RD0017)
+Data at Redshift = 1.8 (RD0018)
+Data at Redshift = 1.7 (RD0019)
+Data at Redshift = 1.6 (RD0020)
+Data at Redshift = 1.5 (RD0021)
+Data at Redshift = 1.4 (RD0022)
+Data at Redshift = 1.3 (RD0023)
+Data at Redshift = 1.2 (RD0024)
+Data at Redshift = 1.1 (RD0025)
+Data at Redshift = 1 (RD0026)
+Data at Redshift = 0.9 (RD0027)
+Data at Redshift = 0.8 (RD0028)
+Data at Redshift = 0.7 (RD0029)
+Data at Redshift = 0.6 (RD0030)
+Data at Redshift = 0.5 (RD0031)
+Data at Redshift = 0.4 (RD0032)
+Data at Redshift = 0.3 (RD0033)
+Data at Redshift = 0.2 (RD0034)
+Data at Redshift = 0.1 (RD0035)
+Data at Redshift = 0 (RD0036)
+Holistic analyses results
+
+Each component may be searched for by its individual title, or as a group by either "Data at Redshift" or "Santa Fe Light Cone Simulation data."  </value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related_materials</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_scope_and_contents">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_biog_hist</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Background</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Santa Fe Light Cone Simulation project was the result of several converging
+efforts in computational astrophysics, namely:
+
+--L7 simulation designed as the final tile; a demonstration of "AMR everywhere"
+--Hallman computed the necessary size to use only the L7 by staking slabs
+
+&lt;emph render="underline"&gt;LUScID&lt;/emph&gt;
+
+During the 1990s, observational cosmology became “big science” involving expensive instruments (e.g., the Hubble Space Telescope) and large teams (e.g., the Sloan Digital Sky Survey [SDSS]) attacking fundamental questions about the origin and evolution of the universe. Progress was astonishing and included the discovery of the accelerating universe (Riess et al. 1998, Perlmutter et al. 1999); precision measurements of the global geometry, age, and composition of the universe (de Bernardis et al. 2000); and deep images of galaxies at the dawn of time (Beckwith et al. 2004). These and other observations have narrowed the range of acceptable theoretical models for cosmological structure formation to a single model called the concordance model (Bahcall et al. 1999), for which free parameters are now known to high precision (Spergel et al. 2003). Cosmology thus finds itself in a place not unlike particle physics, where the goal going forward is to refine and test the standard model with yet higher precision measurements. Fundamental science questions driving the field include the nature of dark energy and dark matter, the formation and evolution of galaxies and quasars, and how and when the intergalactic medium was re-ionized.
+
+Future progress requires ambitious observational surveys of the universe of unprecedented depth and breadth. The SDSS is collecting megabytes of data per galaxy on nearly 1 million galaxies distributed throughout a volume of space many billions of light years on a side. Currently over 2 TB of data has been collected and archived, and this number is expected to grow to 5 TB by project's end. Several similarly sized surveys are underway, and much larger ones are planned. In particular, the Large aperture Synoptic Survey Telescope [LSST] will collect 15 TB of image data every night for a year, amassing a collection of tens of petabytes over several years. The LSST will produce an object catalog of a billion galaxies—a thousand fold increase over the SDSS. Coping with this “data flood” requires advanced scientific data management technologies.
+
+In order to maximize the science return, results from massive surveys need to be compared to the detailed predictions of the concordance model. These take the form of massive cosmological simulations of the formation of galaxies and large scale structure. Just as Moore's Law is the force behind the data explosion in astronomy, it has also enabled numerical simulations of unprecedented size and complexity on massively parallel supercomputers.
+
+ENZO is a parallel cosmology application developed at the Laboratory for Computational Astrophysics (LCA) at UCSD directed by Michael Norman. ENZO solves the equations of dark matter dynamics, multi-species hydrodynamics, non-equilibrium chemical and ionization kinetics, and self-gravity in an expanding universe dominated by dark energy. Parameterized models of star formation and feedback effects allow the simulation of the formation and evolution of galaxies on cosmic length scales and time scales. The state-of-the art is shown in Fig. 1. The simulation shown in the left panel evolves a concordance model with 1 billion Lagrangian dark matter particles and the equations of Eulerian hydrodynamics and self-gravity on a uniform grid of 1 billion (1024^3) cells. The calculation was done on 512 processors of SDSC's IBM Blue Horizon computer, and produced 10TB of raw data and 6 TB of derived data. This calculation serves as a survey volume for follow-on adaptive mesh refinement (AMR) simulations which resolve the galaxies' internal structure. At right is shown an old AMR simulation of galaxy formation done at NCSA in 1998. Due to computer power and data handling limitations at the time, only 1/64 of the survey volume (2563 base grid) could be simulated at high resolution. Now, with more powerful parallel computers and data management technologies, we can in principle simulate the entire volume at high spatial resolution. Making that a practical reality is the overarching goal of the cosmology simulation data grid project, which we shall henceforth refer to as the Cosmic Simulator.
+
+The specific goals of the Cosmic Simulator project are threefold:
+
+-use the LLNL-SDSC-UCSD data grid to be deployed to enable
+ cosmological simulations of unprecedented size and physical realism;
+-improve the physical realism of cosmological modeling through the
+ inclusion of radiation transfer on adaptive meshes;
+-generate simulated sky maps and galaxy catalogs using automated processing pipelines for LSST applications.
+
+Key project events (including requests for computer support and the submission of manuscripts for publication):
+
+-January 2005         LUSciD (LLNL UCSD Scientific Data Management) proposal submitted
+
+-January 2006         The LRAC (Large Resource Allocations Committee) proposal is submitted by Michael Norman, requesting time to run the low redshift tiles of the Santa Fe Light Cone.
+
+-April 2007              Submission of "The Santa Fe Light Cone Simulation Project. I. Confusion and the Warm-Hot Intergalactic Medium in Upcoming Sunyaev-Zel'dovich Effect Surveys"
+
+-January 2008        A second LRAC (Large Resource Allocations Committee) proposal is describing planned analysis of the simulation in the area of weak gravitational lensing.
+
+-June 2008             Submission of "Cosmological Shocks in Adaptive Mesh Refinement Simulations and the Acceleration of Cosmic Rays"
+
+-March 2009          Submission of "The Santa Fe Light Cone Simulation Project: II. The Prospects for Direct Detection of the WHIM with SZE Surveys"
+
+-August 2010        Submission of "Quantifying the collisionless nature of dark matter and galaxies in A1689"
+
+-October 2010      Submission of "The Properties of X-ray Cold Fronts in a Statistical Sample of Simulated Galaxy Clusters"
+
+-June 2011           Submission of "Profiles of Dark Matter Velocity Anisotropy in Simulated Clusters"
+
+Key Personnel (including institutional affilations and project positions)
+
+-Michael L. Norman, University of California, San Diego, Principal Investigator
+-Jack O. Burns, University of Colorado Boulder, Co-Principal Investigator
+-Eric J. Hallman, University of Colorado Boulder, Postdoctoral Fellow
+-Brian W. O'Shea, University of California, San Diego, Graduate Student
+-Robert Harkness, University of California, San Diego, Scientist and Programmer
+-James Bordner, University of California, San Diego, Scientist and Programmer
+-Rick Wagner, University of California, San Diego, Graduate Student
+-Geoffrey So, University of California, San Diego, Graduate Student
+
+
+
+
+</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biography/history</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_source">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_source</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acquired from Rick Wagner, during 2012.  </value>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immediate Source of Acquisition</displayLabel>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">immediate_source_of_acquisition</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#SantaFe_technical_requirements_halo_radial_profiles">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">SantaFe_technical_requirements_halo_radial_profiles</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Binary data file in HDF5 file format.  </value>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technical Requirements</displayLabel>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical_characteristics_and_technical_requirements</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Simulation_Parameters">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">simulation_parameters</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simulation Parameters</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#So,_Geoffrey">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">so_geoffrey</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">So, Geoffrey</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Sunyaev-Zel'dovich_effect">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">Sunyaev-Zel'dovich_effect</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunyaev-Zel'dovich effect</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Sunyaev_Zel'dovich_effect_decrement_for_all_halos">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">Sunyaev_Zel'dovich_effect_decrement_for_all_halos</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunyaev-Zel'dovich effect decrement for all halos</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Uniiversity_of_California,_San_Diego._Center_for_Astrophysics_and_Space_Science">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">university_of_california_san_diego_center_for_astrophysics_and_space_science</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of California, San Diego. Center for Astrophysics and Space Science</value>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authority>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/n84131507</valueURI>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#University_of_Colorado_(System).__Dept._of_Astrophysics_and_Planetary_Sciences.__Center_for_Astrophysics_and_Space_Astronomy">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">university_of_colorado_system_dept_of_astrophysics_and_planetary_sciences_center_for_astrophysics_and_space_science</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Colorado (System).  Dept. of Astrophysics and Planetary Sciences.  Center for Astrophysics and Space Astronomy</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#X-ray_luminosity">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">x-ray_luminosity</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-ray luminosity</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#X-ray_weighted_temperature">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">x-ray_weighted_temperature</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X-ray weighted temperature</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#annual_reports">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">annual_reports</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annual reports</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre</type>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.rbms.info/committees/bibliographic_standards/controlled_vocabularies/genre/alphabetical_list.htm</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.rbms.info/committees/bibliographic_standards/controlled_vocabularies/genre/tr98.htm</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rbgenr</authority>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#annual_reports_genre"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#annual_reports_genre">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">annual_reports_genre</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annual reports</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#burns">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">burns</rdfs:label>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#Burns,_Jack_O."/>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Creator"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#computing_science_and_statistics">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">computing_science_and_statistics</rdfs:label>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> http://lccn.loc.gov/no99063580</valueURI>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computing science and statistics</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#computing_science_and_statistics_topic"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#computing_science_and_statistics_topic">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">computing_science_and_statistics_topic</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computing science and statistics</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#cosmic_background_radiation_topic">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">cosmic_background_radiation_topic</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cosmic background radiation</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#cosmology">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">cosmology_topic</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cosmology</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#cosmology_observations">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">cosmology_observations_topic</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cosmology--Observations</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#data_processing">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#SubjectPart"/>
+    <rdfs:label xml:lang="en">data_processing</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data processing</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/sh85035857</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">topic</type>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#research_data_processing"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#donor">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Role"/>
+    <rdfs:label xml:lang="en">donor</rdfs:label>
+    <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dnr</code>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">donor</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.loc.gov/marc/relators/relaterm.html</authorityURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marc_relator_terms</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#galaxies_clusters">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">galaxies_clusters</rdfs:label>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> http://lccn.loc.gov/sh85052764</valueURI>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galaxies--Clusters</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#hallman">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">hallman</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Creator"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#Hallman,_Eric_J."/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#harkness">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">harkness</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Creator"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#Harkness,_Robert"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#hydrodynamics-topic">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">hydrodynamics-topic</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrodynamics</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#los_alamos">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">los_alamos</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Associated_name"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#Los_Alamos_National_Laboratory._Theoretical_Astrophyiscs_Group_T-6"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#norman">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">norman</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Creator"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#Norman,_Michael_L."/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#numerical_methods_and_algorithms_topic">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">numerical_methods_and_algorithms_topic</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Numerical methods and algorithms</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#o'shea">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">o'shea</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Creator"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#O'Shea,_Brian_W._(Brian_William),_1978-"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_Density_x_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_Density_x_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3,699 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_Density_y_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_Density_y_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3,689 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_Density_z_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_Density_z_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3,712 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_SZKinetic_x_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_SZKinetic_x_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5,552 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_SZKinetic_y_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_SZKinetic_y_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4,766 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_SZKinetic_z_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_SZKinetic_z_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4,412 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_SZY_x_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_SZY_x_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8,302 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_SZY_y_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_SZY_y_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8,307 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_SZY_z_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_SZY_z_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8,320 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_Temperature_x_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_Temperature_x_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8,540 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_Temperature_y_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_Temperature_y_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7,715 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#proj_Temperature_z_RD0010">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">proj_Temperature_z_RD0010</rdfs:label>
+    <dateCreatedByApplication rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-07-31</dateCreatedByApplication>
+    <size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7,713 kb</size>
+    <use rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visual-source</use>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#radial_profiles_of_all_halos">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">radial_profiles_of_all_halos</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radial profiles of all halos</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#research_data_processing">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">research_data_processing</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research--Data processing</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://authorities.loc.gov/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://lccn.loc.gov/sh85113022</valueURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lcsh</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#research_data_sets_genre">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Subject"/>
+    <rdfs:label xml:lang="en">research_data_sets_genre</rdfs:label>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local</authority>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research data sets</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#santa_fe_light_cone_simulation_project_files">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#ProvenanceCollection"/>
+    <rdfs:label xml:lang="en">santa_fe_light_cone_simulation_project_files</rdfs:label>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_access"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#RD0010_use"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_arrangement"/>
+    <scopeContentNote rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_collection_contents"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_preferred_citation"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_processing_information"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_scope_and_contents"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#SantaFe_source"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#annual_reports_genre"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#burns"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#computing_science_and_statistics_topic"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmic_background_radiation_topic"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmology"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#cosmology_observations"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#galaxies_clusters"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#hallman"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#harkness"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#hydrodynamics-topic"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#los_alamos"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#norman"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#numerical_methods_and_algorithms_topic"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#o'shea"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#research_data_processing"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#research_data_sets_genre"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#santa_fe_light_cone_simulation_project_files_collection_title"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#sdsc"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#so"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#ucolo"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#ucsd"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#wagner"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#santa_fe_light_cone_simulation_project_files_collection_title">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">santa_fe_light_cone_simulation_project_files_collection_title</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Fe Light Cone Simulation Project files</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#sdsc">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">sdsc</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Associated_name"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#San_Diego_Supercomputer_Center"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#so">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">so</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Creator"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#So,_Geoffrey"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#summary_statistics_at_the_virial_radius_for_all_halos">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">summary_statistics_at_the_virial_radius_for_all_halos</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summary staitistics at the virial radius for all halos</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#summary_statistics_for_all_halos">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">summary_statistics_for_all_halos</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summary statistics for all halos</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#temperatur">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">temperature</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#ucolo">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">ucolo</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Associated_name"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#University_of_Colorado_(System).__Dept._of_Astrophysics_and_Planetary_Sciences.__Center_for_Astrophysics_and_Space_Astronomy"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#ucsd">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">ucsd</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Associated_name"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#Uniiversity_of_California,_San_Diego._Center_for_Astrophysics_and_Space_Science"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#ucsd_research_data_curation_program">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Repository"/>
+    <rdfs:label xml:lang="en">ucsd_research_data_curation_program</rdfs:label>
+    <repositoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of California, San Diego. Research Data Curation Program</repositoryName>
+    <repositoryURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rci.ucsd.edu/data-curation/index.html</repositoryURI>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#wagner">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <rdfs:label xml:lang="en">wagner</rdfs:label>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#Creator"/>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#wagner_rick_1972"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#wagner_rick_1972">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Name"/>
+    <rdfs:label xml:lang="en">wagner_rick_1972</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wagner, Rick, 1972-</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#x-axis_projection">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">x-axis_projection</rdfs:label>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x-axis projection</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#y-axis_projection">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">y-axis_projection</rdfs:label>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y-axis projection</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#z-axis_projection">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">z-axis_projection</rdfs:label>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z-axis projection</value>
+  </owl:NamedIndividual>
+</rdf:RDF>
