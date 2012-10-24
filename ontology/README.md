@@ -1,6 +1,6 @@
 DAMS OWL Ontology
 
-Developed at The UC San Siego Library by Esmé Cowles, Matt Critchlow, Arwen
+Developed at The UC San Diego Library by Esmé Cowles, Matt Critchlow, Arwen
 Hutt, Longshou Situ and Brad Westbrook.
 
 See Also:
