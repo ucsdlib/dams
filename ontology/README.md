@@ -3,6 +3,13 @@ DAMS OWL Ontology
 Developed at The UC San Diego Library by Esmé Cowles, Matt Critchlow, Arwen
 Hutt, Longshou Situ and Brad Westbrook.
 
+* [OWL Ontology](dams.owl)
+* [Data Dictionary (PDF)](data-dictionary.pdf)
+* [User Stories (PDF)](user-stories.pdf)
+* [Overview Diagram (PDF)](overview-diagram.pdf)
+* [Entity-Relationship Diagram (PDF)](entity-relationship-diagram.pdf)
+
+
 See Also:
 
 * [AAT](http://www.getty.edu/research/tools/vocabularies/aat/about.html)
