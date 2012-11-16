@@ -8,6 +8,11 @@ Hutt, Longshou Situ and Brad Westbrook.
 * [User Stories (PDF)](/ucsdlib/dams/blob/master/ontology/user-stories.pdf)
 * [Overview Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/overview-diagram.pdf)
 * [Entity-Relationship Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/entity-relationship-diagram.pdf)
+* Examples
+    * [Selected Example Data Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/examples/example-diagram.pdf)
+	* [Dissertation Example (RDF/XML)](/ucsdlib/dams/blob/master/ontology/examples/dissertation.rdf.xml)
+	* [Dissertation Diagram (PNG)](/ucsdlib/dams/blob/master/ontology/examples/dissertation.png)
+	* [Research Data Example (RDF/XML)](/ucsdlib/dams/blob/master/ontology/examples/santafe.rdf.xml)
 
 
 See Also:
