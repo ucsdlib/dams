@@ -4,10 +4,10 @@ Developed at The UC San Diego Library by Esmé Cowles, Matt Critchlow, Arwen
 Hutt, Longshou Situ and Brad Westbrook.
 
 * [OWL Ontology](/ucsdlib/dams/blob/master/ontology/dams.owl)
-* [Data Dictionary (PDF)](/ucsdlib/dams/blob/master/ontology/data-dictionary.pdf)
-* [User Stories (PDF)](/ucsdlib/dams/blob/master/ontology/user-stories.pdf)
-* [Overview Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/overview-diagram.pdf)
-* [Entity-Relationship Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/entity-relationship-diagram.pdf)
+* [Data Dictionary (PDF)](/ucsdlib/dams/blob/master/ontology/docs/data-dictionary.pdf)
+* [User Stories (PDF)](/ucsdlib/dams/blob/master/ontology/docs/user-stories.pdf)
+* [Overview Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/docs/overview-diagram.pdf)
+* [Entity-Relationship Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/docs/entity-relationship-diagram.pdf)
 * Examples
     * [Selected Example Data Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/examples/example-diagram.pdf)
 	* [Dissertation Example (RDF/XML)](/ucsdlib/dams/blob/master/ontology/examples/dissertation.rdf.xml)
