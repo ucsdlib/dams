@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://library.ucsd.edu/ontology/dams/#" xmlns:dams="http://library.ucsd.edu/ontology/dams/#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mads="http://www.loc.gov/mads/rdf/v1#" xmlns:error="http://org.semanticweb.owlapi/error#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xml:base="http://library.ucsd.edu/ontology/dams/">
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Ang&#xE9;lica_Mar&#xED;a_Element">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GivenNameElement"/>
+    <mads:elementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angélica María</mads:elementValue>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#English">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Language"/>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</value>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISO639-2</authority>
+    <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eng</code>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.loc.gov/standards/iso639-2/</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.loc.gov/standards/iso639-2/php/langcodes_name.php?code_ID=130</valueURI>
+    <language rdf:resource="http://library.ucsd.edu/ontology/dams/#English"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#PersonalName"/>
+    <mads:authoritativeLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yañez, Angélica María</mads:authoritativeLabel>
+    <mads:elementList rdf:resource="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez_Name_1"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez_Element">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#FamilyNameElement"/>
+    <mads:elementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yañez</mads:elementValue>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez_Name_1">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#Ang&#xE9;lica_Mar&#xED;a_Element"/>
+    <rdf:rest rdf:resource="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez_Name_2"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez_Name_2">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez_Element"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#creator">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Role"/>
+    <rdfs:label xml:lang="en">creator</rdfs:label>
+    <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cre</code>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creator</value>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.loc.gov/marc/relators/relaterm.htm</authorityURI>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marc_relator_terms</authority>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_UCSD_ETD_collection">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#AssembledCollection"/>
+    <rdfs:label xml:lang="en">diss_UCSD_ETD_collection</rdfs:label>
+    <scopeContentNote rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_collection_scopecontent"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_collection_title"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_collection_scopecontent">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#ScopeContentNote"/>
+    <rdfs:label xml:lang="en">diss_collection_scopecontent</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronic theses and dissertations submitted by UC San Diego students as part of their degree requirements and representing all UC San Diego academic programs.  </value>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scope and contents</displayLabel>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scope_and_content</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_collection_title">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">diss_collection_title</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UCSD Electronic Theses and Dissertations</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Object"/>
+    <rdfs:label xml:lang="en">diss_item</rdfs:label>
+    <typeOfResource rdf:datatype="http://www.w3.org/2001/XMLSchema#string">text</typeOfResource>
+    <rightsHolder rdf:resource="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez"/>
+    <copyright rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_copyright"/>
+    <date rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_date"/>
+    <hasFile rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_file"/>
+    <license rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_license"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_abstract"/>
+    <custodialResponsibilityNote rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_custodian"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_extent"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_general1_PQ"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_general2_bibRef"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_general3_thesis"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_general4_titleLoc"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_identifier_ark"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_identifier_local"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_identifier_proQuest"/>
+    <note rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_note_language"/>
+    <relationship rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_relationship_1"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject2"/>
+    <subject rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject_genre"/>
+    <title rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_title"/>
+    <repository rdf:resource="http://library.ucsd.edu/ontology/dams/#mandeville_special_collections_library"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_copyright">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Copyright"/>
+    <rdfs:label xml:lang="en">diss_item_copyright</rdfs:label>
+    <copyrightNote rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This work is protected by the U.S. Copyright Law (Title 17, U.S.C.). Use of this work beyond that allowed by "fair use" requires written permission of the copyright holder(s). Responsibility for obtaining permissions and any use and distribution of this work rests exclusively with the user and not the UC San Diego Libraries. Inquiries can be made to the UC San Diego Libraries department having custody of the work (http://libraries.ucsd.edu/locations/mscl/).</copyrightNote>
+    <copyrightStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under_copyright_1st_party</copyrightStatus>
+    <copyrightJurisdiction rdf:datatype="http://www.w3.org/2001/XMLSchema#string">us</copyrightJurisdiction>
+    <purposeNote>This work is available from the UC San Diego Libraries. This digital copy of the work is intended to support research, teaching, and private study.</purposeNote>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_date">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Date"/>
+    <rdfs:label xml:lang="en">diss_item_date</rdfs:label>
+    <encoding>ISO8601</encoding>
+    <type>creation</type>
+    <endDate>2010</endDate>
+    <value>2010</value>
+    <beginDate>2010</beginDate>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_file">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#File"/>
+    <rdfs:label xml:lang="en">diss_item_file</rdfs:label>
+    <use>document_source</use>
+    <size>65254714</size>
+    <preservationLevel>full</preservationLevel>
+    <crc32checksum>b595b95f</crc32checksum>
+    <objectCategory>file</objectCategory>
+    <compositionLevel>0</compositionLevel>
+    <dateCreated>2010-03-17T20:06:48</dateCreated>
+    <formatName>PDF</formatName>
+    <formatVersion>1.3</formatVersion>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_genre_element">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreFormElement"/>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Academic dissertations</value>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBMS Controlled Vocabularies: Genre Terms</authority>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.rbms.info/committees/bibliographic_standards/controlled_vocabularies/genre/alphabetical_list.htm</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.rbms.info/committees/bibliographic_standards/controlled_vocabularies/genre/tr19.htm</valueURI>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_genre_list">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_genre_element"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_license">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#License"/>
+    <rdfs:label xml:lang="en">diss_item_license</rdfs:label>
+    <rightsAction rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_permission_display"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_name2">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#CorporateName"/>
+    <mads:elementList rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_name2_list1"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_name2_list1">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_name2_term1"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_name2_term1">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#NameElement"/>
+    <mads:elementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Panther Party</mads:elementValue>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Library of Congress Name Authority File</authority>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://id.loc.gov/authorities/names</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://id.loc.gov/authorities/names/n80095585</valueURI>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_abstract">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_abstract</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abstract</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This project seeks to disrupt a black and white paradigm that rests on the foundation of a dominant narrative of American society that creates a binary understanding of race relations in the U.S. This binary privileges the social position and historical trajectory of Euro- Americans by simultaneously creating a deviant "other" through black and brown bodies. I disrupt this binary by centering the parallel experiences of Chicanos and Blacks during the 1960s and 1970s; and see their struggles as a common one. I take a comparative approach in my analysis of the historical Brown Berets and the Black Panther Party and use a Critical Race Theory framework of "counterstories" ; a way for oppressed voices to disrupt dominant narratives of white supremacy, legitimacy, and "truth." I focus on the Power Movements, represented by both groups, which embraced a distinct political and cultural politic that resisted various forms of white racism; this politic typically veered from assimilationist models of integration. I was interested in the comparison of the Brown Berets and the Black Panthers and throughout the literature did not find compelling comparisons about the intersections of both racialized groups. The primary sources that inform this project are the independent newspapers and its' content, published by each organization, La Causa and the Black Panther. Major themes revealed in the newspapers included social justice, self- defense, cultural pride, and a re-evaluation of American society. These primary sources helped me identify the larger social intersections of the Chicano and Black community explicated by both organizations.</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abstract</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_custodian">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#CustodialResponsibilityNote"/>
+    <rdfs:label xml:lang="en">diss_item_note_custodian</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital object made available by</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandeville Special Collections Library, University of California, San Diego, La Jolla, 92093-0175 (http://libraries.ucsd.edu/locations/mscl/)</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">custodial_history</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_extent">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_extent</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 PDF (xi, 111 p.)</value>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extent</displayLabel>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dimensions</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_general1_PQ">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_general1_PQ</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Available via ProQuest Digital Dissertations</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general_note</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_general2_bibRef">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_general2_bibRef</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes bibliographical references (p. 92-100)</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general_note</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_general3_thesis">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_general3_thesis</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesis</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesis (M.A.)--University of California, San Diego, 2010</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_general4_titleLoc">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_general4_titleLoc</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Title from first page of PDF file (viewed April 15, 2010)</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">general_note</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_identifier_ark">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_identifier_ark</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ARK ID</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://libraries.ucsd.edu/ark:/20775/bb52572546</value>
+    <type>identifier</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_identifier_local">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_identifier_local</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local ID</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b6700311</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifier</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_identifier_proQuest">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <rdfs:label xml:lang="en">diss_item_note_identifier_proQuest</rdfs:label>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProQuest ID</displayLabel>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yanez_ucsd_0033M_10776</value>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">identifier</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_note_language">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Note"/>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIssertation is in English.</value>
+    <displayLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language</displayLabel>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language_of_materials</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_permission_display">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Permission"/>
+    <rdfs:label xml:lang="en">diss_item_permission_display</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">display</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_relationship_1">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Relationship"/>
+    <name rdf:resource="http://library.ucsd.edu/ontology/dams/#Ya&#xF1;ez"/>
+    <role rdf:resource="http://library.ucsd.edu/ontology/dams/#creator"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+    <mads:authoritativeLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">African Americans--Relations with Mexican Americans--History--20th Century</mads:authoritativeLabel>
+    <mads:elementList rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_list1"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_list1">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:rest rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_list2"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term1"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_list2">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:rest rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_list3"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term2"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_list3">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:rest rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_list4"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term3"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_list4">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term1">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#TopicElement"/>
+    <mads:elementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">African American</mads:elementValue>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Library of Congress Subject Headings</authority>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://id.loc.gov/authorities/subjects</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://id.loc.gov/authorities/subjects/sh85001932</valueURI>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term2">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#TopicElement"/>
+    <mads:elementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relations with Mexican Americans</mads:elementValue>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term3">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#TopicElement"/>
+    <mads:elementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</mads:elementValue>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Library of Congress Subject Headings</authority>
+    <authorityURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://id.loc.gov/authorities/subjects</authorityURI>
+    <valueURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://id.loc.gov/authorities/subjects/sh99005024</valueURI>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term4">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#TemporalElement"/>
+    <mads:elementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20th century</mads:elementValue>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject2">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+    <mads:authoritativeLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Panther Party--History</mads:authoritativeLabel>
+    <mads:elementList rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject2_list1"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject2_list1">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_name2"/>
+    <rdf:rest rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject2_list2"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject2_list2">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    <rdf:first rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_subject1_term3"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_subject_genre">
+    <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#ComplexSubject"/>
+    <mads:authoritativeLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Academic dissertations</mads:authoritativeLabel>
+    <mads:elementList rdf:resource="http://library.ucsd.edu/ontology/dams/#diss_item_genre_list"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#diss_item_title">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Title"/>
+    <rdfs:label xml:lang="en">diss_item_title</rdfs:label>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicano and black radical activism of the 1960s </value>
+    <subtitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a comparison between the Brown Berets and the Black Panther Party in California</subtitle>
+    <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main</type>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#mandeville_special_collections_library">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Repository"/>
+    <rdfs:label xml:lang="en">mandeville_special_collections_library</rdfs:label>
+    <repositoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandeville Special Collections Library</repositoryName>
+    <repositoryURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://libraries.ucsd.edu/locations/mscl/</repositoryURI>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://library.ucsd.edu/ontology/dams/#rightsholder">
+    <rdf:type rdf:resource="http://library.ucsd.edu/ontology/dams/#Role"/>
+    <rdfs:label xml:lang="en">rightsholder</rdfs:label>
+    <authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">local</authority>
+    <value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rightsholder</value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:RDF>
