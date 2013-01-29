@@ -4,7 +4,7 @@ Developed at The UC San Diego Library by Esmé Cowles, Matt Critchlow, Arwen
 Hutt, Longshou Situ and Brad Westbrook.
 
 * [OWL Ontology](/ucsdlib/dams/blob/master/ontology/dams.owl)
-* [Data Dictionary (PDF)](/ucsdlib/dams/blob/master/ontology/docs/data-dictionary.pdf)
+* Data Dictionary [(HTML)](http://htmlpreview.github.com/?https://github.com/ucsdlib/dams/master/ontology/docs/data-dictionary.html), [(PDF)](/ucsdlib/dams/blob/master/ontology/docs/data-dictionary.pdf)
 * [User Stories (PDF)](/ucsdlib/dams/blob/master/ontology/docs/user-stories.pdf)
 * [Overview Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/docs/overview-diagram.pdf)
 * [Entity-Relationship Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/docs/entity-relationship-diagram.pdf)
