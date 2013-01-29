@@ -1,0 +1,4871 @@
+<?xml version="1.0"?>
+<html>
+<head>
+  <title>DAMS4 Data Dictionary</title>
+  <style type="text/css">
+    body { font-family: sans-serif; }
+    table, td, th { border-color: black; border-style: solid; }
+    table { border-width: 1px; border-spacing: 0; border-collapse: collapse; }
+    td, th { vertical-align: top; margin: 0; padding: 3px; border-width: 1px 1px 0 0; }
+  </style>
+</head>
+<body>
+<table>
+<tbody>
+<tr>
+<th> <p>Superclass</p> </th>
+<th> <p>Class</p> </th>
+<th> <p>Subclass</p> </th>
+<th> <p>Sub-Subclass</p> </th>
+<th> <p>Property</p> </th>
+<th> <p>Definition</p> </th>
+<th> <p>Value(s) / Format(s)</p> </th>
+<th> <p>Links to</p> </th>
+<th> <p>Notes</p> </th>
+</tr>
+<tr>
+<td> <p>DAMS Thing</p> </td>
+<td> <p>&#xA0;</p> </td>
+<td> <p>&#xA0;</p> </td>
+<td> <p>&#xA0;</p> </td>
+<td> <p>ID <strong>(anyURI, required)</strong> </p> </td>
+<td> <p>Parent of all DAMS classes.</p> </td>
+<td> <p>&#xA0;</p> </td>
+<td> <p>DAMS Event (event 0-m)</p> </td>
+<td> <p>In the linked-data context, ID will be the subject URI.</p> </td>
+</tr>
+<tr>
+<td> <p>&#xA0;</p> </td>
+<td> <p> <span style="color: rgb(0,0,255);">Repository </span> </p> </td>
+<td> <p>&#xA0;</p> </td>
+<td> <p>&#xA0;</p> </td>
+<td> <p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>The identification of a library unit (or non-library data provider) that is responsible for supplying content to the DAMS and for administering that content over time, including answering queries from users.<br/><br/>All objects in the DAMS must be linked to one and only one repository.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Object (hasObject 0-m)<br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>Mandatory event: repository record creation.<br/><br/><span style="color: rgb(0,128,0);">Will revisit the need for Agency Code and Country Code properties. These attributes may be conducive for sharing records.</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>repository Name <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>The name of the repository or organizational unit assuming custodial responsibility for DAMS content.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>repository URI <strong>(anyURI, required)</strong>
+</p>
+</td>
+<td>
+<p>The URI linking to a webpage for the repository that contains contact and access information about the repository.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>DAMS Resource</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span>
+</p>
+</td>
+<td>
+<p>Parent of DAMS classes with common descriptive metadata attached (Collection, Object, and Component)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Title (title 0-m)<br/>Date (date 0-m)<br/>Language (language 0-m)<br/>Note (note 0-m)<br/>Relationship (relationship 0-m)<br/>Complex Subject (subject 0-m)<br/>Related Resource (relatedResource, 0-m)<br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>Mandatory event: DAMS Resource creation (collection, object, component).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Collection</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>An aggregate of objects and/or collections.<br/><br/>One type of collection is that in which all members of the collection have the same provenance.<br/><br/>A second type of collection is a sub-part of the first type but having a title that distinguishes it from the parent collection.<br/><br/>A third type of collection is a collection assembled by authorized library agents. This collection may be composed on other collections and/or discrete objects. Provenance is not a binder for the collection, as the assembled collection is typically constructed around a topical facet, e.g. Archive for New Poetry, Southworth Spanish Civil War, Melanesian, University Archives, etc.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Collection (relatedCollection 0-m)<br/>Object (hasObject 0-m)<br/><span style="text-decoration: underline;">Title (title 1-m)</span><br/><span style="text-decoration: underline;">Date (date 0-m)</span><br/><span style="text-decoration: underline;">Language (language 1-m)</span><br/><span style="text-decoration: underline;">Note (note 0-m)</span> , ScopeContentNote (1-m)<br/><span style="text-decoration: underline;">Relationship (relationship 0-m)</span><br/><span style="text-decoration: underline;">Subject (subject 0-m)</span><br/><span style="text-decoration: underline;">Related Resource (relatedResource 0-m)</span><br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>Mandatory event: collection record creation. <span style="color: rgb(0,128,0);">Collection relationships need to be defined by policy TBD.</span>
+<br/> relatedCollection -&gt; peer collection <br/> hasCollection -&gt; child collection <br/> collection -&gt; parent collection <br/> Title and Language: cardinality overrides superclass.<br/><br/>Note: only required note is ScopeContentNote<br/><br/><span style="color: rgb(0,128,0);">additional requirements TBD</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Assembled Collection</span>
+</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>Collection of materials composed of other collections and objects, often based around a common topic.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Collection (hasCollection 0-m)<br/>ProvenanceCollection (hasProvenanceCollection 0-m)<br/><span style="text-decoration: underline;">Collection (relatedCollection 0-m)</span><br/><span style="text-decoration: underline;">Object (hasObject 0-m)</span><br/><span style="text-decoration: underline;">Title (title 1-m)</span><br/><span style="text-decoration: underline;">Date (date 0-m)</span><br/><span style="text-decoration: underline;">Language (language 1-m)</span><br/><span style="text-decoration: underline;">Note (note 0-m)</span> , ScopeContentNote (1-m)<br/><span style="text-decoration: underline;">Relationship (relationship 0-m)</span><br/><span style="text-decoration: underline;">Subject (subject 0-m)</span><br/><span style="text-decoration: underline;">Related Resource (relatedResource 0-m)</span><br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Provenance Collection</span>
+</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>Collection of materials that share a common provenance.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>ProvenanceCollectionPart (hasPart 0-m)<br/><span style="text-decoration: underline;">Collection (relatedCollection 0-m)</span><br/><span style="text-decoration: underline;">Object (hasObject 0-m)</span><br/><span style="text-decoration: underline;">Title (title 1-m)</span><br/><span style="text-decoration: underline;">Date (date 0-m)</span><br/><span style="text-decoration: underline;">Language (language 1-m)</span><br/><span style="text-decoration: underline;">Note (note 0-m)</span> , ScopeContentNote (1-m)<br/><span style="text-decoration: underline;">Relationship (relationship 0-m)</span><br/><span style="text-decoration: underline;">Subject (subject 0-m)</span><br/><span style="text-decoration: underline;">Related Resource (relatedResource 0-m)</span><br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Provenance Collection Part</span>
+</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>Subpart of a Provenance Collection</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>ProvenanceCollection (provenanceCollection 1)<br/><span style="text-decoration: underline;">Collection (relatedCollection 0-m)</span><br/><span style="text-decoration: underline;">Object (hasObject 0-m)</span><br/><span style="text-decoration: underline;">Title (title 1-m)</span><br/><span style="text-decoration: underline;">Date (date 0-m)</span><br/><span style="text-decoration: underline;">Language (language 1-m)</span><br/><span style="text-decoration: underline;">Note (note 0-m)</span> , ScopeContentNote (1-m)<br/><span style="text-decoration: underline;">Relationship (relationship 0-m)</span><br/><span style="text-decoration: underline;">Subject (subject 0-m)</span><br/><span style="text-decoration: underline;">Related Resource (relatedResource 0-m)</span><br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Object</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A representation of an intellectual entity, sometimes referred to as a "work."<br/><br/>The object is composed of three distinct types of information: 1) one or more content files, 2) one or more metadata records, and 3) a binder (unique ID) holding all the parts of the object together and maintaining the correct internal associations among the parts.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Repository (repository 1)<br/>Collection (collection 0-m)<br/>Component (hasComponent 0-m)<br/>File (hasFile 0-m)<br/><span style="text-decoration: underline;">Title (title 1-m)</span><br/><span style="text-decoration: underline;">Date (date 0-m)</span><br/><span style="text-decoration: underline;">Language (language 1-m)</span><br/><span style="text-decoration: underline;">Note (note 0-m)</span><br/><span style="text-decoration: underline;">Relationship (relationship 0-m)</span><br/><span style="text-decoration: underline;">Subject (subject 0-m)</span><br/>Copyright (copyright 1)<br/>Statute (statute, 0-1)<br/>License (license, 0-1)<br/>Other Rights (otherRights, 0-1)<br/>Name (rightsHolder 0-m)<br/><span style="text-decoration: underline;">Related Resource (relatedResource 0-m)</span><br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>Every object must be linked to one, and only one, Repository. It may be linked to as many collections as are pertinent.<br/><br/><span style="color: rgb(0,128,0);">
+<span style="text-decoration: line-through;">Must have at least one child component or file.</span>
+</span> <span style="color: rgb(0,128,0);">DAMS Object requirements need to be changed to reflect this (RCI Levy &amp; SIO examples)</span><br/><br/>Mandatory event: object creation.<br/><br/>Title and Language: cardinality overrides superclass.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>typeOfResource <strong>(required)</strong>
+</p>
+</td>
+<td>
+<p>Basic character of the work.</p>
+</td>
+<td>
+<p>C.V (mods): text, cartographic, notated music, sound recording-musical, sound recording-nonmusical,sound recording, still image, moving image, three dimensional object, software, multimedia, mixed material</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Controlled vocabulary should be considered for extension and/or modification.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Component</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A logical or physical part of an object and contained exclusively within the object. The component may consist of metadata and one or more content files bound together within the context of the object. A component that has no directly associated content files is a logical component, whereas a component that has associated content files is a physical component. There is no constraint on how many components may occur at any given level or how deep the component hierarchy may go.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Object (object 1)<br/>Component (component 0-1, hasComponent 0-m)<br/>File (hasFile 0-m)<br/><span style="text-decoration: underline;">Title (title 0-m)</span><br/><span style="text-decoration: underline;">Date (date 0-m)</span><br/><span style="text-decoration: underline;">Language (language 0-m)</span><br/><span style="text-decoration: underline;">Note (note 0-m)</span><br/><span style="text-decoration: underline;">Relationship (relationship 0-m)</span><br/><span style="text-decoration: underline;">Subject (subject 0-m)</span><br/>Copyright (copyright, 0-1)<br/>Statute (statute, 0-1)<br/>License (license, 0-1)<br/>Other Rights (otherRights, 0-1)<br/>Name (rightsHolder 0-m)<br/><span style="text-decoration: underline;">Related Resource (relatedResource, 0-m)</span><br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>Components are bounded by, unique to an object context and only link to other objects having the same object context. Must link to the object the component is associated with. If the child of another component, must also link to it.<br/><br/>Must have at least one child component or file.<br/><br/>Must link to parent component if there is one.<br/><br/>Mandatory event: component record creation.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>order <strong>(positiveInteger, required)</strong>
+</p>
+</td>
+<td>
+<p>Order between sibling components.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>label <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>Label describing the component<br/><br/>can be a literal or an ark referencing a title or date.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>typeOfResource</p>
+</td>
+<td>
+<p>Basic character of the work.</p>
+</td>
+<td>
+<p>C.V (mods): text, cartographic, notated music, sound recording-musical, sound recording-nonmusical,sound recording, still image, moving image, three dimensional object, software, multimedia, mixed material</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>File</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A file containing content capable of being rendered by a computer. May be of any mime type. The DAMS includes a description of each master file, that supports its preservation management.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Object (object 1)<br/>Component (component 0-1)<br/>SourceCapture (sourceCapture 0-1)<br/>Other Rights (otherRights 0-1)<br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+</p>
+</td>
+<td>
+<p>Ontology: METS<br/><br/>Mandatory event: file ingest.<br/><br/>Must link to the object the file is associated with. If associated with a component, must also link to it.<br/><br/>Mandatory checksum: initial ingest checksum. <span style="color: rgb(0,128,0);">Currently have best coverage in crc32, switch to sha256?</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>use <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>Type of file and role to object.</p>
+</td>
+<td>
+<p>
+<strong>File Use CV:</strong> <br/> visual-source, visual-service, visual-thumbnail, visual-alternate, document-source, document-service, document-alternate, audio-source, audio-service, audio-alternate, data-source, data-service, data-alternate (see <a href="/display/datamodel/File+Use+Vocabulary" data-linked-resource-id="16580750" data-linked-resource-type="page" data-linked-resource-default-alias="File Use Vocabulary" data-base-url="https://illiad.ucsd.edu:8443">File Use Vocabulary</a>)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>preservation Level <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Level of preservation of the file.</p>
+</td>
+<td>
+<p>
+<strong>Preservation Level CV</strong>: <br/> bit-level, full, 0, 1, 2, fully supported with future migrations</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,128,0);">Necessary?</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>object Category <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Whether the entity is a bitstream, file or object.</p>
+</td>
+<td>
+<p>
+<strong>Object Category CV:</strong> <br/> file</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,128,0);">Necessary?</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>composition Level <strong>(nonNegative Integer)</strong>
+</p>
+</td>
+<td>
+<p>Decoding/unbundling steps required to extract file.</p>
+</td>
+<td>
+<p>0, 1, 2, etc. (non-negative integer)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,128,0);">Necessary?</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>size <strong>(</strong>
+<strong>nonNegative Integer,</strong> <strong>required)</strong>
+</p>
+</td>
+<td>
+<p>Size of the file in bytes.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>mime Type (<strong>string</strong>)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>record MIME type</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>format Name <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Name of the file format.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>format Version <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Version of the format in formatName.</p>
+</td>
+<td>
+<p>6.0, 2003, etc.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>source Filename <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>Original source filename</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>source Path <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>Original source file path.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>quality <strong>(string)</strong>
+</td>
+<td>Format-specific indicator of quality, used to differentiate files with the same use value which differ only by resolution, bitrate, etc.</td>
+<td>
+<p>Images: longest dimension in pixels, e.g. '100px'</p>
+<p>Audio: bitrate, e.g. '128kbps'</p>
+<p>Video: longest dimension and/or bitrate e.g. '320px', '640px/1000kbps'</p>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>duration (<strong>string</strong>)</td>
+<td>Running time for audio and video files.</td>
+<td>HH:MM:SS</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>date Created <strong>(dateTimeStamp)</strong>
+</p>
+</td>
+<td>
+<p>Date and time the file was created.</p>
+</td>
+<td>
+<p>
+<strong>Date Encoding CV:</strong> <br/> ISO8601</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>CRC32 Checksum <strong>(hexBinary)</strong>
+</p>
+</td>
+<td>
+<p>Checksum calculated using the CRC32 algorithm.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>MD5 Checksum <strong>(hexBinary)</strong>
+</p>
+</td>
+<td>
+<p>Checksum calculated using the MD5 algorithm.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>SHA1 Checksum <strong>(hexBinary)</strong>
+</p>
+</td>
+<td>
+<p>Checksum calculated using the SHA-1 algorithm.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>SHA256 Checksum <strong>(hexBinary)</strong>
+</p>
+</td>
+<td>
+<p>Checksum calculated using the SHA-256 algorithm.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>SHA512 Checksum <strong>(hexBinary)</strong>
+</p>
+</td>
+<td>
+<p>Checksum calculated using the SHA-512 algorithm.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Relationship</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>Name/Role bundle which is linked to from Collection, Object, etc.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span><br/>Name (name 1)<br/>Role (role 1-m)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Title</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A term or phrase describing a collection, object, or object component. The title may be transcribed from the work, from previous metadata, or supplied.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span><br/>Language (language 0-1)<br/>Title (relatedTitle 0-m)</p>
+</td>
+<td>
+<p>relatedTitle should be used to link to equivalent transliterated, translated, abbreviated, etc. titles.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>value <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Renamed from title to avoid conflict with DAMSResource link to Title.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>subtitle <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>part Number <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>part Name <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Volume, issue #, etc.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>nonsort Characters <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Initial characters which should not affect sort order.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Included to facilitate generating sort form without having to build complex algorithm to handle multiple languages.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>type <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>Title Type CV:</strong> <br/> translated, transliterated, enumerated, abbreviated, uniform, main, alternative</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>untyped title is the main title</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>authority <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>if there is an authority, but no valueURI</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>authorityURI <strong>(anyURI)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>valueURI <strong>(anyURI)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>may be replaced by owl:sameAs, can be multiple</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>script <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">ISO 15924 standard list?</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>displayLabel <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>display text. e.g. source of title</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Date</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>The date(s) for the collection, object, or object component. May be a single date or a combination of inclusive dates and/or bulk dates. May indicate if it is the date for creation, issuance, capture, copyright, or otherwise.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>type <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>Date Type CV:</strong><br/><br/>broadcast <br/> captured <br/> copyright <br/> creation <br/> <span style="color: rgb(255,153,0);">creation-date</span>
+<br/> <span style="color: rgb(255,153,0);">creation-date-earliest</span>
+<br/> <span style="color: rgb(255,153,0);">creation-date-latest</span>
+<br/> <span style="color: rgb(255,153,0);">creation-date-date qualifer</span>
+<br/> deaccession <br/> issued <br/> modified <br/> published <br/> other (other type = ?) <br/> valid</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,128,0);">How do we differentiate between inclusive and bulk dates? It should be possible to express both.</span><br/><br/><span style="color: rgb(255,153,0);">VRA has additional type values. may need sameAs relationships to cover overlaps.</span><br/><br/><span style="color: rgb(255,153,0);">The VRA date may be capable of being managed via our MODS encoding, in that a questionable set of dates for earliest and latest dates can be recorded in the date expression, while the questionable earliest and latest dates can be encoded as begin and end dates.&#xA0;</span><br/><br/>We need to include a property qualifier (types = approximate, inferred, questionable).&#xA0;<br/><br/>We also may need a date for key date, which is typically the normalized version of the start date (so it may not be necessary).&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>value <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>For example "Easter"</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>begin Date <strong>(date)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>end Date <strong>(date)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>encoding <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>Date Encoding CV:</strong> <br/> ISO8601</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,128,0);">could be implemented as typed literal or separate property.</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Note</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A description of some facet of a collection, object, or object component. Facets may range form abstract and scope content notes to specific aspects such as rights status.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>mods:originInfo will be created as an unstructured Note.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>type <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>Note Type CV:</strong>
+</p>
+<ol>
+<li>abstract</li>
+<li>appraisal</li>
+<li>arrangement</li>
+<li>biography/history</li>
+<li>citation</li>
+<li>computer / data type conditions governing access</li>
+<li>conditions governing use</li>
+<li>creation/production credits</li>
+<li>custodial history</li>
+<li>dimensions</li>
+<li>dissertation</li>
+<li>existence and location of copies</li>
+<li>existence and location of originals</li>
+<li>funding information</li>
+<li>general note</li>
+<li>general physical description</li>
+<li>geographic coverage</li>
+<li>immediate source of acquisition</li>
+<li>identifier</li>
+<li>inscription</li>
+<li>language of materials</li>
+<li>location</li>
+<li>material specific details</li>
+<li>methodology note</li>
+<li>numbering peculiarities</li>
+<li>physical characteristics and technical requirements</li>
+<li>participant/performer</li>
+<li>physical facet</li>
+<li>preferred citation</li>
+<li>publication</li>
+<li>related materials</li>
+<li>scope and content</li>
+<li>separated materials</li>
+</ol>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Use type as display label when a displayLabel value is not provided by a data creator. Otherwise, display the type value as displayLabel to end user.<br/><br/><span style="color: rgb(0,128,0);">Augment type list for: VRA, EAD, MODS</span><br/><br/>Note types with analogs:&#xA0;<br/><br/>EAD <br/> <span style="color: rgb(153,51,0);">Local</span>
+<br/> <span style="color: rgb(51,102,255);">MARC</span>
+<br/> <span style="color: rgb(153,204,0);">MODS</span>
+<br/> <span style="color: rgb(255,153,0);">VRA</span>
+<br/> *=unlikely to be used in domain</p>
+<ol>
+<li>abstract (<span style="color: rgb(51,102,255);">520</span>)</li>
+<li>*accruals (<span style="color: rgb(51,102,255);">584</span>, <span style="color: rgb(153,204,0);">accrual method, accrual policy</span>)</li>
+<li>appraisal</li>
+<li>arrangement (<span style="color: rgb(51,102,255);">351</span>)</li>
+<li>*<span style="color: rgb(51,102,255);">audience target (521</span>)</li>
+<li>*<span style="color: rgb(51,102,255);">awards note (586)</span>
+</li>
+<li>*bibliography (<span style="color: rgb(51,102,255);">504, 581</span>, <span style="color: rgb(153,204,0);">publications</span>)</li>
+<li>*<span style="color: rgb(51,102,255);">binding information (563)</span>
+</li>
+<li>biography/history (<span style="color: rgb(51,102,255);">545</span>, <span style="color: rgb(153,204,0);">biographical/historical</span>)</li>
+<li>*<span style="color: rgb(51,102,255);">case file characteristics (565</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">citation (510,</span> <span style="color: rgb(255,153,0);">textref,</span> <span style="color: rgb(153,204,0);">citation/reference</span>
+<span style="color: rgb(255,153,0);">)</span>
+</li>
+<li>
+<span style="color: rgb(51,102,255);">computer / data type (516)</span>
+</li>
+<li>conditions governing access (<span style="color: rgb(51,102,255);">506</span>, <span style="color: rgb(153,204,0);">restriction</span>)</li>
+<li>conditions governing use (<span style="color: rgb(51,102,255);">540, 542</span>, <span style="color: rgb(255,153,0);">rights</span>
+</li>
+<li>*<span style="color: rgb(51,102,255);">copy and version identification (562,</span> <span style="color: rgb(153,204,0);">version</span>
+<span style="color: rgb(51,102,255);">)</span>
+</li>
+<li>
+<span style="color: rgb(51,102,255);">creation/production credits (508,</span> <span style="color: rgb(153,204,0);">creation/production credits</span>
+<span style="color: rgb(51,102,255);">)</span>
+</li>
+<li>custodial history (<span style="color: rgb(51,102,255);">561,</span> <span style="color: rgb(153,204,0);">ownership</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">data quality (514)</span>
+</li>
+<li>*<span style="color: rgb(51,102,255);">date / time for event (518,</span> <span style="color: rgb(153,204,0);">venue</span>
+<span style="color: rgb(51,102,255);">)</span>
+</li>
+<li>dimensions (<span style="color: rgb(255,153,0);">measurements</span>
+</li>
+<li>
+<span style="color: rgb(51,102,255);">dissertation (502,</span> <span style="color: rgb(153,204,0);">thesis</span>
+<span style="color: rgb(51,102,255);">)</span>
+</li>
+<li>*<span style="color: rgb(51,102,255);">documentation information (556</span>)</li>
+<li>*<span style="color: rgb(51,102,255);">entity and attribute information (552</span>)</li>
+<li>*<span style="color: rgb(51,102,255);">exhibitions note (585,</span> <span style="color: rgb(153,204,0);">exhibitions</span>
+<span style="color: rgb(51,102,255);">)</span>
+</li>
+<li>existence and location of copies (<span style="color: rgb(51,102,255);">530 535</span>, <span style="color: rgb(255,153,0);">location,</span> <span style="color: rgb(153,204,0);">additional physical form</span>)</li>
+<li>existence and location of originals (<span style="color: rgb(51,102,255);">534, 535</span>, <span style="color: rgb(255,153,0);">location,</span> <span style="color: rgb(153,204,0);">original location</span>
+<span style="color: rgb(153,204,0);">, original version</span>)</li>
+<li>*file plan</li>
+<li>*<span style="color: rgb(51,102,255);">former title complexity (547</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">funding information (536,</span> <span style="color: rgb(153,204,0);">funding</span>)</li>
+<li>general note (<span style="color: rgb(51,102,255);">500)</span>
+</li>
+<li>general physical description</li>
+<li>
+<span style="color: rgb(51,102,255);">geographic coverage (522</span>)</li>
+<li>immediate source of acquisition (<span style="color: rgb(51,102,255);">541</span>, <span style="color: rgb(255,153,0);">source,</span> <span style="color: rgb(153,204,0);">acquisition</span>)</li>
+<li>
+<span style="color: rgb(153,204,0);">identifier</span>
+</li>
+<li>
+<span style="color: rgb(51,102,255);">*issuing body (550</span>)</li>
+<li>language of materials (<span style="color: rgb(51,102,255);">546</span>, <span style="color: rgb(153,204,0);">language</span>)</li>
+<li>*legal status</li>
+<li>*<span style="color: rgb(51,102,255);">linking entry complexity (580</span>)</li>
+<li>location</li>
+<li>material specific details</li>
+<li>
+<span style="color: rgb(51,102,255);">methodology note (567</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">numbering peculiarities (515</span>, <span style="color: rgb(153,204,0);">numbering</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">*other finding aids (555</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">p</span>
+<span style="color: rgb(51,102,255);">articipant/performer (511</span>, <span style="color: rgb(153,204,0);">performers</span>)</li>
+<li>physical characteristics and technical requirements (<span style="color: rgb(51,102,255);">538, 300, 340,</span> <span style="color: rgb(255,153,0);">material</span>, <span style="color: rgb(153,204,0);">system details</span>)</li>
+<li>physical facet</li>
+<li>preferred citation (<span style="color: rgb(51,102,255);">524,</span> <span style="color: rgb(153,204,0);">preferred citation</span>)</li>
+<li>*processing information</li>
+<li>publication</li>
+<li>related materials (<span style="color: rgb(51,102,255);">544</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">*report type and date (513</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">*reproduction note (533,</span> <span style="color: rgb(153,204,0);">reproduction</span>
+<span style="color: rgb(51,102,255);">)</span>
+</li>
+<li>scope and content (<span style="color: rgb(51,102,255);">520,</span> <span style="color: rgb(255,153,0);">description</span>)</li>
+<li>separated materials</li>
+<li>
+<span style="color: rgb(51,102,255);">*study program information (526</span>)</li>
+<li>
+<span style="color: rgb(51,102,255);">*supplement note (525)</span>
+</li>
+<li>
+<span style="color: rgb(51,102,255);">*with note (501)</span>
+</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>displayLabel <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Free text qualifier of the note type.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>internal Only <strong>(boolean, required)</strong>
+</p>
+</td>
+<td>
+<p>If true, accessible to all users or only to repository and DAMS managers.</p>
+</td>
+<td>
+<p>yes,no (default)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>no = public, yes = custodial repository</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>value <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Scope Content Note</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>(inherit all properties)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Preferred Citation Note</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>(inherit all properties)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,128,0);">investigate automating this value/property</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Custodial Responsibility Note</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>(inherit all properties)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,128,0);">should be populated by Repository for an Object.</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Vocabulary</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A named vocabulary list.&#xA0; Can be used to manage a list of terms for a text field.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>description <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>Vocabulary name/description.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Renamed from name to avoid conflict with DAMSResource link to Name.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Vocabulary Entry</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A term in a vocabulary list.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Vocabulary (vocabulary 1)<br/><span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>code <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Code form of value (if available) e.g. en=English</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>value <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>Typically the display value. The code could potentially be used as an alternative for display.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>description <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Internal notes, scope, usage, etc.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>authority <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>authority URI <strong>(anyURI)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>value URI <strong>(anyURI)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Language</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>(inherit all properties)</strong>
+</p>
+</td>
+<td>
+<p>The language(s) of the collection, object, or object component.</p>
+</td>
+<td>
+<p>term: ISO639-2</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Role</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>(inherit all properties)</strong>
+</p>
+</td>
+<td>
+<p>A term describing the relationship between a Name and an Collection, Object, Component, Events, and Rights Status.</p>
+</td>
+<td>
+<p>
+<strong>Role CV:</strong> <br/> Terms are taken from the list <a href="http://www.loc.gov/marc/relators/relaterm.html">MARC Relators</a> Terms/Codes</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">A list of terms for the relationship of name to Collection, Object, Component, Events, and Rights Status. The predicates can be derived from standard and local list of role terms. Role may be a subclass of higher level entity such as Functional Relationship</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Cartographics</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>Information about geographic location (coordinates) or about a representation of geographic information (i.e. map, chart, model) for a collection, object, or object component.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>scale <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>The relative size of the representation or rendering of geographic information (i.e. map, chart, model) to the actual location.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>projection <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>The method of representing the surface of a sphere or other three-dimensional body on a plane.</p>
+</td>
+<td>
+<p>
+<a href="http://en.wikipedia.org/wiki/List_of_map_projections">Map Projections</a>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>reference System <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>The standard coordinate frame for the coordinates being used.</p>
+</td>
+<td>
+<p>
+<strong>Reference System CV:</strong> <br/> WGS84, WGS72, WGS66...</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>point <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Coordinates for a single point.</p>
+</td>
+<td>
+<p>Decimal degree format</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>line <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Coordinates for a line.</p>
+</td>
+<td>
+<p>Decimal degree format</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>polygon <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Coordinates for a polygon.</p>
+</td>
+<td>
+<p>Decimal degree format</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Related Resource</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>Describes a related resource either internal to the DAMS or in a system external to the DAMS. This could include metadata in another format, content version in another system, relationship between objects and relationship between collections in respect to a specified property.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">We may need to either write policy to enforce relationships between classes (object to object, collection to collection, etc.) or subclass Related Resource to enforce relationships.</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>uri <strong>(anyURI)</strong>
+</p>
+</td>
+<td>
+<p>URI where the related record can be accessed.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>type <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Type of relationship.</p>
+</td>
+<td>
+<p>
+<strong>Related Resource CV:</strong> <br/> online exhibit, source, parallel description, depicts, derived from</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">VRA relationship value list? Types TBD.</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>description <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Title of the related resource.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Renamed from title to avoid conflict with DAMSResource link to Title.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Source Capture</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>An indication of software and hardware used to produce the content file.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>DAMS Event (event 0-m)</p>
+</td>
+<td>
+<p>Ontology: MIX</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>source Type <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>the medium of the analog source material scanned to create a digital still image</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>image Producer <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>organization that created the file</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>capture Source <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>type of device used to create the file</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>scanner Manufacturer <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>scanner manufacturer name</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>scanner Model Name <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>scanner model name</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>scanning Software <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>scanning software name</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>scanning Software Version <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>scanning software version number</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Rights</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Copyright</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>The copyright status of an object or object component, indicating if the object or object component is under copyright, if it is in the public domain, or if copyright is unknown.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Dates (date 0-1)<br/><span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>copyright Status <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>An value indicating the copyright status for an object</p>
+</td>
+<td>
+<p>
+<strong>Copyright Status CV:</strong> <br/> Under copyright -- 1st Party <br/> Under copyright -- 3rd Party <br/> Public domain <br/> Copyright unknown</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">In context of UCSD, "Under copyright -- 1st Party" refers always and only to "UC Regents" as the rights holder, whereas "Under copyright -- 3rd party" refers to copyright held by any agent other than the UC Regents.</span><br/><br/><span style="color: rgb(51,153,102);">Modeling the copyright status in this manner allows the system to be configured differently for a different domain.</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>copyright Jurisdiction <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>An indication of the legal jurisdiction (typically national) in with the copyright status statement is true.</p>
+</td>
+<td>
+<p>
+<strong>Copyright Jurisdiction CV:</strong> <br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> for country codes</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>copyright Purpose Note <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>boilerplate text stating the content is made available for educational purposes.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>copyright Note <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>boilerplate copyright note referencing copyright status and jurisdiction.</p>
+</td>
+<td>
+<p>
+<strong>Copyright Note CV:</strong> <br/> See <a href="http://tpot.ucsd.edu/metadata-services/mas/cvs.html">TPOT</a>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">estimate that there will be 6 of these Note objects.</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Statute</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A national or regional statute that pertains to content and typically limits access to it on some degree, e.g. Federal Educational Rights and Privacy Act (FERPA), which limits dissemination of student records for a specified period of time.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Rights Action (rightsAction 1-m)<br/><span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>Statutes typically limit access to content in some way, often because the content is of a type protected by privacy / confidentiality laws, e.g. FERPA, HIPA, etc.<br/><br/><span style="color: rgb(51,153,102);">Currently we do not include in the DAMS any content subject to statutory regulation. That, of course, can change.</span><br/><br/>Statues link to a permissions and / or restriction records, and they link to dates. Thus, statutes link indirectly to dates.<br/><br/>Required Rights Action: whether the statute allows or prohibits display.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>statute Citation <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>The name of the statute, e.g., Family Education Rights and Privacy Act (FERPA)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>statute Jurisdiction <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>The country or regional jurisdiction in which the statute applies</p>
+</td>
+<td>
+<p>
+<strong>Statute Jurisdiction CV:</strong> <br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> for country codes <br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-2">ISO 3166-2</a> for state codes</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>statute Note <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Can be used to provide a summary statement of a statute and obligation to it, e.g., students records must be restricted for 50 years after creation or death (or whatever the actual terms are now)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">License</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>A contract between the rights holder for content and the repository indicating the rights and constraints placed upon the content for the repository. Purchase agreements, deeds of gift, transfer agreements are construable as kinds of licenses.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Rights Action (rightsAction 1-m)<br/><span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>It is possible for a license to be granted at specific time but for some or all eventual permissions to be restricted for a period of time initially. This is basically how embargoed ETDs are now modeled in the DAMS.<br/><br/>Licenses statements must link to permission and/or restrictions statements, and those statements link to dates. Thus, license statements do not directly link to dates. The active dates of the license should be capable of being inferred from the whole of the related permission / restriction statements, if there is cause to assign a collective date to a license.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>license Note <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Can be used to provide a summary of a license and its terms, either in place of a license or as an abstract on a license linked to.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>license URI <strong>(anyURI)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Other Rights</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>Any other rights not covered by copyright, statute, or license. This typically includes library policies that restrict access to content out of respect to cultural sensitivities.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Relationship (relationship 1)<br/>Rights Action (rightsAction 1-m)<br/><span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>We currently do not use Other Rights in the DAMS, but that is because this element was only recently added to PREMIS. We do have objects that have been restricted due to institutional policy, the culturally sensitive objects in Lambert being a case in point. We also have objects that UCSD has decided to display under the principles of fair use.<br/><br/>Other Rights, like other right types, link indirectly to dates via Rights Action.<br/><br/>Required Relationship: decision maker.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">other Rights Basis</span> <strong>
+<span style="text-decoration: underline;">(string, required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>For indicating the type or source of the other rights, e.g., UC San Diego Policy, UC Policy, etc.</p>
+</td>
+<td>
+<p>
+<strong>Other Rights Basis CV:</strong> <br/> fair use, cultural sensitivity</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">We might want to construct a controlled vocabulary for this. There are likely only a few institutional policies / situations that apply</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>other Rights Note <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Notes can be linked to provide summaries of institution policies.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>other Rights&#xA0; URI <strong>(anyURI)</strong>
+</p>
+</td>
+<td>
+<p>An actionable link to the documentation containing the institutional policy or other rights being applied</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Rights Action</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>An action that is permitted or restricted according to the rights status for an object or object component.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>begin Date <strong>(date)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">same beginDate property from Date class</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>end Date <strong>(date)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">same endDate property from Date class</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>type <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>Rights Action CV:</strong> <br/> display, migrate, replicate, modify,...</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Permission</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>(inherit all properties)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Restriction</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<strong>(inherit all properties)</strong>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>endDate required</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">DAMS Event</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">(required)</span>
+</strong>
+</p>
+</td>
+<td>
+<p>Any event occurring in the DAMS slated to being tracked. Such events can include uploading of content files, creation and updating of metadata records, deletion of objects, and transfer of objects and collections to preservation management.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Relationship (relationship 1-m)</p>
+</td>
+<td>
+<p>Ontology: PREMIS<br/><br/>Required name/role: event initiator.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>type <strong>(string required)</strong>
+</p>
+</td>
+<td>
+<p>Type of event.</p>
+</td>
+<td>
+<p>
+<strong>Event Type CV:</strong> <br/> See <a href="/display/dlpg/DAMS+Events+Vocabulary" data-linked-resource-id="15433897" data-linked-resource-type="page" data-linked-resource-default-alias="DAMS Events Vocabulary" data-base-url="https://illiad.ucsd.edu:8443">UCSD DAMS Events Vocabulary</a> (will need revision to reflect Data Model)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>end Date <strong>(dateTimeStamp, required)</strong>
+</p>
+</td>
+<td>
+<p>Timestamp when the event occurred.</p>
+</td>
+<td>
+<p>ISO8601</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">same endDate property from Date class</span>
+</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>detail <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>Description of the event, containing any relevant details.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>outcome <strong>(string, required)</strong>
+</p>
+</td>
+<td>
+<p>Whether the event succeeded or failed.</p>
+</td>
+<td>
+<p>Action succeeded</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>outcome Note <strong>(string)</strong>
+</p>
+</td>
+<td>
+<p>Extended information about the event, including any relevant status message and timestamp.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>MADS Extensions</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Outline and extensions shown.&#xA0; See the <a href="http://www.loc.gov/standards/mads/rdf/">MADS Primer</a> for the full MADS ontology.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">Element</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,0);">Built Work Place Element </span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,0);">Cultural Context Element </span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,0);">Function Element </span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,0);">Genre Form Element</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,0);">Geographic Element</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,0);">Iconography Element </span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>Name Element</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>Date Name Element</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>Family Name Element</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>Full Name Element</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>Given Name Element</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>Terms Of Address Name Element</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,0);">Scientific Name Element </span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,0);">Style Period Element </span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,0);">Technique Element </span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,0);">Temporal Element</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,0);">Topic Element</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">MADSType</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>See <a href="http://www.loc.gov/standards/mads/rdf/">MADS RDF documentation</a>.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">Complex Type</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Complex Subject</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>DAMS Event (event 0-m)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(51,153,102);">Simple Type</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Built Work Place</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>Describes a built environment, site, or other constructed place.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Cultural Context</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>The name of the culture, people (ethonym), or adjectival form of a country name from which a resource originated, or has been associated with.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Function</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">GenreForm</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">Geographic</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Iconography</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>The people and items depicted, the composition of an image, etc.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,128,0);">Name</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>DAMS Event (event 0-m)</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">Corporate Name</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">Family Name</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">Personal Name</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">Conference Name</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">Occupation</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Scientific Name</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Style Period</span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>A defined style, historical period, group, school, dynasty, movement, etc. whose characteristics are represented in the resource.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>
+<span style="color: rgb(0,0,255);">Technique </span>
+</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>The production or manufacturing processes, techniques, and methods incorporated in the fabrication or alteration of the resource.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>VRA Core 4</p>
+</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">Temporal</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>
+<span style="color: rgb(0,0,255);">Topic</span>
+</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
