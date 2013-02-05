@@ -36,7 +36,7 @@
 </tr>
 <tr>
 <td> <p>&#xA0;</p> </td>
-<td> <p> <span style="color: rgb(0,0,255);">Repository </span> </p> </td>
+<td> <p> <span style="color: rgb(0,0,255);">Organizational Unit </span> </p> </td>
 <td> <p>&#xA0;</p> </td>
 <td> <p>&#xA0;</p> </td>
 <td> <p>
@@ -46,7 +46,7 @@
 </p>
 </td>
 <td>
-<p>The identification of a library unit (or non-library data provider) that is responsible for supplying content to the DAMS and for administering that content over time, including answering queries from users.<br/><br/>All objects in the DAMS must be linked to one and only one repository.</p>
+<p>The identification of a library unit (or non-library data provider) that is responsible for supplying content to the DAMS and for administering that content over time, including answering queries from users.<br/><br/>All objects in the DAMS must be linked to one and only one organizational unit.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -56,7 +56,7 @@
 </p>
 </td>
 <td>
-<p>Mandatory event: repository record creation.<br/><br/><span style="color: rgb(0,128,0);">Will revisit the need for Agency Code and Country Code properties. These attributes may be conducive for sharing records.</span>
+<p>Mandatory event: organizational unit record creation.<br/><br/><span style="color: rgb(0,128,0);">Will revisit the need for Agency Code and Country Code properties. These attributes may be conducive for sharing records.</span>
 </p>
 </td>
 </tr>
@@ -65,8 +65,8 @@
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
-<td><p>repository Name <strong>(string, required)</strong></p></td>
-<td><p>The name of the repository or organizational unit assuming custodial responsibility for DAMS content.</p></td>
+<td><p>unit Name <strong>(string, required)</strong></p></td>
+<td><p>The name of the organizational unit assuming custodial responsibility for DAMS content.</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
@@ -76,8 +76,8 @@
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
-<td><p>repository Description <strong>(string)</strong></p></td>
-<td><p>Additional description of the repository.</p></td>
+<td><p>unit Description <strong>(string)</strong></p></td>
+<td><p>Additional description of the organizational unit.</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
@@ -96,11 +96,11 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>repository URI <strong>(anyURI, required)</strong>
+<p>unit URI <strong>(anyURI, required)</strong>
 </p>
 </td>
 <td>
-<p>The URI linking to a webpage for the repository that contains contact and access information about the repository.</p>
+<p>The URI linking to a webpage for the organizational unit that contains contact and access information about the organizational unit.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -317,11 +317,11 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Repository (repository 1)<br/>Collection (collection 0-m)<br/>Component (hasComponent 0-m)<br/>File (hasFile 0-m)<br/><span style="text-decoration: underline;">Title (title 1-m)</span><br/><span style="text-decoration: underline;">Date (date 0-m)</span><br/><span style="text-decoration: underline;">Language (language 1-m)</span><br/><span style="text-decoration: underline;">Note (note 0-m)</span><br/><span style="text-decoration: underline;">Relationship (relationship 0-m)</span><br/><span style="text-decoration: underline;">Subject (subject 0-m)</span><br/>Copyright (copyright 1)<br/>Statute (statute, 0-1)<br/>License (license, 0-1)<br/>Other Rights (otherRights, 0-1)<br/>Name (rightsHolder 0-m)<br/><span style="text-decoration: underline;">Related Resource (relatedResource 0-m)</span><br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
+<p>Organizational Unit (unit 1)<br/>Collection (collection 0-m)<br/>Component (hasComponent 0-m)<br/>File (hasFile 0-m)<br/><span style="text-decoration: underline;">Title (title 1-m)</span><br/><span style="text-decoration: underline;">Date (date 0-m)</span><br/><span style="text-decoration: underline;">Language (language 1-m)</span><br/><span style="text-decoration: underline;">Note (note 0-m)</span><br/><span style="text-decoration: underline;">Relationship (relationship 0-m)</span><br/><span style="text-decoration: underline;">Subject (subject 0-m)</span><br/>Copyright (copyright 1)<br/>Statute (statute, 0-1)<br/>License (license, 0-1)<br/>Other Rights (otherRights, 0-1)<br/>Name (rightsHolder 0-m)<br/><span style="text-decoration: underline;">Related Resource (relatedResource 0-m)</span><br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
 </p>
 </td>
 <td>
-<p>Every object must be linked to one, and only one, Repository. It may be linked to as many collections as are pertinent.<br/><br/><span style="color: rgb(0,128,0);">
+<p>Every object must be linked to one, and only one, organizational unit. It may be linked to as many collections as are pertinent.<br/><br/><span style="color: rgb(0,128,0);">
 <span style="text-decoration: line-through;">Must have at least one child component or file.</span>
 </span> <span style="color: rgb(0,128,0);">DAMS Object requirements need to be changed to reflect this (RCI Levy &amp; SIO examples)</span><br/><br/>Mandatory event: object creation.<br/><br/>Title and Language: cardinality overrides superclass.</p>
 </td>
@@ -1883,7 +1883,7 @@
 </p>
 </td>
 <td>
-<p>If true, accessible to all users or only to repository and DAMS managers.</p>
+<p>If true, accessible to all users or only to organizational unit and DAMS managers.</p>
 </td>
 <td>
 <p>yes,no (default)</p>
@@ -1892,7 +1892,7 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>no = public, yes = custodial repository</p>
+<p>no = public, yes = custodial organizational unit</p>
 </td>
 </tr>
 <tr>
@@ -2018,7 +2018,7 @@
 </td>
 <td>
 <p>
-<span style="color: rgb(0,128,0);">should be populated by Repository for an Object.</span>
+<span style="color: rgb(0,128,0);">should be populated by Organizational Unit for an Object.</span>
 </p>
 </td>
 </tr>
@@ -3326,7 +3326,7 @@
 </p>
 </td>
 <td>
-<p>A contract between the rights holder for content and the repository indicating the rights and constraints placed upon the content for the repository. Purchase agreements, deeds of gift, transfer agreements are construable as kinds of licenses.</p>
+<p>A contract between the rights holder for content and the organizational unit indicating the rights and constraints placed upon the content for the organizational unit. Purchase agreements, deeds of gift, transfer agreements are construable as kinds of licenses.</p>
 </td>
 <td>
 <p>&#xA0;</p>
