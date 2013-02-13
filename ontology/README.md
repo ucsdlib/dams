@@ -8,6 +8,7 @@ Hutt, Longshou Situ and Brad Westbrook.
 * [User Stories (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/user-stories.pdf)
 * [Overview Diagram (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/overview-diagram.pdf)
 * [Entity-Relationship Diagram (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/entity-relationship-diagram.pdf)
+* [code4lib 2013 Presentation (PPTX)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/C4L-All_TEH_METADATAS_2013-final.pptx)
 * Examples
     * [Selected Example Data Diagram (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/examples/example-diagram.pdf)
 	* [Dissertation Example (RDF/XML)](https://github.com/ucsdlib/dams/blob/master/ontology/examples/dissertation.rdf.xml)
