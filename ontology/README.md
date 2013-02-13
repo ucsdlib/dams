@@ -3,16 +3,16 @@ DAMS OWL Ontology
 Developed at The UC San Diego Library by Esmé Cowles, Matt Critchlow, Arwen
 Hutt, Longshou Situ and Brad Westbrook.
 
-* [OWL Ontology](/ucsdlib/dams/blob/master/ontology/dams.owl)
-* Data Dictionary [(HTML)](http://htmlpreview.github.com/?https://github.com/ucsdlib/dams/master/ontology/docs/data-dictionary.html), [(PDF)](/ucsdlib/dams/blob/master/ontology/docs/data-dictionary.pdf)
-* [User Stories (PDF)](/ucsdlib/dams/blob/master/ontology/docs/user-stories.pdf)
-* [Overview Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/docs/overview-diagram.pdf)
-* [Entity-Relationship Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/docs/entity-relationship-diagram.pdf)
+* [OWL Ontology](https://github.com/ucsdlib/dams/blob/master/ontology/dams.owl)
+* Data Dictionary [(HTML)](http://htmlpreview.github.com/?https://github.com/ucsdlib/dams/master/ontology/docs/data-dictionary.html), [(PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/data-dictionary.pdf)
+* [User Stories (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/user-stories.pdf)
+* [Overview Diagram (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/overview-diagram.pdf)
+* [Entity-Relationship Diagram (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/entity-relationship-diagram.pdf)
 * Examples
-    * [Selected Example Data Diagram (PDF)](/ucsdlib/dams/blob/master/ontology/examples/example-diagram.pdf)
-	* [Dissertation Example (RDF/XML)](/ucsdlib/dams/blob/master/ontology/examples/dissertation.rdf.xml)
-	* [Dissertation Diagram (PNG)](/ucsdlib/dams/blob/master/ontology/examples/dissertation.png)
-	* [Research Data Example (RDF/XML)](/ucsdlib/dams/blob/master/ontology/examples/santafe.rdf.xml)
+    * [Selected Example Data Diagram (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/examples/example-diagram.pdf)
+	* [Dissertation Example (RDF/XML)](https://github.com/ucsdlib/dams/blob/master/ontology/examples/dissertation.rdf.xml)
+	* [Dissertation Diagram (PNG)](https://github.com/ucsdlib/dams/blob/master/ontology/examples/dissertation.png)
+	* [Research Data Example (RDF/XML)](https://github.com/ucsdlib/dams/blob/master/ontology/examples/santafe.rdf.xml)
 
 
 See Also:
