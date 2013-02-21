@@ -8,12 +8,23 @@
     table { border-width: 1px; border-spacing: 0; border-collapse: collapse; }
     td, th { vertical-align: top; margin: 0; padding: 3px; border-width: 1px 1px 0 0; }
   </style>
+	<link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<script>
+	  $(function() {
+	    $("#menu").menu();
+	  });
+	 </script>
+	<style>
+		.ui-menu { width: 200px; }
+	</style>
 </head>
 <body>
 	<!-- table of contents -->
 	<h1>DAMS4 Data Dictionary</h1>
 	<h2>Table of Contents</h2>
-	<ul>
+	<ul id="menu">
 		<li><a href="#dams-thing">DAMS Thing</a>
 			<ul>
 				<li><a href="#dams-unit">Organizational Unit</a></li>
