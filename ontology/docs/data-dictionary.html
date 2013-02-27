@@ -8,8 +8,135 @@
     table { border-width: 1px; border-spacing: 0; border-collapse: collapse; }
     td, th { vertical-align: top; margin: 0; padding: 3px; border-width: 1px 1px 0 0; }
   </style>
+	<link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+	<script>
+	  $(function() {
+	    $("#menu").menu();
+	  });
+	 </script>
+	<style>
+		.ui-menu { width: 200px; }
+	</style>
 </head>
 <body>
+	<!-- table of contents -->
+	<h1>DAMS4 Data Dictionary</h1>
+	<h2>Table of Contents</h2>
+	<ul id="menu">
+		<li><a href="#dams-thing">DAMS Thing</a>
+			<ul>
+				<li><a href="#dams-unit">Organizational Unit</a></li>
+				<li><a href="#dams-resource">DAMS Resource</a>
+					<ul>
+						<li><a href="#dams-collection">Collection</a>
+							<ul>
+								<li><a href="#dams-assembled-collection">Assembled Collection</a></li>
+								<li><a href="#dams-provenance-collection">Provenance Collection</a></li>
+								<li><a href="#dams-provenance-collection-part">Provenance Collection Part</a></li>
+							</ul>
+						</li>
+						<li><a href="#dams-object">Object</a></li>
+						<li><a href="#dams-component">Component</a></li>
+					</ul>
+				</li>
+				<li><a href="#dams-file">File</a></li>
+				<li><a href="#dams-relationship">Relationship</a></li>
+				<li><a href="#dams-title">Title</a></li>
+				<li><a href="#dams-date">Date</a></li>
+				<li><a href="#dams-note">Note</a></li>
+				<li><a href="#dams-vocabulary">Vocabulary</a></li>
+				<li><a href="#dams-vocabulary-entry">Vocabulary Entry</a>
+					<ul>
+						<li><a href="#dams-language">Language</a></li>
+						<li><a href="#dams-role">Role</a></li>
+					</ul>
+				</li>
+				<li><a href="#dams-cartographics">Cartographics</a></li>
+				<li><a href="#dams-related-resource">Related Resource</a></li>
+				<li><a href="#dams-source-capture">Source Capture</a></li> <!-- NEXT -->
+				<li><a href="#dams-rights">Rights</a>
+					<ul>
+						<li><a href="#dams-copyright">Copyright</a></li>
+						<li><a href="#dams-statute">Statute</a></li>
+						<li><a href="#dams-license">License</a></li>
+						<li><a href="#dams-other-rights">Other Rights</a></li>
+					</ul>
+				</li>
+				<li><a href="#dams-rights-action">Rights Action</a>
+					<ul>
+						<li><a href="#dams-permission">Permission</a></li>
+						<li><a href="#dams-restriction">Restriction</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="#dams-event">DAMS Event</a></li>
+		<li><a href="#mads-extensions">DAMS MADS Extensions</a>
+			<ul>
+				<li><a href="#mads-element">Element</a>
+					<ul>
+						<li><a href="#mads-built-work-place-element">Built Work Place Element</a></li>
+						<li><a href="#mads-cultural-context-element">Cultural Content Element</a></li>
+						<li><a href="#mads-function-element">Function Element</a></li>
+						<li><a href="#mads-genre-form-element">Genre Form Element</a></li>
+						<li><a href="#mads-geographic-element">Geographic Element</a></li>
+						<li><a href="#mads-iconography-element">Iconography Element</a></li>
+						<li><a href="#mads-name-element">Name Element</a>
+							<ul>
+								<li><a href="#mads-date-name-element">Date Name Element</a></li>
+								<li><a href="#mads-family-name-element">Family Name Element</a></li>
+								<li><a href="#mads-full-name-element">Full Name Element</a></li>
+								<li><a href="#mads-given-name-element">Given Name Element</a></li>
+								<li><a href="#mads-terms-of-address-name-element">Terms Of Address Name Element</a></li>
+							</ul>
+						</li>
+						<li><a href="#mads-scientific-name-element">Scientific Name Element</a></li>
+						<li><a href="#mads-style-period-element">Style Period Element</a></li>
+						<li><a href="#mads-technique-element">Technique Element</a></li>
+						<li><a href="#mads-temporal-element">Temporal Element</a></li>
+						<li><a href="#mads-topic-element">Topic Element</a></li>
+					</ul>
+				</li>
+				<li><a href="#mads-type">MADS Type</a>
+					<ul>
+						<li><a href="#mads-complex-type">Complex Type</a>
+							<ul>
+								<li><a href="#mads-complex-subject">Complex Subject</a></li>
+							</ul>
+						</li>
+						<li><a href="#mads-name-element">Simple Type</a>
+							<ul>
+								<li><a href="#mads-built-work-place">Built Work Place</a></li>
+								<li><a href="#mads-cultural-context">Cultural Context</a></li>
+								<li><a href="#mads-function">Function</a></li>
+								<li><a href="#mads-genreform">GenreForm</a></li>
+								<li><a href="#mads-geographic">Geographic</a></li>
+								<li><a href="#mads-iconography">Iconography</a></li>
+								<li><a href="#mads-name">Name</a>
+									<ul>
+										<li><a href="#mads-corporate-name">Conference Name</a></li>
+										<li><a href="#mads-family-name">Family Name</a></li>
+										<li><a href="#mads-personal-name">Personal Name</a></li>
+										<li><a href="#mads-conference-name">Conference Name</a></li>
+									</ul>
+								</li>
+								<li><a href="#mads-occupation">Occupation</a></li>
+								<li><a href="#mads-scientific-name">Scientific Name</a></li>
+								<li><a href="#mads-style-period">Style Period</a></li>
+								<li><a href="#mads-technique">Technique</a></li>
+								<li><a href="#mads-temporal">Temporal</a></li>
+								<li><a href="#mads-topic">Topic</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<!-- end: table of contents -->
+<h2>Data Dictionary</h2>
 <table>
 <tbody>
 <tr>
@@ -24,7 +151,7 @@
 <th> <p>Notes</p> </th>
 </tr>
 <tr>
-<td> <p>DAMS Thing</p> </td>
+<td> <p id="dams-thing">DAMS Thing</p> </td>
 <td> <p>&#xA0;</p> </td>
 <td> <p>&#xA0;</p> </td>
 <td> <p>&#xA0;</p> </td>
@@ -36,7 +163,7 @@
 </tr>
 <tr>
 <td> <p>&#xA0;</p> </td>
-<td> <p> <span style="color: rgb(0,0,255);">Organizational Unit </span> </p> </td>
+<td> <p id="dams-unit"> <span style="color: rgb(0,0,255);">Organizational Unit </span> </p> </td>
 <td> <p>&#xA0;</p> </td>
 <td> <p>&#xA0;</p> </td>
 <td> <p>
@@ -117,7 +244,7 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>DAMS Resource</p>
+<p id="dams-resource">DAMS Resource</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -152,7 +279,7 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Collection</p>
+<p id="dams-collection">Collection</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -191,7 +318,7 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-assembled-collection">
 <span style="color: rgb(0,0,255);">Assembled Collection</span>
 </p>
 </td>
@@ -227,7 +354,7 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-provenance-collection">
 <span style="color: rgb(0,0,255);">Provenance Collection</span>
 </p>
 </td>
@@ -263,7 +390,7 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-provenance-collection-part">
 <span style="color: rgb(0,0,255);">Provenance Collection Part</span>
 </p>
 </td>
@@ -296,7 +423,7 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-object">
 <span style="color: rgb(0,0,255);">Object</span>
 </p>
 </td>
@@ -383,7 +510,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Component</p>
+<p id="dams-component">Component</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -503,7 +630,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>File</p>
+<p id="dams-file">File</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1085,7 +1212,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Relationship</p>
+<p id="dams-relationship">Relationship</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1119,7 +1246,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Title</p>
+<p id="dams-title">Title</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1486,7 +1613,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Date</p>
+<p id="dams-date">Date</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1680,7 +1807,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Note</p>
+<p id="dams-note">Note</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2126,7 +2253,7 @@ Name (rightsHolder 0-m)<br/>
 </p>
 </td>
 <td>
-<p>Vocabulary name/description.</p>
+<p id="dams-vocabulary">Vocabulary name/description.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2143,7 +2270,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-vocabulary-entry">
 <span style="color: rgb(0,0,255);">Vocabulary Entry</span>
 </p>
 </td>
@@ -2362,7 +2489,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-language">
 <span style="color: rgb(0,0,255);">Language</span>
 </p>
 </td>
@@ -2397,7 +2524,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-role">
 <span style="color: rgb(0,0,255);">Role</span>
 </p>
 </td>
@@ -2432,7 +2559,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-cartographics">
 <span style="color: rgb(0,0,255);">Cartographics</span>
 </p>
 </td>
@@ -2658,7 +2785,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Related Resource</p>
+<p id="dams-related-resource">Related Resource</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2788,7 +2915,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Source Capture</p>
+<p id="dams-source-capture">Source Capture</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3031,7 +3158,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Rights</p>
+<p id="dams-rights">Rights</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3069,7 +3196,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-copyright">
 <span style="color: rgb(0,0,255);">Copyright</span>
 </p>
 </td>
@@ -3233,7 +3360,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-statute">
 <span style="color: rgb(0,0,255);">Statute</span>
 </p>
 </td>
@@ -3360,7 +3487,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-license">
 <span style="color: rgb(0,0,255);">License</span>
 </p>
 </td>
@@ -3456,7 +3583,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="dams-other-rights">
 <span style="color: rgb(0,0,255);">Other Rights</span>
 </p>
 </td>
@@ -3585,7 +3712,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Rights Action</p>
+<p id="dams-rights-action">Rights Action</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3718,7 +3845,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Permission</p>
+<p id="dams-permission">Permission</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3751,7 +3878,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Restriction</p>
+<p id="dams-restriction">Restriction</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3778,7 +3905,7 @@ Name (rightsHolder 0-m)<br/>
 </tr>
 <tr>
 <td>
-<p>
+<p id="dams-event">
 <span style="color: rgb(0,0,255);">DAMS Event</span>
 </p>
 </td>
@@ -3995,7 +4122,7 @@ Name (rightsHolder 0-m)<br/>
 </tr>
 <tr>
 <td>
-<p>MADS Extensions</p>
+<p id="mads-extensions">MADS Extensions</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -4053,7 +4180,7 @@ Name (rightsHolder 0-m)<br/>
 </tr>
 <tr>
 <td>
-<p>
+<p id="mads-element">
 <span style="color: rgb(51,153,102);">Element</span>
 </p>
 </td>
@@ -4087,7 +4214,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-built-work-place-element">
 <span style="color: rgb(0,0,0);">Built Work Place Element </span>
 </p>
 </td>
@@ -4118,7 +4245,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-cultural-context-element">
 <span style="color: rgb(0,0,0);">Cultural Context Element </span>
 </p>
 </td>
@@ -4149,7 +4276,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-function-element">
 <span style="color: rgb(0,0,0);">Function Element </span>
 </p>
 </td>
@@ -4178,7 +4305,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,0);">Genre Form Element</span>
+<span style="color: rgb(0,0,0);" id="mads-genre-form-element">Genre Form Element</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4191,7 +4318,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,0);">Geographic Element</span>
+<span style="color: rgb(0,0,0);" id="mads-geographic-element">Geographic Element</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4207,7 +4334,7 @@ Name (rightsHolder 0-m)<br/>
 </td>
 <td>
 <p>
-<span style="color: rgb(0,0,0);">Iconography Element </span>
+<span style="color: rgb(0,0,0);" id="mads-iconography-element">Iconography Element </span>
 </p>
 </td>
 <td>
@@ -4234,7 +4361,7 @@ Name (rightsHolder 0-m)<br/>
 </tr>
 <tr>
 <td>&#xA0;</td>
-<td>Name Element</td>
+<td><span id="mads-name-element">Name Element</span></td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4246,7 +4373,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
-<td>Date Name Element</td>
+<td><span id="mads-date-name-element">Date Name Element</span></td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4257,7 +4384,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
-<td>Family Name Element</td>
+<td><span id="mads-family-name-element">Family Name Element</span></td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4268,7 +4395,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
-<td>Full Name Element</td>
+<td><span id="mads-full-name-element">Full Name Element</span></td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4279,7 +4406,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
-<td>Given Name Element</td>
+<td><span id="mads-given-name-element">Given Name Element</span></td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4290,7 +4417,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
-<td>Terms Of Address Name Element</td>
+<td><span id="mads-terms-of-address-name-element">Terms Of Address Name Element</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4303,7 +4430,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-scientific-name-element">
 <span style="color: rgb(0,0,0);">Scientific Name Element </span>
 </p>
 </td>
@@ -4334,7 +4461,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-style-period-element">
 <span style="color: rgb(0,0,0);">Style Period Element </span>
 </p>
 </td>
@@ -4365,7 +4492,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-technique-element">
 <span style="color: rgb(0,0,0);">Technique Element </span>
 </p>
 </td>
@@ -4394,7 +4521,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,0);">Temporal Element</span>
+<span id="mads-temporal-element" style="color: rgb(0,0,0);">Temporal Element</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4407,7 +4534,7 @@ Name (rightsHolder 0-m)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,0);">Topic Element</span>
+<span id="mads-topic-element" style="color: rgb(0,0,0);">Topic Element</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4418,7 +4545,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 </tr>
 <tr>
-<td><p><span style="color: rgb(51,153,102);">MADSType</span></p></td>
+<td><p id="mads-type"><span style="color: rgb(51,153,102);">MADSType</span></p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
@@ -4441,7 +4568,7 @@ Name (rightsHolder 0-m)<br/>
 </tr>
 <tr>
 <td><p>&#xA0;</p></td>
-<td><p><span style="color: rgb(51,153,102);">Complex Type</span></p></td>
+<td><p id="mads-complex-type"><span style="color: rgb(51,153,102);">Complex Type</span></p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p> </td>
 <td> <p>&#xA0;</p> </td>
@@ -4458,7 +4585,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-complex-subject">
 <span style="color: rgb(0,0,255);">Complex Subject</span>
 </p>
 </td>
@@ -4486,7 +4613,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-simple-type">
 <span style="color: rgb(51,153,102);">Simple Type</span>
 </p>
 </td>
@@ -4520,7 +4647,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-built-work-place">
 <span style="color: rgb(0,0,255);">Built Work Place</span>
 </p>
 </td>
@@ -4551,7 +4678,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-cultural-context">
 <span style="color: rgb(0,0,255);">Cultural Context</span>
 </p>
 </td>
@@ -4582,7 +4709,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-function">
 <span style="color: rgb(0,0,255);">Function</span>
 </p>
 </td>
@@ -4609,7 +4736,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">GenreForm</span>
+<span id="mads-genreform" style="color: rgb(0,0,255);">GenreForm</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4622,7 +4749,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">Geographic</span>
+<span id="mads-geographic" style="color: rgb(0,0,255);">Geographic</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4639,7 +4766,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-iconography">
 <span style="color: rgb(0,0,255);">Iconography</span>
 </p>
 </td>
@@ -4670,7 +4797,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-name">
 <span style="color: rgb(0,128,0);">Name</span>
 </p>
 </td>
@@ -4698,7 +4825,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">Corporate Name</span>
+<span id="mads-corporate-name" style="color: rgb(0,0,255);">Corporate Name</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4711,7 +4838,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">Family Name</span>
+<span id="mads-family-name" style="color: rgb(0,0,255);">Family Name</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4724,7 +4851,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">Personal Name</span>
+<span id="mads-personal-name" style="color: rgb(0,0,255);">Personal Name</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4737,7 +4864,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">Conference Name</span>
+<span id="mads-conference-name" style="color: rgb(0,0,255);">Conference Name</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4749,7 +4876,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">Occupation</span>
+<span id="mads-occupation" style="color: rgb(0,0,255);">Occupation</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4766,7 +4893,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-scientific-name">
 <span style="color: rgb(0,0,255);">Scientific Name</span>
 </p>
 </td>
@@ -4797,7 +4924,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-style-period">
 <span style="color: rgb(0,0,255);">Style Period</span>
 </p>
 </td>
@@ -4828,7 +4955,7 @@ Name (rightsHolder 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
+<p id="mads-technique">
 <span style="color: rgb(0,0,255);">Technique </span>
 </p>
 </td>
@@ -4855,7 +4982,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">Temporal</span>
+<span id="mads-temporal" style="color: rgb(0,0,255);">Temporal</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4868,7 +4995,7 @@ Name (rightsHolder 0-m)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,255);">Topic</span>
+<span id="mads-topic" style="color: rgb(0,0,255);">Topic</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
