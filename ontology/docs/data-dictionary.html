@@ -27,7 +27,7 @@
 	<ul id="menu">
 		<li><a href="#dams-thing">DAMS Thing</a>
 			<ul>
-				<li><a href="#dams-unit">Organizational Unit</a></li>
+				<li><a href="#dams-unit">Administrative Unit</a></li>
 				<li><a href="#dams-resource">DAMS Resource</a>
 					<ul>
 						<li><a href="#dams-collection">Collection</a>
@@ -163,7 +163,7 @@
 </tr>
 <tr>
 <td> <p>&#xA0;</p> </td>
-<td> <p id="dams-unit"> <span style="color: rgb(0,0,255);">Organizational Unit </span> </p> </td>
+<td> <p id="dams-unit"> <span style="color: rgb(0,0,255);">Administrative Unit </span> </p> </td>
 <td> <p>&#xA0;</p> </td>
 <td> <p>&#xA0;</p> </td>
 <td> <p>
@@ -173,7 +173,7 @@
 </p>
 </td>
 <td>
-<p>The identification of a library unit (or non-library data provider) that is responsible for supplying content to the DAMS and for administering that content over time, including answering queries from users.<br/><br/>All objects in the DAMS must be linked to one and only one organizational unit.</p>
+<p>The identification of a library unit (or non-library data provider) that is responsible for supplying content to the DAMS and for administering that content over time, including answering queries from users.<br/><br/>All objects in the DAMS must be linked to one and only one administrative unit.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -183,7 +183,7 @@
 </p>
 </td>
 <td>
-<p>Mandatory event: organizational unit record creation.<br/><br/><span style="color: rgb(0,128,0);">Will revisit the need for Agency Code and Country Code properties. These attributes may be conducive for sharing records.</span>
+<p>Mandatory event: Administrative unit record creation.<br/><br/><span style="color: rgb(0,128,0);">Will revisit the need for Agency Code and Country Code properties. These attributes may be conducive for sharing records.</span>
 </p>
 </td>
 </tr>
@@ -193,7 +193,7 @@
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>unit Name <strong>(string, required)</strong></p></td>
-<td><p>The name of the organizational unit assuming custodial responsibility for DAMS content.</p></td>
+<td><p>The name of the Administrative unit assuming custodial responsibility for DAMS content.</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
@@ -204,7 +204,7 @@
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>unit Description <strong>(string)</strong></p></td>
-<td><p>Additional description of the organizational unit.</p></td>
+<td><p>Additional description of the Administrative unit.</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
@@ -227,7 +227,7 @@
 </p>
 </td>
 <td>
-<p>The URI linking to a webpage for the organizational unit that contains contact and access information about the organizational unit.</p>
+<p>The URI linking to a webpage for the Administrative unit that contains contact and access information about the Administrative unit.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -444,7 +444,7 @@
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Organizational Unit (unit 1)<br/>
+<p>Administrative Unit (unit 1)<br/>
 Collection (collection 0-m)<br/>
 AssembledCollection (assembledCollection 0-m)<br/>
 ProvenanceCollection (provenanceCollection 0-1)<br/>
@@ -468,7 +468,7 @@ Cartographics (cartographics 0-1)<br/>
 </p>
 </td>
 <td>
-<p>Every object must be linked to one, and only one, organizational unit. It may be linked to as many collections as are pertinent.<br/><br/><span style="color: rgb(0,128,0);">
+<p>Every object must be linked to one, and only one, Administrative unit. It may be linked to as many collections as are pertinent.<br/><br/><span style="color: rgb(0,128,0);">
 <span style="text-decoration: line-through;">Must have at least one child component or file.</span>
 </span> <span style="color: rgb(0,128,0);">DAMS Object requirements need to be changed to reflect this (RCI Levy &amp; SIO examples)</span><br/><br/>Mandatory event: object creation.<br/><br/>Title and Language: cardinality overrides superclass.</p>
 </td>
@@ -2071,7 +2071,7 @@ Cartographics (cartographics 0-1)<br/>
 </p>
 </td>
 <td>
-<p>If true, accessible to all users or only to organizational unit and DAMS managers.</p>
+<p>If true, accessible to all users or only to Administrative unit and DAMS managers.</p>
 </td>
 <td>
 <p>yes,no (default)</p>
@@ -2080,7 +2080,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>no = public, yes = custodial organizational unit</p>
+<p>no = public, yes = custodial Administrative unit</p>
 </td>
 </tr>
 <tr>
@@ -2206,7 +2206,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="color: rgb(0,128,0);">should be populated by Organizational Unit for an Object.</span>
+<span style="color: rgb(0,128,0);">should be populated by Administrative Unit for an Object.</span>
 </p>
 </td>
 </tr>
@@ -3514,7 +3514,7 @@ Cartographics (cartographics 0-1)<br/>
 </p>
 </td>
 <td>
-<p>A contract between the rights holder for content and the organizational unit indicating the rights and constraints placed upon the content for the organizational unit. Purchase agreements, deeds of gift, transfer agreements are construable as kinds of licenses.</p>
+<p>A contract between the rights holder for content and the Administrative unit indicating the rights and constraints placed upon the content for the Administrative unit. Purchase agreements, deeds of gift, transfer agreements are construable as kinds of licenses.</p>
 </td>
 <td>
 <p>&#xA0;</p>
