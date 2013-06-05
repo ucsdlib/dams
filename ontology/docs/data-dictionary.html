@@ -8,7 +8,7 @@
     table { border-width: 1px; border-spacing: 0; border-collapse: collapse; }
     td, th { vertical-align: top; margin: 0; padding: 3px; border-width: 1px 1px 0 0; }
   </style>
-	<link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet">
+	<link href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" rel="stylesheet"/>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
 	<script>
@@ -43,19 +43,11 @@
 				</li>
 				<li><a href="#dams-file">File</a></li>
 				<li><a href="#dams-relationship">Relationship</a></li>
-				<li><a href="#dams-title">Title</a></li>
 				<li><a href="#dams-date">Date</a></li>
 				<li><a href="#dams-note">Note</a></li>
-				<li><a href="#dams-vocabulary">Vocabulary</a></li>
-				<li><a href="#dams-vocabulary-entry">Vocabulary Entry</a>
-					<ul>
-						<li><a href="#dams-language">Language</a></li>
-						<li><a href="#dams-role">Role</a></li>
-					</ul>
-				</li>
 				<li><a href="#dams-cartographics">Cartographics</a></li>
 				<li><a href="#dams-related-resource">Related Resource</a></li>
-				<li><a href="#dams-source-capture">Source Capture</a></li> <!-- NEXT -->
+				<li><a href="#dams-source-capture">Source Capture</a></li><!-- NEXT -->
 				<li><a href="#dams-rights">Rights</a>
 					<ul>
 						<li><a href="#dams-copyright">Copyright</a></li>
@@ -75,6 +67,7 @@
 		<li><a href="#dams-event">DAMS Event</a></li>
 		<li><a href="#mads-extensions">DAMS MADS Extensions</a>
 			<ul>
+				<li><a href="#mads-authority">Authority</a></li>
 				<li><a href="#mads-element">Element</a>
 					<ul>
 						<li><a href="#mads-built-work-place-element">Built Work Place Element</a></li>
@@ -96,9 +89,19 @@
 						<li><a href="#mads-style-period-element">Style Period Element</a></li>
 						<li><a href="#mads-technique-element">Technique Element</a></li>
 						<li><a href="#mads-temporal-element">Temporal Element</a></li>
+						<li><a href="#mads-title-element">Title Element</a>
+                          <ul>
+						    <li><a href="#mads-main-title-element">Main Title Element</a></li>
+						    <li><a href="#mads-non-sort-element">Non Sort Element</a></li>
+						    <li><a href="#mads-part-name-element">Part Name Element</a></li>
+						    <li><a href="#mads-part-number-element">Part Number Element</a></li>
+						    <li><a href="#mads-subtitle-element">Sub Title Element</a></li>
+                          </ul>
+                        </li>
 						<li><a href="#mads-topic-element">Topic Element</a></li>
 					</ul>
 				</li>
+				<li><a href="#mads-scheme">MADS Scheme</a></li>
 				<li><a href="#mads-type">MADS Type</a>
 					<ul>
 						<li><a href="#mads-complex-type">Complex Type</a>
@@ -114,6 +117,7 @@
 								<li><a href="#mads-genreform">GenreForm</a></li>
 								<li><a href="#mads-geographic">Geographic</a></li>
 								<li><a href="#mads-iconography">Iconography</a></li>
+								<li><a href="#mads-language">Language</a></li>
 								<li><a href="#mads-name">Name</a>
 									<ul>
 										<li><a href="#mads-corporate-name">Conference Name</a></li>
@@ -123,11 +127,12 @@
 									</ul>
 								</li>
 								<li><a href="#mads-occupation">Occupation</a></li>
+								<li><a href="#mads-role">Role</a></li>
 								<li><a href="#mads-scientific-name">Scientific Name</a></li>
 								<li><a href="#mads-style-period">Style Period</a></li>
 								<li><a href="#mads-technique">Technique</a></li>
 								<li><a href="#mads-temporal">Temporal</a></li>
-								<li><a href="#mads-topic">Topic</a></li>
+						        <li><a href="#mads-title">Title</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -136,55 +141,53 @@
 		</li>
 	</ul>
 	<!-- end: table of contents -->
+    <p>Color Key:</p>
+    <ul>
+      <li><span style="color: #000000">Hierarchy Only</span></li>
+      <li><span style="color: #0000ff">New DAMS Classes</span></li>
+      <li><span style="color: #339966">Existing MADS Classes</span></li>
+    </ul>
 <h2>Data Dictionary</h2>
 <table>
 <tbody>
 <tr>
-<th> <p>Superclass</p> </th>
-<th> <p>Class</p> </th>
-<th> <p>Subclass</p> </th>
-<th> <p>Sub-Subclass</p> </th>
-<th> <p>Property</p> </th>
-<th> <p>Definition</p> </th>
-<th> <p>Value(s) / Format(s)</p> </th>
-<th> <p>Links to</p> </th>
-<th> <p>Notes</p> </th>
+<th><p>Superclass</p></th>
+<th><p>Class</p></th>
+<th><p>Subclass</p></th>
+<th><p>Sub-Subclass</p></th>
+<th><p>Property</p></th>
+<th><p>Definition</p></th>
+<th><p>Value(s) / Format(s)</p></th>
+<th><p>Links to</p></th>
+<th><p>Notes</p></th>
 </tr>
 <tr>
-<td> <p id="dams-thing">DAMS Thing</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>ID <strong>(anyURI, required)</strong> </p> </td>
-<td> <p>Parent of all DAMS classes.</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>DAMS Event (event 0-m)</p> </td>
-<td> <p>In the linked-data context, ID will be the subject URI.</p> </td>
+<td><p id="dams-thing">DAMS Thing</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>ID <strong>(anyURI, required)</strong></p></td>
+<td><p>Parent of all DAMS classes.</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>DAMS Event (event 0-m)</p></td>
+<td><p>In the linked-data context, ID will be the subject URI.</p></td>
 </tr>
 <tr>
-<td> <p>&#xA0;</p> </td>
-<td> <p id="dams-unit"> <span style="color: rgb(0,0,255);">Administrative Unit </span> </p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<td><p>&#xA0;</p></td>
+<td><p id="dams-unit"><span style="color: rgb(0,0,255);">Administrative Unit </span></p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
 </td>
-<td>
-<p>The identification of a library unit (or non-library data provider) that is responsible for supplying content to the DAMS and for administering that content over time, including answering queries from users.<br/><br/>All objects in the DAMS must be linked to one and only one administrative unit.</p>
+<td><p>The identification of a library unit (or non-library data provider) that is responsible for supplying content to the DAMS and for administering that content over time, including answering queries from users.<br/><br/>All objects in the DAMS must be linked to one and only one administrative unit.</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>Object (hasObject 0-m)<br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span></p>
 </td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>Object (hasObject 0-m)<br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
-</p>
-</td>
-<td>
-<p>Mandatory event: Administrative unit record creation.<br/><br/><span style="color: rgb(0,128,0);">Will revisit the need for Agency Code and Country Code properties. These attributes may be conducive for sharing records.</span>
-</p>
+<td><p>Mandatory event: Administrative unit record creation.<br/><br/><span style="color: rgb(0,128,0);">Will revisit the need for Agency Code and Country Code properties. These attributes may be conducive for sharing records.</span></p>
 </td>
 </tr>
 <tr>
@@ -210,83 +213,35 @@
 <td><p>&#xA0;</p></td>
 </tr>
 <tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>unit URI <strong>(anyURI, required)</strong>
-</p>
-</td>
-<td>
-<p>The URI linking to a webpage for the Administrative unit that contains contact and access information about the Administrative unit.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>unit URI <strong>(anyURI, required)</strong></p></td>
+<td><p>The URI linking to a webpage for the Administrative unit that contains contact and access information about the Administrative unit.</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
 </tr>
 <tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p id="dams-resource">DAMS Resource</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<span style="text-decoration: underline;">ID</span>
-</p>
-</td>
-<td>
-<p>Parent of DAMS classes with common descriptive metadata attached (Collection, Object, and Component)</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>Title (title 0-m)<br/>Date (date 0-m)<br/>Language (language 0-m)<br/>Note (note 0-m)<br/>Relationship (relationship 0-m)<br/>Subject (builtWorkPlace, complexSubject, culturalContext, function, genreForm, geographic, iconography, occupation, scientificName, stylePeriod, technique, temporal, topic 0-m)<br/>Related Resource (relatedResource, 0-m)<br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span>
-</p>
-</td>
-<td>
-<p>Mandatory event: DAMS Resource creation (collection, object, component).</p>
-</td>
+<td><p>&#xA0;</p></td>
+<td><p id="dams-resource">DAMS Resource</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p><span style="text-decoration: underline;">ID</span></p></td>
+<td><p>Parent of DAMS classes with common descriptive metadata attached (Collection, Object, and Component)</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>Title (title 0-m)<br/>Date (date 0-m)<br/>Language (language 0-m)<br/>Note (note 0-m)<br/>Relationship (relationship 0-m)<br/>Subject (builtWorkPlace, complexSubject, culturalContext, function, genreForm, geographic, iconography, occupation, scientificName, stylePeriod, technique, temporal, topic 0-m)<br/>Related Resource (relatedResource, 0-m)<br/><span style="text-decoration: underline;">DAMS Event (event 1-m)</span></p></td>
+<td><p>Mandatory event: DAMS Resource creation (collection, object, component).</p></td>
 </tr>
 <tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p id="dams-collection">Collection</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p id="dams-collection">Collection</p></td>
+<td><p>&#xA0;</p></td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -324,7 +279,7 @@
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -360,7 +315,7 @@
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -396,7 +351,7 @@
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -432,7 +387,7 @@
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -467,7 +422,7 @@ Cartographics (cartographics 0-1)<br/>
 <td>
 <p>Every object must be linked to one, and only one, Administrative unit. It may be linked to as many collections as are pertinent.<br/><br/><span style="color: rgb(0,128,0);">
 <span style="text-decoration: line-through;">Must have at least one child component or file.</span>
-</span> <span style="color: rgb(0,128,0);">DAMS Object requirements need to be changed to reflect this (RCI Levy &amp; SIO examples)</span><br/><br/>Mandatory event: object creation.<br/><br/>Title and Language: cardinality overrides superclass.</p>
+</span><span style="color: rgb(0,128,0);">DAMS Object requirements need to be changed to reflect this (RCI Levy &amp; SIO examples)</span><br/><br/>Mandatory event: object creation.<br/><br/>Title and Language: cardinality overrides superclass.</p>
 </td>
 </tr>
 <tr>
@@ -515,7 +470,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -628,7 +583,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p id="dams-file">File</p>
+<p id="dams-file" style="color: #0000ff;">File</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -638,7 +593,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -680,7 +635,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>File Use CV:</strong> <br/> visual-source, visual-service, visual-thumbnail, visual-alternate, document-source, document-service, document-alternate, audio-source, audio-service, audio-alternate, data-source, data-service, data-alternate (see <a href="/display/datamodel/File+Use+Vocabulary" data-linked-resource-id="16580750" data-linked-resource-type="page" data-linked-resource-default-alias="File Use Vocabulary" data-base-url="https://illiad.ucsd.edu:8443">File Use Vocabulary</a>)</p>
+<strong>File Use CV:</strong><br/> visual-source, visual-service, visual-thumbnail, visual-alternate, document-source, document-service, document-alternate, audio-source, audio-service, audio-alternate, data-source, data-service, data-alternate (see <a href="/display/datamodel/File+Use+Vocabulary" data-linked-resource-id="16580750" data-linked-resource-type="page" data-linked-resource-default-alias="File Use Vocabulary" data-base-url="https://illiad.ucsd.edu:8443">File Use Vocabulary</a>)</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -785,7 +740,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Object Category CV:</strong> <br/> file</p>
+<strong>Object Category CV:</strong><br/> file</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -843,7 +798,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>size <strong>(</strong>
-<strong>nonNegative Integer,</strong> <strong>required)</strong>
+<strong>nonNegative Integer,</strong><strong>required)</strong>
 </p>
 </td>
 <td>
@@ -1057,7 +1012,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Date Encoding CV:</strong> <br/> ISO8601</p>
+<strong>Date Encoding CV:</strong><br/> ISO8601</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1221,7 +1176,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p id="dams-relationship">Relationship</p>
+<p id="dams-relationship" style="color: #0000ff;">Relationship</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1231,7 +1186,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -1255,7 +1210,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p id="dams-title">Title</p>
+<p id="dams-date" style="color: #0000ff;">Date</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1265,374 +1220,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
-<span style="text-decoration: underline;">(required)</span>
-</strong>
-</p>
-</td>
-<td>
-<p>A term or phrase describing a collection, object, or object component. The title may be transcribed from the work, from previous metadata, or supplied.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<span style="text-decoration: underline;">DAMS Event (event 0-m)</span><br/>Language (language 0-1)<br/>Title (relatedTitle 0-m)</p>
-</td>
-<td>
-<p>relatedTitle should be used to link to equivalent transliterated, translated, abbreviated, etc. titles.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>value <strong>(string, required)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>Renamed from title to avoid conflict with DAMSResource link to Title.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>subtitle <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>part Number <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>part Name <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>Volume, issue #, etc.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>nonsort Characters <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>Initial characters which should not affect sort order.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>Included to facilitate generating sort form without having to build complex algorithm to handle multiple languages.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>type <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<strong>Title Type CV:</strong> <br/> translated, transliterated, enumerated, abbreviated, uniform, main, alternative</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>untyped title is the main title</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>authority <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>if there is an authority, but no valueURI</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>authorityURI <strong>(anyURI)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>valueURI <strong>(anyURI)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>may be replaced by owl:sameAs, can be multiple</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>script <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<span style="color: rgb(51,153,102);">ISO 15924 standard list?</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>displayLabel <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>display text. e.g. source of title</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p id="dams-date">Date</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -1674,10 +1262,10 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Date Type CV:</strong><br/><br/>broadcast <br/> captured <br/> copyright <br/> creation <br/> <span style="color: rgb(255,153,0);">creation-date</span>
-<br/> <span style="color: rgb(255,153,0);">creation-date-earliest</span>
-<br/> <span style="color: rgb(255,153,0);">creation-date-latest</span>
-<br/> <span style="color: rgb(255,153,0);">creation-date-date qualifer</span>
+<strong>Date Type CV:</strong><br/><br/>broadcast <br/> captured <br/> copyright <br/> creation <br/><span style="color: rgb(255,153,0);">creation-date</span>
+<br/><span style="color: rgb(255,153,0);">creation-date-earliest</span>
+<br/><span style="color: rgb(255,153,0);">creation-date-latest</span>
+<br/><span style="color: rgb(255,153,0);">creation-date-date qualifer</span>
 <br/> deaccession <br/> issued <br/> modified <br/> published <br/> other (other type = ?) <br/> valid</p>
 </td>
 <td>
@@ -1800,7 +1388,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Date Encoding CV:</strong> <br/> ISO8601</p>
+<strong>Date Encoding CV:</strong><br/> ISO8601</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1816,7 +1404,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p id="dams-note">Note</p>
+<p id="dams-note" style="color: #0000ff;">Note</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1826,7 +1414,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -1910,10 +1498,10 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Use type as display label when a displayLabel value is not provided by a data creator. Otherwise, display the type value as displayLabel to end user.<br/><br/><span style="color: rgb(0,128,0);">Augment type list for: VRA, EAD, MODS</span><br/><br/>Note types with analogs:&#xA0;<br/><br/>EAD <br/> <span style="color: rgb(153,51,0);">Local</span>
-<br/> <span style="color: rgb(51,102,255);">MARC</span>
-<br/> <span style="color: rgb(153,204,0);">MODS</span>
-<br/> <span style="color: rgb(255,153,0);">VRA</span>
+<p>Use type as display label when a displayLabel value is not provided by a data creator. Otherwise, display the type value as displayLabel to end user.<br/><br/><span style="color: rgb(0,128,0);">Augment type list for: VRA, EAD, MODS</span><br/><br/>Note types with analogs:&#xA0;<br/><br/>EAD <br/><span style="color: rgb(153,51,0);">Local</span>
+<br/><span style="color: rgb(51,102,255);">MARC</span>
+<br/><span style="color: rgb(153,204,0);">MODS</span>
+<br/><span style="color: rgb(255,153,0);">VRA</span>
 <br/> *=unlikely to be used in domain</p>
 <ol>
 <li>abstract (<span style="color: rgb(51,102,255);">520</span>)</li>
@@ -1929,7 +1517,7 @@ Cartographics (cartographics 0-1)<br/>
 <li>biography/history (<span style="color: rgb(51,102,255);">545</span>, <span style="color: rgb(153,204,0);">biographical/historical</span>)</li>
 <li>*<span style="color: rgb(51,102,255);">case file characteristics (565</span>)</li>
 <li>
-<span style="color: rgb(51,102,255);">citation (510,</span> <span style="color: rgb(255,153,0);">textref,</span> <span style="color: rgb(153,204,0);">citation/reference</span>
+<span style="color: rgb(51,102,255);">citation (510,</span><span style="color: rgb(255,153,0);">textref,</span><span style="color: rgb(153,204,0);">citation/reference</span>
 <span style="color: rgb(255,153,0);">)</span>
 </li>
 <li>
@@ -1938,44 +1526,44 @@ Cartographics (cartographics 0-1)<br/>
 <li>conditions governing access (<span style="color: rgb(51,102,255);">506</span>, <span style="color: rgb(153,204,0);">restriction</span>)</li>
 <li>conditions governing use (<span style="color: rgb(51,102,255);">540, 542</span>, <span style="color: rgb(255,153,0);">rights</span>
 </li>
-<li>*<span style="color: rgb(51,102,255);">copy and version identification (562,</span> <span style="color: rgb(153,204,0);">version</span>
+<li>*<span style="color: rgb(51,102,255);">copy and version identification (562,</span><span style="color: rgb(153,204,0);">version</span>
 <span style="color: rgb(51,102,255);">)</span>
 </li>
 <li>
-<span style="color: rgb(51,102,255);">creation/production credits (508,</span> <span style="color: rgb(153,204,0);">creation/production credits</span>
+<span style="color: rgb(51,102,255);">creation/production credits (508,</span><span style="color: rgb(153,204,0);">creation/production credits</span>
 <span style="color: rgb(51,102,255);">)</span>
 </li>
-<li>custodial history (<span style="color: rgb(51,102,255);">561,</span> <span style="color: rgb(153,204,0);">ownership</span>)</li>
+<li>custodial history (<span style="color: rgb(51,102,255);">561,</span><span style="color: rgb(153,204,0);">ownership</span>)</li>
 <li>
 <span style="color: rgb(51,102,255);">data quality (514)</span>
 </li>
-<li>*<span style="color: rgb(51,102,255);">date / time for event (518,</span> <span style="color: rgb(153,204,0);">venue</span>
+<li>*<span style="color: rgb(51,102,255);">date / time for event (518,</span><span style="color: rgb(153,204,0);">venue</span>
 <span style="color: rgb(51,102,255);">)</span>
 </li>
 <li>dimensions (<span style="color: rgb(255,153,0);">measurements</span>
 </li>
 <li>
-<span style="color: rgb(51,102,255);">dissertation (502,</span> <span style="color: rgb(153,204,0);">thesis</span>
+<span style="color: rgb(51,102,255);">dissertation (502,</span><span style="color: rgb(153,204,0);">thesis</span>
 <span style="color: rgb(51,102,255);">)</span>
 </li>
 <li>*<span style="color: rgb(51,102,255);">documentation information (556</span>)</li>
 <li>*<span style="color: rgb(51,102,255);">entity and attribute information (552</span>)</li>
-<li>*<span style="color: rgb(51,102,255);">exhibitions note (585,</span> <span style="color: rgb(153,204,0);">exhibitions</span>
+<li>*<span style="color: rgb(51,102,255);">exhibitions note (585,</span><span style="color: rgb(153,204,0);">exhibitions</span>
 <span style="color: rgb(51,102,255);">)</span>
 </li>
-<li>existence and location of copies (<span style="color: rgb(51,102,255);">530 535</span>, <span style="color: rgb(255,153,0);">location,</span> <span style="color: rgb(153,204,0);">additional physical form</span>)</li>
-<li>existence and location of originals (<span style="color: rgb(51,102,255);">534, 535</span>, <span style="color: rgb(255,153,0);">location,</span> <span style="color: rgb(153,204,0);">original location</span>
+<li>existence and location of copies (<span style="color: rgb(51,102,255);">530 535</span>, <span style="color: rgb(255,153,0);">location,</span><span style="color: rgb(153,204,0);">additional physical form</span>)</li>
+<li>existence and location of originals (<span style="color: rgb(51,102,255);">534, 535</span>, <span style="color: rgb(255,153,0);">location,</span><span style="color: rgb(153,204,0);">original location</span>
 <span style="color: rgb(153,204,0);">, original version</span>)</li>
 <li>*file plan</li>
 <li>*<span style="color: rgb(51,102,255);">former title complexity (547</span>)</li>
 <li>
-<span style="color: rgb(51,102,255);">funding information (536,</span> <span style="color: rgb(153,204,0);">funding</span>)</li>
+<span style="color: rgb(51,102,255);">funding information (536,</span><span style="color: rgb(153,204,0);">funding</span>)</li>
 <li>general note (<span style="color: rgb(51,102,255);">500)</span>
 </li>
 <li>general physical description</li>
 <li>
 <span style="color: rgb(51,102,255);">geographic coverage (522</span>)</li>
-<li>immediate source of acquisition (<span style="color: rgb(51,102,255);">541</span>, <span style="color: rgb(255,153,0);">source,</span> <span style="color: rgb(153,204,0);">acquisition</span>)</li>
+<li>immediate source of acquisition (<span style="color: rgb(51,102,255);">541</span>, <span style="color: rgb(255,153,0);">source,</span><span style="color: rgb(153,204,0);">acquisition</span>)</li>
 <li>
 <span style="color: rgb(153,204,0);">identifier</span>
 </li>
@@ -1995,19 +1583,19 @@ Cartographics (cartographics 0-1)<br/>
 <li>
 <span style="color: rgb(51,102,255);">p</span>
 <span style="color: rgb(51,102,255);">articipant/performer (511</span>, <span style="color: rgb(153,204,0);">performers</span>)</li>
-<li>physical characteristics and technical requirements (<span style="color: rgb(51,102,255);">538, 300, 340,</span> <span style="color: rgb(255,153,0);">material</span>, <span style="color: rgb(153,204,0);">system details</span>)</li>
+<li>physical characteristics and technical requirements (<span style="color: rgb(51,102,255);">538, 300, 340,</span><span style="color: rgb(255,153,0);">material</span>, <span style="color: rgb(153,204,0);">system details</span>)</li>
 <li>physical facet</li>
-<li>preferred citation (<span style="color: rgb(51,102,255);">524,</span> <span style="color: rgb(153,204,0);">preferred citation</span>)</li>
+<li>preferred citation (<span style="color: rgb(51,102,255);">524,</span><span style="color: rgb(153,204,0);">preferred citation</span>)</li>
 <li>*processing information</li>
 <li>publication</li>
 <li>related materials (<span style="color: rgb(51,102,255);">544</span>)</li>
 <li>
 <span style="color: rgb(51,102,255);">*report type and date (513</span>)</li>
 <li>
-<span style="color: rgb(51,102,255);">*reproduction note (533,</span> <span style="color: rgb(153,204,0);">reproduction</span>
+<span style="color: rgb(51,102,255);">*reproduction note (533,</span><span style="color: rgb(153,204,0);">reproduction</span>
 <span style="color: rgb(51,102,255);">)</span>
 </li>
-<li>scope and content (<span style="color: rgb(51,102,255);">520,</span> <span style="color: rgb(255,153,0);">description</span>)</li>
+<li>scope and content (<span style="color: rgb(51,102,255);">520,</span><span style="color: rgb(255,153,0);">description</span>)</li>
 <li>separated materials</li>
 <li>
 <span style="color: rgb(51,102,255);">*study program information (526</span>)</li>
@@ -2118,7 +1706,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Scope Content Note</p>
+<p style="color: #0000ff;">Scope Content Note</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2149,7 +1737,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Preferred Citation Note</p>
+<p style="color: #0000ff;">Preferred Citation Note</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2182,7 +1770,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Custodial Responsibility Note</p>
+<p style="color: #0000ff;">Custodial Responsibility Note</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2212,362 +1800,6 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(0,0,255);">Vocabulary</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<span style="text-decoration: underline;">ID</span> <strong>
-<span style="text-decoration: underline;">(required)</span>
-</strong>
-</p>
-</td>
-<td>
-<p>A named vocabulary list.&#xA0; Can be used to manage a list of terms for a text field.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>description <strong>(string, required)</strong>
-</p>
-</td>
-<td>
-<p id="dams-vocabulary">Vocabulary name/description.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>Renamed from name to avoid conflict with DAMSResource link to Name.</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p id="dams-vocabulary-entry">
-<span style="color: rgb(0,0,255);">Vocabulary Entry</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<span style="text-decoration: underline;">ID</span> <strong>
-<span style="text-decoration: underline;">(required)</span>
-</strong>
-</p>
-</td>
-<td>
-<p>A term in a vocabulary list.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>Vocabulary (vocabulary 1)<br/><span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>code <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>Code form of value (if available) e.g. en=English</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>value <strong>(string, required)</strong>
-</p>
-</td>
-<td>
-<p>Typically the display value. The code could potentially be used as an alternative for display.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>description <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>Internal notes, scope, usage, etc.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>authority <strong>(string)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>authority URI <strong>(anyURI)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>value URI <strong>(anyURI)</strong>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p id="dams-language">
-<span style="color: rgb(0,0,255);">Language</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<strong>(inherit all properties)</strong>
-</p>
-</td>
-<td>
-<p>The language(s) of the collection, object, or object component.</p>
-</td>
-<td>
-<p>term: ISO639-2</p>
-</td>
-<td>
-<p>
-<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p id="dams-role">
-<span style="color: rgb(0,0,255);">Role</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<strong>(inherit all properties)</strong>
-</p>
-</td>
-<td>
-<p>A term describing the relationship between a Name and an Collection, Object, Component, Events, and Rights Status.</p>
-</td>
-<td>
-<p>
-<strong>Role CV:</strong> <br/> Terms are taken from the list <a href="http://www.loc.gov/marc/relators/relaterm.html">MARC Relators</a> Terms/Codes</p>
-</td>
-<td>
-<p>
-<span style="text-decoration: underline;">DAMS Event (event 0-m)</span>
-</p>
-</td>
-<td>
-<p>
-<span style="color: rgb(51,153,102);">A list of terms for the relationship of name to Collection, Object, Component, Events, and Rights Status. The predicates can be derived from standard and local list of role terms. Role may be a subclass of higher level entity such as Functional Relationship</span>
-</p>
-</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
 <p id="dams-cartographics">
 <span style="color: rgb(0,0,255);">Cartographics</span>
 </p>
@@ -2580,7 +1812,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -2684,7 +1916,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Reference System CV:</strong> <br/> WGS84, WGS72, WGS66...</p>
+<strong>Reference System CV:</strong><br/> WGS84, WGS72, WGS66...</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2794,7 +2026,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p id="dams-related-resource">Related Resource</p>
+<p id="dams-related-resource" style="color: #0000ff;">Related Resource</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2804,7 +2036,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -2878,7 +2110,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Related Resource CV:</strong> <br/> online exhibit, source, parallel description, depicts, derived from</p>
+<strong>Related Resource CV:</strong><br/> online exhibit, source, parallel description, depicts, derived from</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2924,7 +2156,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p id="dams-source-capture">Source Capture</p>
+<p id="dams-source-capture" style="color: #0000ff;">Source Capture</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2934,7 +2166,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -3177,7 +2409,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -3214,7 +2446,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -3255,7 +2487,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Copyright Status CV:</strong> <br/> Under copyright <br/> Public domain <br/> Copyright unknown</p>
+<strong>Copyright Status CV:</strong><br/> Under copyright <br/> Public domain <br/> Copyright unknown</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3286,7 +2518,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Copyright Jurisdiction CV:</strong> <br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> for country codes</p>
+<strong>Copyright Jurisdiction CV:</strong><br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> for country codes</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3347,7 +2579,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Copyright Note CV:</strong> <br/> See <a href="http://tpot.ucsd.edu/metadata-services/mas/cvs.html">TPOT</a>
+<strong>Copyright Note CV:</strong><br/> See <a href="http://tpot.ucsd.edu/metadata-services/mas/cvs.html">TPOT</a>
 </p>
 </td>
 <td>
@@ -3376,7 +2608,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -3447,7 +2679,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Statute Jurisdiction CV:</strong> <br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> for country codes <br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-2">ISO 3166-2</a> for state codes</p>
+<strong>Statute Jurisdiction CV:</strong><br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> for country codes <br/> Use <a href="http://en.wikipedia.org/wiki/ISO_3166-2">ISO 3166-2</a> for state codes</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3503,7 +2735,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -3599,7 +2831,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -3633,7 +2865,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">other Rights Basis</span> <strong>
+<span style="text-decoration: underline;">other Rights Basis</span><strong>
 <span style="text-decoration: underline;">(string, required)</span>
 </strong>
 </p>
@@ -3643,7 +2875,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Other Rights Basis CV:</strong> <br/> fair use, cultural sensitivity</p>
+<strong>Other Rights Basis CV:</strong><br/> fair use, cultural sensitivity</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3729,7 +2961,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -3835,7 +3067,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Rights Action CV:</strong> <br/> display, migrate, replicate, modify,...</p>
+<strong>Rights Action CV:</strong><br/> display, migrate, replicate, modify,...</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3852,7 +3084,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p id="dams-permission">Permission</p>
+<p id="dams-permission" style="color: #0000ff;">Permission</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3885,7 +3117,7 @@ Cartographics (cartographics 0-1)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p id="dams-restriction">Restriction</p>
+<p id="dams-restriction" style="color: #0000ff;">Restriction</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -3927,7 +3159,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<span style="text-decoration: underline;">ID</span> <strong>
+<span style="text-decoration: underline;">ID</span><strong>
 <span style="text-decoration: underline;">(required)</span>
 </strong>
 </p>
@@ -3967,7 +3199,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p>
-<strong>Event Type CV:</strong> <br/> See <a href="/display/dlpg/DAMS+Events+Vocabulary" data-linked-resource-id="15433897" data-linked-resource-type="page" data-linked-resource-default-alias="DAMS Events Vocabulary" data-base-url="https://illiad.ucsd.edu:8443">UCSD DAMS Events Vocabulary</a> (will need revision to reflect Data Model)</p>
+<strong>Event Type CV:</strong><br/> See <a href="/display/dlpg/DAMS+Events+Vocabulary" data-linked-resource-id="15433897" data-linked-resource-type="page" data-linked-resource-default-alias="DAMS Events Vocabulary" data-base-url="https://illiad.ucsd.edu:8443">UCSD DAMS Events Vocabulary</a> (will need revision to reflect Data Model)</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -4186,35 +3418,26 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 </tr>
 <tr>
-<td>
-<p id="mads-element">
-<span style="color: rgb(51,153,102);">Element</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
+  <td><p id="mads-authority"><span style="color: #339966;">Authority</span></p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>Replaces DAMS:VocabularyEntry</p></td>
+</tr>
+<tr>
+  <td><p id="mads-element"><span style="color: #000000;">Element</span></p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
 </tr>
 <tr>
 <td>
@@ -4222,7 +3445,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-built-work-place-element">
-<span style="color: rgb(0,0,0);">Built Work Place Element </span>
+<span style="color: #0000ff;">Built Work Place Element </span>
 </p>
 </td>
 <td>
@@ -4253,7 +3476,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-cultural-context-element">
-<span style="color: rgb(0,0,0);">Cultural Context Element </span>
+<span style="color: #0000ff;">Cultural Context Element </span>
 </p>
 </td>
 <td>
@@ -4284,7 +3507,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-function-element">
-<span style="color: rgb(0,0,0);">Function Element </span>
+<span style="color: #0000ff;">Function Element </span>
 </p>
 </td>
 <td>
@@ -4312,7 +3535,7 @@ Cartographics (cartographics 0-1)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,0);" id="mads-genre-form-element">Genre Form Element</span>
+<span style="color: #339966;" id="mads-genre-form-element">Genre Form Element</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4325,106 +3548,9 @@ Cartographics (cartographics 0-1)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>
-<span style="color: rgb(0,0,0);" id="mads-geographic-element">Geographic Element</span>
+<span style="color: #339966;" id="mads-geographic-element">Geographic Element</span>
 </td>
 <td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-</tr>
-<tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>
-<span style="color: rgb(0,0,0);" id="mads-iconography-element">Iconography Element </span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>VRA Core 4</p>
-</td>
-</tr>
-<tr>
-<td>&#xA0;</td>
-<td><span id="mads-name-element">Name Element</span></td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-</tr>
-<tr>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td><span id="mads-date-name-element">Date Name Element</span></td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-</tr>
-<tr>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td><span id="mads-family-name-element">Family Name Element</span></td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-</tr>
-<tr>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td><span id="mads-full-name-element">Full Name Element</span></td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-</tr>
-<tr>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td><span id="mads-given-name-element">Given Name Element</span></td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-</tr>
-<tr>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td><span id="mads-terms-of-address-name-element">Terms Of Address Name Element</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4436,11 +3562,86 @@ Cartographics (cartographics 0-1)<br/>
 <td>
 <p>&#xA0;</p>
 </td>
+<td><p><span style="color: #0000ff;" id="mads-iconography-element">Iconography Element </span></p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>VRA Core 4</p></td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td><span id="mads-name-element" style="color: #339966;">Name Element</span></td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td><span id="mads-date-name-element" style="color: #339966;">Date Name Element</span></td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td><span id="mads-family-name-element" style="color: #339966;">Family Name Element</span></td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td><span id="mads-full-name-element" style="color: #339966;">Full Name Element</span></td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td><span id="mads-given-name-element" style="color: #339966;">Given Name Element</span></td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td><span id="mads-terms-of-address-name-element" style="color: #339966;">Terms Of Address Name Element</span></td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
 <td>
-<p id="mads-scientific-name-element">
-<span style="color: rgb(0,0,0);">Scientific Name Element </span>
-</p>
+<p>&#xA0;</p>
 </td>
+<td><p id="mads-scientific-name-element"><span style="color: #0000ff;">Scientific Name Element </span></p></td>
 <td>
 <p>&#xA0;</p>
 </td>
@@ -4469,7 +3670,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-style-period-element">
-<span style="color: rgb(0,0,0);">Style Period Element </span>
+<span style="color: #0000ff;">Style Period Element </span>
 </p>
 </td>
 <td>
@@ -4500,7 +3701,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-technique-element">
-<span style="color: rgb(0,0,0);">Technique Element </span>
+<span style="color: #0000ff;">Technique Element </span>
 </p>
 </td>
 <td>
@@ -4527,8 +3728,85 @@ Cartographics (cartographics 0-1)<br/>
 </tr>
 <tr>
 <td>&#xA0;</td>
+<td><span id="mads-temporal-element" style="color: #339966;">Temporal Element</span></td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+</tr>
+<tr>
+  <td><p>&#xA0;</p></td>
+  <td><p id="mads-title-element" style="color: #000000;">Title Element</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p id="mads-main-title-element" style="color: #339966;">Main Title Element</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p id="mads-non-sort-element" style="color: #339966;">Non Sort Element</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p id="mads-part-name-element" style="color: #339966;">Part Name Element</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p id="mads-part-number-element" style="color: #339966;">Part Number Element</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p id="mads-sub-title-element" style="color: #339966;">Sub Title Element</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
+<td>&#xA0;</td>
 <td>
-<span id="mads-temporal-element" style="color: rgb(0,0,0);">Temporal Element</span>
+<span id="mads-topic-element" style="color: #339966;">Topic Element</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4539,20 +3817,18 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 </tr>
 <tr>
-<td>&#xA0;</td>
-<td>
-<span id="mads-topic-element" style="color: rgb(0,0,0);">Topic Element</span>
-</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
-<td>&#xA0;</td>
+  <td><p id="mads-scheme" style="color: #339966;">MADS Scheme</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>Replaces DAMS:Vocabulary</p></td>
 </tr>
 <tr>
-<td><p id="mads-type"><span style="color: rgb(51,153,102);">MADSType</span></p></td>
+<td><p id="mads-type"><span style="color: #000000;">MADSType</span></p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
@@ -4575,14 +3851,14 @@ Cartographics (cartographics 0-1)<br/>
 </tr>
 <tr>
 <td><p>&#xA0;</p></td>
-<td><p id="mads-complex-type"><span style="color: rgb(51,153,102);">Complex Type</span></p></td>
+<td><p id="mads-complex-type"><span style="color: #000000;">Complex Type</span></p></td>
 <td><p>&#xA0;</p></td>
-<td><p>&#xA0;</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>&#xA0;</p> </td>
-<td> <p>&#xA0;</p> </td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
 </tr>
 <tr>
 <td>
@@ -4593,7 +3869,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-complex-subject">
-<span style="color: rgb(0,0,255);">Complex Subject</span>
+<span style="color: #339966;">Complex Subject</span>
 </p>
 </td>
 <td>
@@ -4621,7 +3897,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-simple-type">
-<span style="color: rgb(51,153,102);">Simple Type</span>
+<span style="color: #000000;">Simple Type</span>
 </p>
 </td>
 <td>
@@ -4655,7 +3931,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-built-work-place">
-<span style="color: rgb(0,0,255);">Built Work Place</span>
+<span style="color: #0000ff;">Built Work Place</span>
 </p>
 </td>
 <td>
@@ -4686,7 +3962,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-cultural-context">
-<span style="color: rgb(0,0,255);">Cultural Context</span>
+<span style="color: #0000ff;">Cultural Context</span>
 </p>
 </td>
 <td>
@@ -4717,7 +3993,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-function">
-<span style="color: rgb(0,0,255);">Function</span>
+<span style="color: #0000ff;">Function</span>
 </p>
 </td>
 <td>
@@ -4743,7 +4019,7 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span id="mads-genreform" style="color: rgb(0,0,255);">GenreForm</span>
+<span id="mads-genreform" style="color: #339966;">GenreForm</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4756,7 +4032,7 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span id="mads-geographic" style="color: rgb(0,0,255);">Geographic</span>
+<span id="mads-geographic" style="color: #339966;">Geographic</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4766,35 +4042,26 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 </tr>
 <tr>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p id="mads-iconography">
-<span style="color: rgb(0,0,255);">Iconography</span>
-</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>The people and items depicted, the composition of an image, etc.</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>&#xA0;</p>
-</td>
-<td>
-<p>VRA Core 4</p>
-</td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p id="mads-language" style="color: #339966;">Language</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p id="mads-iconography"><span style="color: #0000ff;">Iconography</span></p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>The people and items depicted, the composition of an image, etc.</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>&#xA0;</p></td>
+<td><p>VRA Core 4</p></td>
 </tr>
 <tr>
 <td>
@@ -4832,7 +4099,7 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span id="mads-corporate-name" style="color: rgb(0,0,255);">Corporate Name</span>
+<span id="mads-corporate-name" style="color: #339966;">Corporate Name</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4845,7 +4112,7 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span id="mads-family-name" style="color: rgb(0,0,255);">Family Name</span>
+<span id="mads-family-name" style="color: #339966;">Family Name</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4858,7 +4125,7 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span id="mads-personal-name" style="color: rgb(0,0,255);">Personal Name</span>
+<span id="mads-personal-name" style="color: #339966;">Personal Name</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4871,7 +4138,7 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span id="mads-conference-name" style="color: rgb(0,0,255);">Conference Name</span>
+<span id="mads-conference-name" style="color: #339966;">Conference Name</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4882,15 +4149,24 @@ Cartographics (cartographics 0-1)<br/>
 <tr>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
-<td>
-<span id="mads-occupation" style="color: rgb(0,0,255);">Occupation</span>
-</td>
+<td><span id="mads-occupation" style="color: #339966;">Occupation</span></td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
+</tr>
+<tr>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td><span id="mads-role" style="color: #0000ff;">Role</span></td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>&#xA0;</td>
+<td>Replaces DAMS:Role</td>
 </tr>
 <tr>
 <td>
@@ -4901,7 +4177,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-scientific-name">
-<span style="color: rgb(0,0,255);">Scientific Name</span>
+<span style="color: #0000ff;">Scientific Name</span>
 </p>
 </td>
 <td>
@@ -4932,7 +4208,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-style-period">
-<span style="color: rgb(0,0,255);">Style Period</span>
+<span style="color: #0000ff;">Style Period</span>
 </p>
 </td>
 <td>
@@ -4963,7 +4239,7 @@ Cartographics (cartographics 0-1)<br/>
 </td>
 <td>
 <p id="mads-technique">
-<span style="color: rgb(0,0,255);">Technique </span>
+<span style="color: #0000ff;">Technique </span>
 </p>
 </td>
 <td>
@@ -4989,7 +4265,7 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span id="mads-temporal" style="color: rgb(0,0,255);">Temporal</span>
+<span id="mads-temporal" style="color: #339966;">Temporal</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
@@ -4999,10 +4275,21 @@ Cartographics (cartographics 0-1)<br/>
 <td>&#xA0;</td>
 </tr>
 <tr>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p id="mads-title" style="color: #339966;">Title</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
 <td>
-<span id="mads-topic" style="color: rgb(0,0,255);">Topic</span>
+<span id="mads-topic" style="color: #339966;">Topic</span>
 </td>
 <td>&#xA0;</td>
 <td>&#xA0;</td>
