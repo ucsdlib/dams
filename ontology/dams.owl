@@ -25,23 +25,12 @@
      xmlns:mads="http://www.loc.gov/mads/rdf/v1#">
     <owl:Ontology rdf:about="http://library.ucsd.edu/ontology/dams/#">
         <rdfs:label>DAMS Data Model</rdfs:label>
-        <owl:versionInfo>0.3</owl:versionInfo>
         <rdfs:comment>OWL ontology for DAMS content.  Developed at The UC San Diego
       Library by Esmé Cowles, Matt Critchlow, Arwen Hutt, Longshou Situ and Brad
       Westbrook.</rdfs:comment>
+        <owl:versionInfo>0.3</owl:versionInfo>
         <owl:imports rdf:resource="http://www.loc.gov/mads/rdf/v1#"/>
     </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
     
 
 
@@ -307,8 +296,8 @@
 
     <owl:ObjectProperty rdf:about="&dams;hasCollection">
         <rdfs:comment>Links from a parent Collection to a child Collection.</rdfs:comment>
-        <rdfs:range rdf:resource="&dams;Collection"/>
         <rdfs:domain rdf:resource="&dams;Collection"/>
+        <rdfs:range rdf:resource="&dams;Collection"/>
     </owl:ObjectProperty>
     
 
@@ -588,8 +577,8 @@
 
     <owl:ObjectProperty rdf:about="&dams;relatedCollection">
         <rdfs:comment>Peer collection relationship.</rdfs:comment>
-        <rdfs:domain rdf:resource="&dams;Collection"/>
         <rdfs:range rdf:resource="&dams;Collection"/>
+        <rdfs:domain rdf:resource="&dams;Collection"/>
     </owl:ObjectProperty>
     
 
@@ -609,8 +598,8 @@
     <owl:ObjectProperty rdf:about="&dams;relatedTitle">
         <rdfs:comment>Links a Title to another form of the same Title (e.g., transliterated,
        translated, abbreviated, etc.).</rdfs:comment>
-        <rdfs:range rdf:resource="&dams;Title"/>
         <rdfs:domain rdf:resource="&dams;Title"/>
+        <rdfs:range rdf:resource="&dams;Title"/>
     </owl:ObjectProperty>
     
 
@@ -708,8 +697,8 @@
     <!-- http://library.ucsd.edu/ontology/dams/#scopeContentNote -->
 
     <owl:ObjectProperty rdf:about="&dams;scopeContentNote">
-        <rdfs:comment>This should be a literal, not a class.</rdfs:comment>
         <rdfs:comment>Links a Collection to a ScopeContentNote.</rdfs:comment>
+        <rdfs:comment>This should be a literal, not a class.</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Collection"/>
         <rdfs:range rdf:resource="&dams;ScopeContentNote"/>
         <rdfs:subPropertyOf rdf:resource="&dams;note"/>
@@ -940,8 +929,8 @@
     <!-- http://library.ucsd.edu/ontology/dams/#copyrightNote -->
 
     <owl:DatatypeProperty rdf:about="&dams;copyrightNote">
-        <rdfs:comment>boilerplate copyright note referencing copyright status and jurisdiction.</rdfs:comment>
         <rdfs:comment>Estimate that there will be 6 of these Note objects.</rdfs:comment>
+        <rdfs:comment>boilerplate copyright note referencing copyright status and jurisdiction.</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Copyright"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -962,10 +951,10 @@
     <!-- http://library.ucsd.edu/ontology/dams/#copyrightStatus -->
 
     <owl:DatatypeProperty rdf:about="&dams;copyrightStatus">
+        <rdfs:comment>A value indicating the copyright status for an object</rdfs:comment>
         <rdfs:comment>In context of UCSD, &quot;Under copyright -- 1st Party&quot; refers always and
       only to &quot;UC Regents&quot; as the rights holder, whereas &quot;Under copyright -- 3rd
       party&quot; refers to copyright held by any agent other than the UC Regents.</rdfs:comment>
-        <rdfs:comment>An value indicating the copyright status for an object</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Copyright"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -1137,8 +1126,8 @@
     <!-- http://library.ucsd.edu/ontology/dams/#internalOnly -->
 
     <owl:DatatypeProperty rdf:about="&dams;internalOnly">
-        <rdfs:comment>If true, accessible to all users or only to administrative unit and DAMS managers.</rdfs:comment>
         <rdfs:comment>false = public, true = custodial unit</rdfs:comment>
+        <rdfs:comment>If true, accessible to all users or only to administrative unit and DAMS managers.</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Note"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
     </owl:DatatypeProperty>
@@ -1179,8 +1168,8 @@
     <!-- http://library.ucsd.edu/ontology/dams/#line -->
 
     <owl:DatatypeProperty rdf:about="&dams;line">
-        <rdfs:comment>Coordinates for a line (last point is not assumed to link to the first point)</rdfs:comment>
         <rdfs:comment>Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</rdfs:comment>
+        <rdfs:comment>Coordinates for a line (last point is not assumed to link to the first point)</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Cartographics"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -1210,9 +1199,9 @@
     <!-- http://library.ucsd.edu/ontology/dams/#nonsortCharacters -->
 
     <owl:DatatypeProperty rdf:about="&dams;nonsortCharacters">
-        <rdfs:comment>Initial characters which should not affect sort order.</rdfs:comment>
         <rdfs:comment>Included to facilitate generating sort form without having to build complex
       algorithm to handle multiple languages.</rdfs:comment>
+        <rdfs:comment>Initial characters which should not affect sort order.</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Title"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -1368,8 +1357,8 @@
     <!-- http://library.ucsd.edu/ontology/dams/#point -->
 
     <owl:DatatypeProperty rdf:about="&dams;point">
-        <rdfs:comment>Coordinates for a single point.</rdfs:comment>
         <rdfs:comment>Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</rdfs:comment>
+        <rdfs:comment>Coordinates for a single point.</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Cartographics"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -1379,8 +1368,8 @@
     <!-- http://library.ucsd.edu/ontology/dams/#polygon -->
 
     <owl:DatatypeProperty rdf:about="&dams;polygon">
-        <rdfs:comment>Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</rdfs:comment>
         <rdfs:comment>Coordinates for a polygon (last point is assumed to link to the first point to form an enclosed area).</rdfs:comment>
+        <rdfs:comment>Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Cartographics"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -1435,9 +1424,9 @@
     <!-- http://library.ucsd.edu/ontology/dams/#projection -->
 
     <owl:DatatypeProperty rdf:about="&dams;projection">
-        <rdfs:comment>See http://en.wikipedia.org/wiki/List_of_map_projections</rdfs:comment>
         <rdfs:comment>The method of representing the surface of a sphere or other three-dimensional
       body on a plane.</rdfs:comment>
+        <rdfs:comment>See http://en.wikipedia.org/wiki/List_of_map_projections</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Cartographics"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -1448,11 +1437,11 @@
 
     <owl:DatatypeProperty rdf:about="&dams;quality">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:comment>Format guidelines:
-Images: longest dimension in pixels, e.g. &#39;100px&#39;
-Audio: bitrate, e.g. &#39;128kbps&#39;
-Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbps&#39;</rdfs:comment>
         <rdfs:comment>Format-specific indicator of quality, used to differentiate files with the same use value which differ only by resolution, bitrate, etc.</rdfs:comment>
+        <rdfs:comment>Format guidelines:
+Images: longest dimension in pixels, e.g. &apos;100px&apos;
+Audio: bitrate, e.g. &apos;128kbps&apos;
+Video: longest dimension and/or bitrate e.g. &apos;320px&apos;, &apos;640px/1000kbps&apos;</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;File"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
@@ -1670,16 +1659,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
     <!-- http://library.ucsd.edu/ontology/dams/#typeOfResource -->
 
     <owl:DatatypeProperty rdf:about="&dams;typeOfResource">
-        <rdfs:comment>Basic character of the work.</rdfs:comment>
         <rdfs:comment>Controlled vocabulary should be considered for extension and/or modification.</rdfs:comment>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&dams;Component"/>
-                    <rdf:Description rdf:about="&dams;Object"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:comment>Basic character of the work.</rdfs:comment>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -1757,6 +1738,14 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 </owl:oneOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&dams;Component"/>
+                    <rdf:Description rdf:about="&dams;Object"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
     </owl:DatatypeProperty>
     
 
@@ -1860,20 +1849,62 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                                                                                         <rdf:rest>
                                                                                             <rdf:Description>
                                                                                                 <rdf:type rdf:resource="&rdf;List"/>
-                                                                                                <rdf:first rdf:datatype="&xsd;string">visual-alternate</rdf:first>
+                                                                                                <rdf:first rdf:datatype="&xsd;string">image-alternate</rdf:first>
                                                                                                 <rdf:rest>
                                                                                                     <rdf:Description>
                                                                                                         <rdf:type rdf:resource="&rdf;List"/>
-                                                                                                        <rdf:first rdf:datatype="&xsd;string">visual-service</rdf:first>
+                                                                                                        <rdf:first rdf:datatype="&xsd;string">image-huge</rdf:first>
                                                                                                         <rdf:rest>
                                                                                                             <rdf:Description>
                                                                                                                 <rdf:type rdf:resource="&rdf;List"/>
-                                                                                                                <rdf:first rdf:datatype="&xsd;string">visual-source</rdf:first>
+                                                                                                                <rdf:first rdf:datatype="&xsd;string">image-icon</rdf:first>
                                                                                                                 <rdf:rest>
                                                                                                                     <rdf:Description>
                                                                                                                         <rdf:type rdf:resource="&rdf;List"/>
-                                                                                                                        <rdf:first rdf:datatype="&xsd;string">visual-thumbnail</rdf:first>
-                                                                                                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                        <rdf:first rdf:datatype="&xsd;string">image-large</rdf:first>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                <rdf:first>image-preview</rdf:first>
+                                                                                                                                <rdf:rest>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                        <rdf:first rdf:datatype="&xsd;string">image-service</rdf:first>
+                                                                                                                                        <rdf:rest>
+                                                                                                                                            <rdf:Description>
+                                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                <rdf:first rdf:datatype="&xsd;string">image-source</rdf:first>
+                                                                                                                                                <rdf:rest>
+                                                                                                                                                    <rdf:Description>
+                                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                        <rdf:first rdf:datatype="&xsd;string">image-thumbnail</rdf:first>
+                                                                                                                                                        <rdf:rest>
+                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                <rdf:first rdf:datatype="&xsd;string">video-alternate</rdf:first>
+                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                        <rdf:first rdf:datatype="&xsd;string">video-service</rdf:first>
+                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                                <rdf:first rdf:datatype="&xsd;string">video-source</rdf:first>
+                                                                                                                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                </rdf:rest>
+                                                                                                                                                            </rdf:Description>
+                                                                                                                                                        </rdf:rest>
+                                                                                                                                                    </rdf:Description>
+                                                                                                                                                </rdf:rest>
+                                                                                                                                            </rdf:Description>
+                                                                                                                                        </rdf:rest>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:rest>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
                                                                                                                     </rdf:Description>
                                                                                                                 </rdf:rest>
                                                                                                             </rdf:Description>
@@ -1957,14 +1988,14 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;Collection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;hasCollection"/>
-                <owl:allValuesFrom rdf:resource="&dams;Collection"/>
+                <owl:onProperty rdf:resource="&dams;hasProvenanceCollection"/>
+                <owl:allValuesFrom rdf:resource="&dams;ProvenanceCollection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;hasProvenanceCollection"/>
-                <owl:allValuesFrom rdf:resource="&dams;ProvenanceCollection"/>
+                <owl:onProperty rdf:resource="&dams;hasCollection"/>
+                <owl:allValuesFrom rdf:resource="&dams;Collection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1975,8 +2006,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;BuiltWorkPlace">
         <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
-        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
         <rdfs:comment>Describes a built environment, site, or other constructed place.</rdfs:comment>
+        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1995,14 +2026,14 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;point"/>
+                <owl:onProperty rdf:resource="&dams;projection"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;projection"/>
+                <owl:onProperty rdf:resource="&dams;line"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -2016,7 +2047,7 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;line"/>
+                <owl:onProperty rdf:resource="&dams;point"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -2069,9 +2100,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSResource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;language"/>
-                <owl:onClass rdf:resource="&dams;Language"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="&dams;hasObject"/>
+                <owl:allValuesFrom rdf:resource="&dams;Object"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2083,8 +2113,15 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;hasObject"/>
-                <owl:allValuesFrom rdf:resource="&dams;Object"/>
+                <owl:onProperty rdf:resource="&dams;language"/>
+                <owl:onClass rdf:resource="&dams;Language"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;collection"/>
+                <owl:allValuesFrom rdf:resource="&dams;Collection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2100,15 +2137,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:allValuesFrom rdf:resource="&dams;Collection"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;collection"/>
-                <owl:allValuesFrom rdf:resource="&dams;Collection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Mandatory event: collection record creation.</rdfs:comment>
-        <rdfs:comment>Note: only required note is ScopeContentNote</rdfs:comment>
-        <rdfs:comment>additional requirements TBD</rdfs:comment>
+        <rdfs:comment>Title and Language: cardinality overrides superclass.</rdfs:comment>
+        <rdfs:comment>Collection relationships need to be defined by policy TBD.</rdfs:comment>
         <rdfs:comment>An aggregate of objects and/or collections.  One type of
       collection is that in which all members of the collection have the same
       provenance.  A second type of collection is a sub-part of the first type
@@ -2119,8 +2149,9 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
       collection is typically constructed around a topical facet, e.g. Archive
       for New Poetry, Southworth Spanish Civil War, Melanesian, University Archives,
       etc.</rdfs:comment>
-        <rdfs:comment>Collection relationships need to be defined by policy TBD.</rdfs:comment>
-        <rdfs:comment>Title and Language: cardinality overrides superclass.</rdfs:comment>
+        <rdfs:comment>additional requirements TBD</rdfs:comment>
+        <rdfs:comment>Note: only required note is ScopeContentNote</rdfs:comment>
+        <rdfs:comment>Mandatory event: collection record creation.</rdfs:comment>
     </owl:Class>
     
 
@@ -2131,56 +2162,15 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSResource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;object"/>
-                <owl:onClass rdf:resource="&dams;Object"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;hasComponent"/>
-                <owl:allValuesFrom rdf:resource="&dams;Component"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;license"/>
-                <owl:onClass rdf:resource="&dams;License"/>
+                <owl:onProperty rdf:resource="&dams;typeOfResource"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;copyright"/>
-                <owl:onClass rdf:resource="&dams;Copyright"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;order"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;positiveInteger"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;hasFile"/>
                 <owl:allValuesFrom rdf:resource="&dams;File"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;otherRights"/>
-                <owl:onClass rdf:resource="&dams;OtherRights"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;typeOfResource"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2198,9 +2188,9 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;label"/>
+                <owl:onProperty rdf:resource="&dams;order"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;positiveInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2210,13 +2200,47 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Components are bounded by, unique to an object context and only
-      link to other objects having the same object context. Must link to the object
-      the component is associated with. If the child of another component, must
-      also link to it.</rdfs:comment>
-        <rdfs:comment>Mandatory event: component record creation.</rdfs:comment>
-        <rdfs:comment>Must have at least one child component or file.</rdfs:comment>
-        <rdfs:comment>Must link to parent component if there is one.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;object"/>
+                <owl:onClass rdf:resource="&dams;Object"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;label"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;hasComponent"/>
+                <owl:allValuesFrom rdf:resource="&dams;Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;otherRights"/>
+                <owl:onClass rdf:resource="&dams;OtherRights"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;license"/>
+                <owl:onClass rdf:resource="&dams;License"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;copyright"/>
+                <owl:onClass rdf:resource="&dams;Copyright"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>A logical or physical part of an object and contained
       exclusively within the object. The component may consist of metadata and
       one or more content files bound together within the context of the object.
@@ -2224,6 +2248,13 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
       component, whereas a component that has associated content files is a physical
       component. There is no constraint on how many components may occur at any
       given level or how deep the component hierarchy may go.</rdfs:comment>
+        <rdfs:comment>Must link to parent component if there is one.</rdfs:comment>
+        <rdfs:comment>Must have at least one child component or file.</rdfs:comment>
+        <rdfs:comment>Mandatory event: component record creation.</rdfs:comment>
+        <rdfs:comment>Components are bounded by, unique to an object context and only
+      link to other objects having the same object context. Must link to the object
+      the component is associated with. If the child of another component, must
+      also link to it.</rdfs:comment>
     </owl:Class>
     
 
@@ -2236,6 +2267,13 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;copyrightPurposeNote"/>
                 <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;copyrightJurisdiction"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2281,22 +2319,15 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;copyrightJurisdiction"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;date"/>
                 <owl:onClass rdf:resource="&dams;Date"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Relationship for Rights Holder.</rdfs:comment>
         <rdfs:comment>The copyright status of an object or object component, indicating if the object
       or object component is under copyright, if it is in the public domain, or if copyright is
       unknown.</rdfs:comment>
+        <rdfs:comment>Relationship for Rights Holder.</rdfs:comment>
     </owl:Class>
     
 
@@ -2305,8 +2336,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;CulturalContext">
         <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
-        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
         <rdfs:comment>The name of the culture, people (ethonym), or adjectival form of a country name from which a resource originated, or has been associated with.</rdfs:comment>
+        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2329,8 +2360,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Note declaring the custodial unit for an object.</rdfs:comment>
         <rdfs:comment>Should be populated by the Administrative Unit for an object.</rdfs:comment>
+        <rdfs:comment>Note declaring the custodial unit for an object.</rdfs:comment>
     </owl:Class>
     
 
@@ -2338,6 +2369,13 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
     <!-- http://library.ucsd.edu/ontology/dams/#DAMSEvent -->
 
     <owl:Class rdf:about="&dams;DAMSEvent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;outcome"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;type"/>
@@ -2441,20 +2479,6 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;relationship"/>
-                <owl:onClass rdf:resource="&dams;Relationship"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;outcomeNote"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;endDate"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;dateTimeStamp"/>
@@ -2469,16 +2493,23 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;outcome"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="&dams;outcomeNote"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Required name/role: event initiator.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;relationship"/>
+                <owl:onClass rdf:resource="&dams;Relationship"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Any event occurring in the DAMS slated to being tracked. Such events can include
       uploading of content files, creation and updating of metadata records, deletion of objects,
       and transfer of objects and collections to preservation management.</rdfs:comment>
         <rdfs:comment>Ontology: PREMIS</rdfs:comment>
+        <rdfs:comment>Required name/role: event initiator.</rdfs:comment>
     </owl:Class>
     
 
@@ -2489,8 +2520,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;date"/>
-                <owl:allValuesFrom rdf:resource="&dams;Date"/>
+                <owl:onProperty rdf:resource="&dams;subject"/>
+                <owl:allValuesFrom rdf:resource="&mads;ComplexSubject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2502,8 +2533,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;note"/>
-                <owl:allValuesFrom rdf:resource="&dams;Note"/>
+                <owl:onProperty rdf:resource="&dams;date"/>
+                <owl:allValuesFrom rdf:resource="&dams;Date"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2514,14 +2545,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;subject"/>
-                <owl:allValuesFrom rdf:resource="&mads;ComplexSubject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;relatedResource"/>
-                <owl:allValuesFrom rdf:resource="&dams;RelatedResource"/>
+                <owl:onProperty rdf:resource="&dams;language"/>
+                <owl:allValuesFrom rdf:resource="&dams;Language"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2532,13 +2557,19 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;language"/>
-                <owl:allValuesFrom rdf:resource="&dams;Language"/>
+                <owl:onProperty rdf:resource="&dams;note"/>
+                <owl:allValuesFrom rdf:resource="&dams;Note"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;relatedResource"/>
+                <owl:allValuesFrom rdf:resource="&dams;RelatedResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Mandatory event: DAMS Resource creation (collection, object, component).</rdfs:comment>
         <rdfs:comment>Parent of DAMS classes with common descriptive metadata attached (Collection,
       Object, and Component)</rdfs:comment>
-        <rdfs:comment>Mandatory event: DAMS Resource creation (collection, object, component).</rdfs:comment>
     </owl:Class>
     
 
@@ -2561,20 +2592,6 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;Date">
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;endDate"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;value"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;type"/>
@@ -2629,7 +2646,14 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;beginDate"/>
+                <owl:onProperty rdf:resource="&dams;endDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;value"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -2641,8 +2665,15 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Text date forms, which do not necessarily correspond to a specific numeric date (e.g., &#39;Easter&#39;), can be recorded in rdf:value.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;beginDate"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The date(s) for the collection, object, or object component. May be a single date or a combination of inclusive dates and/or bulk dates. May indicate if it is the date for creation, issuance, capture, copyright, or otherwise.</rdfs:comment>
+        <rdfs:comment>Text date forms, which do not necessarily correspond to a specific numeric date (e.g., &apos;Easter&apos;), can be recorded in rdf:value.</rdfs:comment>
     </owl:Class>
     
 
@@ -2653,41 +2684,6 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;sha1checksum"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;hexBinary"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;duration"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;component"/>
-                <owl:onClass rdf:resource="&dams;Component"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;use"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;sha256checksum"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;hexBinary"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;filestore"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
@@ -2695,9 +2691,30 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;sourceCapture"/>
-                <owl:onClass rdf:resource="&dams;SourceCapture"/>
+                <owl:onProperty rdf:resource="&dams;quality"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;checksum"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;hexBinary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;object"/>
+                <owl:onClass rdf:resource="&dams;Object"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;compositionLevel"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;nonNegativeInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2709,9 +2726,78 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;sha1checksum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;hexBinary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;component"/>
+                <owl:onClass rdf:resource="&dams;Component"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;sha256checksum"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;hexBinary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;use"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;size"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;nonNegativeInteger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;duration"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;otherRights"/>
+                <owl:onClass rdf:resource="&dams;OtherRights"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;preservationLevel"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;dateCreated"/>
+                <owl:allValuesFrom rdf:resource="&xsd;dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;objectCategory"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;sourceCapture"/>
+                <owl:onClass rdf:resource="&dams;SourceCapture"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2730,29 +2816,9 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;size"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;nonNegativeInteger"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;dateCreated"/>
-                <owl:allValuesFrom rdf:resource="&xsd;dateTimeStamp"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;formatVersion"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;object"/>
-                <owl:onClass rdf:resource="&dams;Object"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="&dams;event"/>
+                <owl:onClass rdf:resource="&dams;DAMSEvent"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2764,37 +2830,9 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;event"/>
-                <owl:onClass rdf:resource="&dams;DAMSEvent"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;compositionLevel"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;nonNegativeInteger"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;quality"/>
+                <owl:onProperty rdf:resource="&dams;formatVersion"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;preservationLevel"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;otherRights"/>
-                <owl:onClass rdf:resource="&dams;OtherRights"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2804,22 +2842,15 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:onDataRange rdf:resource="&xsd;hexBinary"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;checksum"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;hexBinary"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Mandatory event: file ingest.</rdfs:comment>
-        <rdfs:comment>Must link to the object the file is associated with. If associated with
-      a component, must also link to it.</rdfs:comment>
-        <rdfs:comment>Ontology: METS</rdfs:comment>
-        <rdfs:comment>Mandatory checksum: initial ingest checksum. Currently have best
-      coverage in crc32, switch to sha256?</rdfs:comment>
         <rdfs:comment>A file containing content capable of being rendered by a computer.
       May be of any mime type. The DAMS includes a description of each master file,
       that supports its preservation management.</rdfs:comment>
+        <rdfs:comment>Mandatory checksum: initial ingest checksum. Currently have best
+      coverage in crc32, switch to sha256?</rdfs:comment>
+        <rdfs:comment>Ontology: METS</rdfs:comment>
+        <rdfs:comment>Must link to the object the file is associated with. If associated with
+      a component, must also link to it.</rdfs:comment>
+        <rdfs:comment>Mandatory event: file ingest.</rdfs:comment>
     </owl:Class>
     
 
@@ -2844,8 +2875,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;Iconography">
         <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
-        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
         <rdfs:comment>The people and items depicted, the composition of an image, etc.</rdfs:comment>
+        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2874,15 +2905,15 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;Rights"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;rightsAction"/>
-                <owl:onClass rdf:resource="&dams;RightsAction"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="&dams;licenseURI"/>
+                <owl:allValuesFrom rdf:resource="&xsd;anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;licenseURI"/>
-                <owl:allValuesFrom rdf:resource="&xsd;anyURI"/>
+                <owl:onProperty rdf:resource="&dams;rightsAction"/>
+                <owl:onClass rdf:resource="&dams;RightsAction"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2892,18 +2923,18 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>It is possible for a license to be granted at specific time but for some or
+      all eventual permissions to be restricted for a period of time initially. This is basically
+      how embargoed ETDs are now modeled in the DAMS.</rdfs:comment>
+        <rdfs:comment>Required name/role: rights holder.</rdfs:comment>
+        <rdfs:comment>A contract between the rights holder for content and the administrative unit indicating
+      the rights and constraints placed upon the content for the unit. Purchase agreements,
+      deeds of gift, transfer agreements are construable as kinds of licenses.</rdfs:comment>
         <rdfs:comment>Licenses statements must link to permission and/or restrictions statements, and
       those statements link to dates. Thus, license statements do not directly link to dates. The
       active dates of the license should be capable of being inferred from the whole of the related
       permission / restriction statements, if there is cause to assign a collective date to a
       license.</rdfs:comment>
-        <rdfs:comment>A contract between the rights holder for content and the administrative unit indicating
-      the rights and constraints placed upon the content for the unit. Purchase agreements,
-      deeds of gift, transfer agreements are construable as kinds of licenses.</rdfs:comment>
-        <rdfs:comment>Required name/role: rights holder.</rdfs:comment>
-        <rdfs:comment>It is possible for a license to be granted at specific time but for some or
-      all eventual permissions to be restricted for a period of time initially. This is basically
-      how embargoed ETDs are now modeled in the DAMS.</rdfs:comment>
     </owl:Class>
     
 
@@ -2914,9 +2945,16 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;internalOnly"/>
+                <owl:onProperty rdf:resource="&dams;value"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;boolean"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;displayLabel"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3129,22 +3167,15 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;displayLabel"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;value"/>
+                <owl:onProperty rdf:resource="&dams;internalOnly"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>mods:originInfo will be created as an unstructured note.</rdfs:comment>
         <rdfs:comment>A description of some facet of a collection, object, or object component. Facets
       may range form abstract and scope content notes to specific aspects such as rights
       status.</rdfs:comment>
-        <rdfs:comment>mods:originInfo will be created as an unstructured note.</rdfs:comment>
     </owl:Class>
     
 
@@ -3155,6 +3186,20 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSResource"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;license"/>
+                <owl:onClass rdf:resource="&dams;License"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;title"/>
+                <owl:onClass rdf:resource="&dams;Title"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;typeOfResource"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
@@ -3162,9 +3207,43 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;cartographics"/>
+                <owl:onClass rdf:resource="&dams;Cartographics"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;otherRights"/>
+                <owl:onClass rdf:resource="&dams;OtherRights"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;statute"/>
                 <owl:onClass rdf:resource="&dams;Statute"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;hasComponent"/>
+                <owl:allValuesFrom rdf:resource="&dams;Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;copyright"/>
+                <owl:onClass rdf:resource="&dams;Copyright"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;unit"/>
+                <owl:onClass rdf:resource="&dams;Unit"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3186,65 +3265,17 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;otherRights"/>
-                <owl:onClass rdf:resource="&dams;OtherRights"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;copyright"/>
-                <owl:onClass rdf:resource="&dams;Copyright"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;title"/>
-                <owl:onClass rdf:resource="&dams;Title"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;license"/>
-                <owl:onClass rdf:resource="&dams;License"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;unit"/>
-                <owl:onClass rdf:resource="&dams;Unit"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;cartographics"/>
-                <owl:onClass rdf:resource="&dams;Cartographics"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;hasComponent"/>
-                <owl:allValuesFrom rdf:resource="&dams;Component"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:comment>DAMS Object requirements need to be changed to reflect this
+      (RCI Levy &amp; SIO examples)</rdfs:comment>
+        <rdfs:comment>Every object must be linked to one, and only one, Administrative Unit.
+      It may be linked to as many collections as are pertinent.</rdfs:comment>
+        <rdfs:comment>Mandatory event: object creation.</rdfs:comment>
+        <rdfs:comment>Title and Language: cardinality overrides superclass.</rdfs:comment>
         <rdfs:comment>A representation of an intellectual entity, sometimes referred
       to as a &quot;work.&quot; The object is composed of three distinct types of
       information: 1) one or more content files, 2) one or more metadata records,
       and 3) a binder (unique ID) holding all the parts of the object together and
       maintaining the correct internal associations among the parts.</rdfs:comment>
-        <rdfs:comment>Title and Language: cardinality overrides superclass.</rdfs:comment>
-        <rdfs:comment>Mandatory event: object creation.</rdfs:comment>
-        <rdfs:comment>Every object must be linked to one, and only one, Administrative Unit.
-      It may be linked to as many collections as are pertinent.</rdfs:comment>
-        <rdfs:comment>DAMS Object requirements need to be changed to reflect this
-      (RCI Levy &amp; SIO examples)</rdfs:comment>
     </owl:Class>
     
 
@@ -3253,6 +3284,13 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;OtherRights">
         <rdfs:subClassOf rdf:resource="&dams;Rights"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;otherRightsNote"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;otherRightsBasis"/>
@@ -3269,9 +3307,9 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;otherRightsNote"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&dams;relationship"/>
+                <owl:onClass rdf:resource="&dams;Relationship"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3281,23 +3319,16 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:onDataRange rdf:resource="&xsd;anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;relationship"/>
-                <owl:onClass rdf:resource="&dams;Relationship"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>Required Relationship: decision maker.</rdfs:comment>
-        <rdfs:comment>Any other rights not covered by copyright, statute, or license. This typically
-       includes library policies that restrict access to content out of respect to cultural
-       sensitivities.</rdfs:comment>
+        <rdfs:comment>Other Rights, like other right types, link indirectly to dates via Rights Action.</rdfs:comment>
         <rdfs:comment>We currently do not use Other Rights in the DAMS, but that is because this
        element was only recently added to PREMIS. We do have objects that have been restricted
        due to institutional policy, the culturally sensitive objects in Lambert being a case in
        point. We also have objects that UCSD has decided to display under the principles of fair
        use.</rdfs:comment>
-        <rdfs:comment>Other Rights, like other right types, link indirectly to dates via Rights Action.</rdfs:comment>
+        <rdfs:comment>Any other rights not covered by copyright, statute, or license. This typically
+       includes library policies that restrict access to content out of respect to cultural
+       sensitivities.</rdfs:comment>
+        <rdfs:comment>Required Relationship: decision maker.</rdfs:comment>
     </owl:Class>
     
 
@@ -3321,8 +3352,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:cardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Investigate automating this value.</rdfs:comment>
         <rdfs:comment>Note containing the preferred citation form.</rdfs:comment>
+        <rdfs:comment>Investigate automating this value.</rdfs:comment>
     </owl:Class>
     
 
@@ -3360,12 +3391,6 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;RelatedResource">
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;uri"/>
-                <owl:allValuesFrom rdf:resource="&xsd;anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;type"/>
@@ -3425,13 +3450,19 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>We may need to either write policy to enforce relationships between classes
-      (object to object, collection to collection, etc.) or subclass Related Resource to enforce
-      relationships.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;uri"/>
+                <owl:allValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Describes a related resource either internal to the DAMS or in a system external
       to the DAMS. This could include metadata in another format, content version in another
       system, relationship between objects and relationship between collections in respect to
       a specified property.</rdfs:comment>
+        <rdfs:comment>We may need to either write policy to enforce relationships between classes
+      (object to object, collection to collection, etc.) or subclass Related Resource to enforce
+      relationships.</rdfs:comment>
     </owl:Class>
     
 
@@ -3442,16 +3473,16 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;role"/>
-                <owl:onClass rdf:resource="&dams;Role"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="&dams;name"/>
+                <owl:onClass rdf:resource="&mads;Name"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;name"/>
-                <owl:onClass rdf:resource="&mads;Name"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onProperty rdf:resource="&dams;role"/>
+                <owl:onClass rdf:resource="&dams;Role"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Name/Role bundle which is linked to from Collection, Object, etc.</rdfs:comment>
@@ -3491,6 +3522,18 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;beginDate"/>
+                <owl:allValuesFrom rdf:resource="&xsd;date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;endDate"/>
+                <owl:allValuesFrom rdf:resource="&xsd;date"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;type"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange>
@@ -3524,18 +3567,6 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 </owl:onDataRange>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;endDate"/>
-                <owl:allValuesFrom rdf:resource="&xsd;date"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;beginDate"/>
-                <owl:allValuesFrom rdf:resource="&xsd;date"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>An action that is permitted or restricted according to the rights status for an
        object or object component.</rdfs:comment>
     </owl:Class>
@@ -3546,12 +3577,12 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;Role">
         <rdfs:subClassOf rdf:resource="&dams;VocabularyEntry"/>
-        <rdfs:comment>A term describing the relationship between a Name and an Collection, Object,
-      Component, Events, and Rights Status.</rdfs:comment>
         <rdfs:comment>A list of terms for the relationship of name to Collection, Object, Component,
       Events, and Rights Status. The predicates can be derived from standard and local list of
       role terms. Role may be a subclass of higher level entity such as Functional
       Relationship.</rdfs:comment>
+        <rdfs:comment>A term describing the relationship between a Name and an Collection, Object,
+      Component, Events, and Rights Status.</rdfs:comment>
     </owl:Class>
     
 
@@ -3593,21 +3624,21 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;scanningSoftware"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;scanningSoftwareVersion"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;scannerModelName"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;imageProducer"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;scanningSoftware"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -3621,7 +3652,7 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;captureSource"/>
+                <owl:onProperty rdf:resource="&dams;scanningSoftwareVersion"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -3635,13 +3666,13 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;imageProducer"/>
+                <owl:onProperty rdf:resource="&dams;captureSource"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Ontology: MIX</rdfs:comment>
         <rdfs:comment>An indication of software and hardware used to produce the content file.</rdfs:comment>
+        <rdfs:comment>Ontology: MIX</rdfs:comment>
     </owl:Class>
     
 
@@ -3659,16 +3690,16 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;rightsAction"/>
-                <owl:onClass rdf:resource="&dams;RightsAction"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="&dams;statuteJurisdiction"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;statuteJurisdiction"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onProperty rdf:resource="&dams;rightsAction"/>
+                <owl:onClass rdf:resource="&dams;RightsAction"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3678,18 +3709,18 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Statues link to a permissions and / or restriction records, and they link to
-      dates. Thus, statutes link indirectly to dates.</rdfs:comment>
-        <rdfs:comment>Required Rights Action: whether the statute allows or prohibits
-      display.</rdfs:comment>
-        <rdfs:comment>Statutes typically limit access to content in some way, often because the
-      content is of a type protected by privacy / confidentiality laws, e.g. FERPA, HIPA,
-      etc.</rdfs:comment>
-        <rdfs:comment>Currently we do not include in the DAMS any content subject to statutory
-      regulation. That, of course, can change.</rdfs:comment>
         <rdfs:comment>A national or regional statute that pertains to content and typically limits
       access to it on some degree, e.g. Federal Educational Rights and Privacy Act (FERPA), which
       limits dissemination of student records for a specified period of time.</rdfs:comment>
+        <rdfs:comment>Currently we do not include in the DAMS any content subject to statutory
+      regulation. That, of course, can change.</rdfs:comment>
+        <rdfs:comment>Statutes typically limit access to content in some way, often because the
+      content is of a type protected by privacy / confidentiality laws, e.g. FERPA, HIPA,
+      etc.</rdfs:comment>
+        <rdfs:comment>Required Rights Action: whether the statute allows or prohibits
+      display.</rdfs:comment>
+        <rdfs:comment>Statues link to a permissions and / or restriction records, and they link to
+      dates. Thus, statutes link indirectly to dates.</rdfs:comment>
     </owl:Class>
     
 
@@ -3698,8 +3729,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;StylePeriod">
         <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
-        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
         <rdfs:comment>A defined style, historical period, group, school, dynasty, movement, etc. whose characteristics are represented in the resource.</rdfs:comment>
+        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3716,8 +3747,8 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;Technique">
         <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
-        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
         <rdfs:comment>The production or manufacturing processes, techniques, and methods incorporated in the fabrication or alteration of the resource.</rdfs:comment>
+        <rdfs:seeAlso>VRA Core 4.0 http://www.loc.gov/standards/vracore/</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3736,9 +3767,15 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;subtitle"/>
+                <owl:onProperty rdf:resource="&dams;language"/>
+                <owl:onClass rdf:resource="&dams;Language"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;relatedTitle"/>
+                <owl:allValuesFrom rdf:resource="&dams;Title"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3750,20 +3787,6 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;partName"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;language"/>
-                <owl:onClass rdf:resource="&dams;Language"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;displayLabel"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
@@ -3771,29 +3794,29 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;authorityURI"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;anyURI"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;partNumber"/>
+                <owl:onProperty rdf:resource="&dams;script"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;valueURI"/>
+                <owl:onProperty rdf:resource="&dams;nonsortCharacters"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;anyURI"/>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;value"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;subtitle"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3851,28 +3874,36 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;script"/>
+                <owl:onProperty rdf:resource="&dams;partName"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;nonsortCharacters"/>
+                <owl:onProperty rdf:resource="&dams;authorityURI"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
+                <owl:onDataRange rdf:resource="&xsd;anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;relatedTitle"/>
-                <owl:allValuesFrom rdf:resource="&dams;Title"/>
+                <owl:onProperty rdf:resource="&dams;valueURI"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>A term or phrase describing a collection, object, or object component. The title
-      may be transcribed from the work, from previous metadata, or supplied.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;partNumber"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>relatedTitle should be used to link to equivalent transliterated, translated,
       abbreviated, etc. titles.</rdfs:comment>
+        <rdfs:comment>A term or phrase describing a collection, object, or object component. The title
+      may be transcribed from the work, from previous metadata, or supplied.</rdfs:comment>
     </owl:Class>
     
 
@@ -3881,19 +3912,6 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
 
     <owl:Class rdf:about="&dams;Unit">
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;unitDescription"/>
-                <owl:allValuesFrom rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;unitName"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;unitURI"/>
@@ -3910,17 +3928,30 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;unitDescription"/>
+                <owl:allValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;unitCode"/>
                 <owl:allValuesFrom rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>Mandatory event: administrative unit record creation.</rdfs:comment>
-        <rdfs:comment>Will revisit the need for Agency Code and Country Code properties. These
-      attributes may be conducive for sharing records.</rdfs:comment>
-        <rdfs:comment>All objects in the DAMS must be linked to one and only one administrative unit.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;unitName"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>The identification of a library unit (or non-library data provider)
       that is responsible for supplying content to the DAMS and for administering that
       content over time, including answering queries from users.</rdfs:comment>
+        <rdfs:comment>All objects in the DAMS must be linked to one and only one administrative unit.</rdfs:comment>
+        <rdfs:comment>Will revisit the need for Agency Code and Country Code properties. These
+      attributes may be conducive for sharing records.</rdfs:comment>
+        <rdfs:comment>Mandatory event: administrative unit record creation.</rdfs:comment>
     </owl:Class>
     
 
@@ -3947,14 +3978,7 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;vocabulary"/>
-                <owl:onClass rdf:resource="&dams;Vocabulary"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;authority"/>
+                <owl:onProperty rdf:resource="&dams;description"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -3964,20 +3988,6 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:onProperty rdf:resource="&dams;code"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;description"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;valueURI"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3994,11 +4004,32 @@ Video: longest dimension and/or bitrate e.g. &#39;320px&#39;, &#39;640px/1000kbp
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;vocabulary"/>
+                <owl:onClass rdf:resource="&dams;Vocabulary"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;authority"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;valueURI"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Item in a controlled vocabulary list.</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
