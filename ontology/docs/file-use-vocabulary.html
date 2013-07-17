@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<html>
+<head>
+  <title>DAMS4 File Use Vocabulary</title>
+  <style type="text/css">
+    body { font-family: sans-serif; }
+    table, td, th { border-color: black; border-style: solid; }
+    table { border-width: 1px; border-spacing: 0; border-collapse: collapse; }
+    td, th { vertical-align: top; margin: 0; padding: 3px; border-width: 1px 1px 0 0; }
+  </style>
+</head>
+<body>
+	<!-- table of contents -->
+	<h1>DAMS4 File Use Vocabulary</h1>
+<table>
+<tbody>
+<tr>
+<th> <p>Type</p> </th>
+<th> <p>Role</p> </th>
+<th> <p>Examples</p> </th>
+<th> <p>Notes</p> </th>
+</tr>
+<tr>
+<td> <p>image</p> </td>
+<td> <p>source</p> </td>
+<td> <p>TIFF image master, MOV/AVI master video</p> </td>
+<td> <p>do not allow downloading because of bandwidth, format support, control of data</p> </td>
+</tr>
+<tr>
+<td> <p>image</p> </td>
+<td> <p>service</p> </td>
+<td> <p>screen-resolution image derivative</p> </td>
+<td> <p>surrogate can be used instead of master file</p> </td>
+</tr>
+<tr>
+<td> <p>image</p> </td>
+<td>
+    <p>huge</p>
+    <p>large</p>
+    <p>preview</p>
+    <p>thumbnail</p>
+    <p>icon</p>
+</td>
+<td> <p>low-resolution image derivatives, video/document preview images</p> </td>
+<td> <p>only useful for identifying master file.  Current resolutions are 1600px (huge), 1024px (large), 450px (preview), 150px (thumbnail) and 65px (icon).</p> </td>
+</tr>
+<tr>
+<td> <p>image</p> </td>
+<td> <p>alternate</p> </td>
+<td> <p>original TIFF image superseded by edited TIFF</p> </td>
+<td> <p>same as image source, but typically would not generate derivatives</p> </td>
+</tr>
+<tr>
+<td> <p>document</p> </td>
+<td> <p>source</p> </td>
+<td> <p>Word document master</p> </td>
+<td> <p> </p> </td>
+</tr>
+<tr>
+<td> <p>document</p> </td>
+<td> <p>service</p> </td>
+<td> <p>PDF created from a Word document.</p> </td>
+<td> <p> </p> </td>
+</tr>
+<tr>
+<td> <p>document</p> </td>
+<td> <p>alternate</p> </td>
+<td> <p>original transcript to a redacted version.</p> </td>
+<td> <p> </p> </td>
+</tr>
+<tr>
+<td> <p>audio</p> </td>
+<td> <p>source</p> </td>
+<td> <p>WAV audio master</p> </td>
+<td> <p>same as image master, but use icon for display</p> </td>
+</tr>
+<tr>
+<td> <p>audio</p> </td>
+<td> <p>service</p> </td>
+<td> <p>MP3 audio derivative</p> </td>
+<td> <p>same as image surrogate, but use image preview or generic icon for display</p> </td>
+</tr>
+<tr>
+<td> <p>audio</p> </td>
+<td> <p>alternate</p> </td>
+<td> <p>an original audio project file from Logic, etc.</p> </td>
+<td> <p> </p> </td>
+</tr>
+<tr>
+<td>video</td>
+<td>source</td>
+<td>AVI or MOV video master</td>
+<td>same as image master, but use icon for display</td>
+</tr>
+<tr>
+<td>video</td>
+<td>service</td>
+<td>MP4 video derivative</td>
+<td>same as image surrogate, but use image preview for display</td>
+</tr>
+<tr>
+<td>video</td>
+<td>alternate</td>
+<td>an original video file from authoring software</td>
+<td> </td>
+</tr>
+<tr>
+<td> <p>data</p> </td>
+<td> <p>source</p> </td>
+<td> <p>statistical data that needs to be transformed for service.</p> </td>
+<td> <p> </p> </td>
+</tr>
+<tr>
+<td> <p>data</p> </td>
+<td> <p>service</p> </td>
+<td> <p>TAR archive of research data, fish catch statistics, XML news releases</p> </td>
+<td> <p> </p> </td>
+</tr>
+<tr>
+<td> <p>data</p> </td>
+<td> <p>alternate</p> </td>
+<td> <p>TAR archive of page images</p> </td>
+<td> <p>alternate to document master, could be used for sidecar metadata files, etc.</p> </td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Role Definitions:</h3>
+<ul>
+  <li>Source: High resolution quality file either digital or born digital. Used to generate service and thumbnail files, when relevant and needed. Current examples are TIFF,JPEG, WAV, MOV/AVI</li>
+  <li>Alternate: Another version of either a source or service file.  Also used for files in non-standard formats (RAW images, proprietary authoring tools, etc.).</li>
+  <li>Service:The file provided to end users in user interface or for download. Either derived from source image or can be the only available file.</li>
+  <li>Preview/Thumbnail/Icon: Files used as proxies for the service file in the user interface.</li>
+</ul>
+</body>
+</html>
