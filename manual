@@ -1,0 +1,51 @@
+#Introducing DAMS
+####An overview of the Digital Asset Management System (DAMS)
+#####Presented by UC San Diego Library
+****
+##Introducing the Digital Asset Management System
+The UC San Diego Library’s **Digital Asset Management System** (**DAMS**) is a technology framework for preserving, managing, and making digital objects and their metadata available, both within the university’s current library systems, and to external groups and applications. 
+
+DAMS is designed to accommodate the widest possible spectrum of digital media held by UC San Diego libraries, housing and delivering digital resources in ways that serve both the preservation of the data and its users in flexible, open-ended ways.
+
+This document reviews the architecture, data model, and functions of DAMS and its components.
+
+![alt text](http://github.com/ "DAMS")
+****
+##What is DAMS?
+**DAMS** is a collection of a data model, software applications, and services that accept digital resources into UC San Diego Library systems, classifying and preserving them in intelligent, flexible ways, and then making resources available to library patrons and other information systems.
+
+1. Multimedia objects are ingested into DAMS.
+
+2. Resources are classified and archived using rich, open metadata.
+
+3. Resources are made available to a variety of systems and users.
+****
+##DAMS Architecture
+![alt text](https://github.com/picture.jpg "DAMS Architecture")
+
+**DAMS** is composed of many linked applications and components.  The Java-based **DAMS Manager** handles many curator tasks such as batch ingest, metadata standardization into the **DAMS Data Model**, and derivative creation.  The Ruby-based **DAMS Hydra Head** is the primary interface for users, managing the look and feel as well as the discovery and display of digital objects. The **DAMS API** provides RESTian access to the Java-based **DAMS Repository**, which is tightly coupled to local and/or cloud based storage.  Preservation of the objects is provided by Chronopolis. The Hydra Head and Repository utilize the indexing capabilities of Solr. Finally, a Wowza server provides streaming access to digital objects. This combination of components provide a complete system for working with simple to complex digital objects, and enable the UC San Diego Libraries to host and deliver resources in almost any digital format. 
+****
+##DAMS Data Model
+DAMS is able to work with a wide variety of digital objects because of its Data Model, a set of classes and subclasses that can describe any digital object.
+
+![alt text](https://github.com/pic.jpg "DAMS Data Model")
+
+The core of the data model is the Object class, which represents an intellectual work.  File records (content files) can be attached directly to Objects to handle simple objects with a single data file.  Objects can be subdivided into Components, which can form an arbitrarily-complex hierarchy to represent the rich structure found in some materials, particularly archival holdings and research data.  All File records attached directly to an Object or Component are equivalent, only differing in format or quality (for example, a source file and derivatives generated from it, or video files in multiple formats for different platforms).  File records contain technical metadata to support fixity checking, format discovery and selecting the appropriate file to use for presentation in an access system user interface.
+
+Objects are aggregated in two ways: in collections and in Administrative Units.  Each Object must link to a single Administrative Unit, to record who has custodial responsibility for the Object.  Collections are used for other groups of Objects — ProvenanceCollection and ProvenanceCollectionPart are used to record groups of Objects from the same source.  AssembledCollection is used for other groupings, including organizing ProvenanceCollections into a hierarchy for browsing.
+
+Descriptive metadata modeled after MODS can be attached to Object, Collection and Component records.  Very little is required (title, language, copyright and administrative unit are the only required properties of an Object, and Components require only a title or a date).  The model is able to capture the full richness of MODS metadata, with repeating complex title, subject, date and name statements.  The model is also able to reuse these statements when appropriate in ways analogous to authority records in a traditional catalog. Name, Subject and other descriptive metadata content are first-class records with their own permanent URLs which can be linked to from Objects, Components and Collections.  This allows the model to link Names and Subjects to published authorities like LCSH, LCNAF, and VIAF.
+
+Administrative metadata is modeled on PREMIS, including our Rights and DAMSEvent classes.  Some of the verbose hierarchy was omitted, but in general the properties map directly from PREMIS.
+****
+##How Resources Are Managed and Utilized Within DAMS
+
+![alt text](https://github.com/picture.jpg "Figure")
+
+New library resources, along with their metadata, are typically ingested into **DAMS** in bulk using **DAMS Manager**. (Over time this functionality will become part of the **DAMS Hydra Head** and the **DAMS Manager** will become obsolete.)
+
+During this process, data files for each resource are copied to **DAMS Storage**, and metadata is standardized and stored as *triples* in the **DAMS triplestore** and indexed by Solr. Resources can also be added manually by curators, and metadata added or edited, using the **DAMS Hydra Head Editor**. 
+
+
+****
+##A Closer Look: Classifying, Storing, and Retrieving Objects in DAMS
