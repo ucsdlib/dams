@@ -62,9 +62,9 @@
     
 
 
-    <!-- http://library.ucsd.edu/ontology/dams/#assembledColleciton -->
+    <!-- http://library.ucsd.edu/ontology/dams/#assembledCollection -->
 
-    <owl:ObjectProperty rdf:about="&dams;assembledColleciton">
+    <owl:ObjectProperty rdf:about="&dams;assembledCollection">
         <rdfs:comment>Links from an Object to an AssembledCollection that contains it.</rdfs:comment>
         <rdfs:range rdf:resource="&dams;AssembledCollection"/>
         <rdfs:domain rdf:resource="&dams;Object"/>
