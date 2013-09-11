@@ -232,6 +232,17 @@
 <td><p>Mandatory event: DAMS Resource creation (collection, object, component).</p></td>
 </tr>
 <tr>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>typeOfResource</p></td>
+  <td><p>Basic character of the work.</p></td>
+  <td><p id="typeOfResourceCV">C.V (mods): text, cartographic, notated music, sound recording-musical, sound recording-nonmusical,sound recording, still image, moving image, three dimensional object, software, multimedia, mixed material</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>May be repeated for collections or complex objects that contain multiple types.</p></td>
+</tr>
+<tr>
 <td><p>&#xA0;</p></td>
 <td><p>&#xA0;</p></td>
 <td><p id="dams-collection">Collection</p></td>
@@ -279,6 +290,46 @@
 <p>&#xA0;</p>
 </td>
 <td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p><ul>typeOfResource</ul></p>
+</td>
+<td>
+<p>Basic character of the work.</p>
+</td>
+<td>
+<p>See <a href="#typeOfResourceCV">CV list</a> above.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>visibility</p></td>
+  <td><p>Access control status of for the collection object, used to determine whether a given user should see this collection listed in a user interface.</p></td>
+  <td><p>C.V: curator, local, public</p></td>
+  <td><p>&#xA0;</p></td>
+  <td><p>&#xA0;</p></td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
 <p id="dams-assembled-collection">
 <span style="color: rgb(0,0,255);">Assembled Collection</span>
 </p>
@@ -299,6 +350,35 @@
 <td>
 <p><a href="#dams-collection">Collection</a> (hasCollection 0-m)<br/><a href="#dams-provenance-collection">Provenance Collection</a> (hasProvenanceCollection 0-m)<br/><a href="#dams-provenance-collection-part">Provenance Collection Part</a> (hasPart 0-m)<br/><span style="text-decoration: underline;"><a href="#dams-collection">Collection</a> (relatedCollection 0-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-object">Object</a> (hasObject 0-m)</span><br/><span style="text-decoration: underline;"><a href="#mads-title">Title</a> (title 1-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-date">Date</a> (date 0-m)</span><br/><span style="text-decoration: underline;"><a href="#mads-language">Language</a> (language 1-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-note">Note</a> (note, custodialResponsibilityNote, preferredCitationNote 0-m)</span> , ScopeContentNote (scopeContentNote 1-m)<br/><span style="text-decoration: underline;"><a href="#dams-relationship">Relationship</a> (relationship 0-m)</span><br/><span style="text-decoration: underline;"><a href="#mads-type">MADSType</a> (builtWorkPlace, complexSubject, conferenceName, corporateName, culturalContext, familyName, function, genreForm, geographic, iconography, name, occupation, personalName, scientificName, stylePeriod, technique, temporal, topic 0-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-related-resource">Related Resource</a> (relatedResource 0-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-event">DAMS Event</a> (event 1-m)</span>
 </p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p><ul>typeOfResource</ul></p>
+</td>
+<td>
+<p>Basic character of the work.</p>
+</td>
+<td>
+<p>See <a href="#typeOfResourceCV">CV list</a> above.</p>
+</td>
+<td>
+<p>&#xA0;</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -351,6 +431,35 @@
 <p>&#xA0;</p>
 </td>
 <td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p><ul>typeOfResource</ul></p>
+</td>
+<td>
+<p>Basic character of the work.</p>
+</td>
+<td>
+<p>See <a href="#typeOfResourceCV">CV list</a> above.</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
 <p id="dams-provenance-collection-part">
 <span style="color: rgb(0,0,255);">Provenance Collection Part</span>
 </p>
@@ -371,6 +480,35 @@
 <td>
 <p><a href="#dams-provenance-collection">Provenance Collection</a> (provenanceCollection 1)<br/><span style="text-decoration: underline;"><a href="#dams-collection">Collection</a> (relatedCollection 0-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-object">Object</a> (hasObject 0-m)</span><br/><span style="text-decoration: underline;"><a href="#mads-title">Title</a> (title 1-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-date">Date</a> (date 0-m)</span><br/><span style="text-decoration: underline;"><a href="#mads-language">Language</a> (language 1-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-note">Note</a> (note, custodialResponsibilityNote, preferredCitationNote 0-m)</span> , ScopeContentNote (scopeContentNote 1-m)<br/><span style="text-decoration: underline;"><a href="#dams-relationship">Relationship</a> (relationship 0-m)</span><br/><span style="text-decoration: underline;"><a href="#mads-type">MADSType</a> (builtWorkPlace, complexSubject, conferenceName, corporateName, culturalContext, familyName, function, genreForm, geographic, iconography, name, occupation, personalName, scientificName, stylePeriod, technique, temporal, topic 0-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-related-resource">Related Resource</a> (relatedResource 0-m)</span><br/><span style="text-decoration: underline;"><a href="#dams-event">DAMS Event</a> (event 1-m)</span>
 </p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p>&#xA0;</p>
+</td>
+<td>
+<p><ul>typeOfResource</ul></p>
+</td>
+<td>
+<p>Basic character of the work.</p>
+</td>
+<td>
+<p>See <a href="#typeOfResourceCV">CV list</a> above.</p>
+</td>
+<td>
+<p>&#xA0;</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -445,14 +583,13 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>typeOfResource <strong>(required)</strong>
-</p>
+<p><ul>typeOfResource <strong>(required)</strong></ul></p>
 </td>
 <td>
 <p>Basic character of the work.</p>
 </td>
 <td>
-<p>C.V (mods): text, cartographic, notated music, sound recording-musical, sound recording-nonmusical,sound recording, still image, moving image, three dimensional object, software, multimedia, mixed material, dataset</p>
+<p>See <a href="#typeOfResourceCV">CV list</a> above.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -569,13 +706,13 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>typeOfResource</p>
+<p><ul>typeOfResource</ul></p>
 </td>
 <td>
 <p>Basic character of the work.</p>
 </td>
 <td>
-<p>C.V (mods): text, cartographic, notated music, sound recording-musical, sound recording-nonmusical,sound recording, still image, moving image, three dimensional object, software, multimedia, mixed material</p>
+<p>See <a href="#typeOfResourceCV">CV list</a> above.</p>
 </td>
 <td>
 <p>&#xA0;</p>
