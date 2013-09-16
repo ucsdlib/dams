@@ -1354,9 +1354,9 @@
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:comment>Format-specific indicator of quality, used to differentiate files with the same use value which differ only by resolution, bitrate, etc.</rdfs:comment>
         <rdfs:comment>Format guidelines:
-Images: longest dimension in pixels, e.g. &apos;100px&apos;
-Audio: bitrate, e.g. &apos;128kbps&apos;
-Video: longest dimension and/or bitrate e.g. &apos;320px&apos;, &apos;640px/1000kbps&apos;</rdfs:comment>
+Images: resolution in pixels, e.g. &apos;1280x740&apos;
+Audio: bitrate, sample frequency, and number of channels e.g. &apos;256-bit, 44.1kHz, Single channel (Mono)&apos;
+Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if applicable, e.g. &apos;video: mpeg4 (Simple Profile), 640x480, 261 kb/s, 10 fps; audio: aac, 32000 Hz, mono, s16, 43 kb/s&apos;</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;File"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
