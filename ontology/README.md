@@ -3,7 +3,7 @@ DAMS OWL Ontology
 Developed at The UC San Diego Library by Esmé Cowles, Matt Critchlow, Arwen
 Hutt, Longshou Situ and Brad Westbrook.
 
-* [OWL Ontology](https://github.com/ucsdlib/dams/blob/master/ontology/dams.owl)
+* [OWL Ontology](https://github.com/ucsdlib/dams/blob/master/ontology/dams.owl) ([visualize with LODE](http://www.essepuntato.it/lode/https://raw2.github.com/ucsdlib/dams/master/ontology/dams.owl))
 * [Data Dictionary](http://htmlpreview.github.io/?https://github.com/ucsdlib/dams/master/ontology/docs/data-dictionary.html)
 * [User Stories (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/user-stories.pdf)
 * [Overview Diagram (PDF)](https://github.com/ucsdlib/dams/blob/master/ontology/docs/overview-diagram.pdf)
