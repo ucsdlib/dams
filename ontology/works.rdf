@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:hydra="http://projecthydra.org/ns/works#"
+         xmlns:ore="http://www.openarchives.org/ore/terms/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#">
+    <dcterms:title xml:lang="en">Hydra::Works ontology</dcterms:title>
+    <dcterms:publisher rdf:resource="http://projecthydra.org/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-21</dcterms:modified>
+    <rdfs:seeAlso rdf:resource="https://wiki.duraspace.org/display/hydra/Hydra%3A%3AWorks+Shared+Modeling"/>
+  </rdf:Description>
+
+  <!-- classes -->
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#GenericResource">
+    <rdfs:label xml:lang="en">Generic Resource</rdfs:label>
+    <rdfs:comment xml:lang="en">A GenericResource is the parent class of GenericWork and GenericCollection -- it represents the common properties of descriptive metadata, containing GenericFiles, having GenericWork members, and belonging to AdministrativeSets.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://projecthydra.org/ns/works#"/>
+    <rdfs:subClassOf rdf:resource="http://www.openarchives.org/ore/terms/Aggregation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#GenericWork">
+    <rdfs:label xml:lang="en">Generic Work</rdfs:label>
+    <rdfs:comment xml:lang="en">A GenericWork is an intellectual entity, sometimes called a "work", "digital object", etc.  Works have descriptive metadata, access metadata, may contain files, and other GenericWorks as member "components".</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://projecthydra.org/ns/works#"/>
+    <rdfs:subClassOf rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#GenericCollection">
+    <rdfs:label xml:lang="en">Generic Collection</rdfs:label>
+    <rdfs:comment xml:lang="en">A GenericCollection is a group of resources.  Collections have descriptive metadata, access metadata, may contain files and links to works and/or collections.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://projecthydra.org/ns/works#"/>
+    <rdfs:subClassOf rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#AdministrativeSet">
+    <rdfs:label xml:lang="en">Administrative Set</rdfs:label>
+    <rdfs:comment xml:lang="en">An Administrative Set is a grouping of resources that an administrative unit is ultimately responsible for managing.  The set itself helps to manage the items within it.  A GenericWork or GenericCollection may be contained by only one AdministrativeSet.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://projecthydra.org/ns/works#"/>
+    <rdfs:subClassOf rdf:resource="http://projecthydra.org/ns/works#GenericCollection"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#GenericFile">
+    <rdfs:label xml:lang="en">Generic File</rdfs:label>
+    <rdfs:comment xml:lang="en">A GenericFile is a sequence of binary data and its accompanying metadata.  The metadata typically includes at least basic technical metadata (size, content type, modification date, etc.), but can also include properties related to preservation, digitization process, provenance, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://projecthydra.org/ns/works#"/>
+  </rdf:Description>
+
+  <!-- properties -->
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#hasMember">
+    <rdfs:label xml:lang="en">Has Member</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a related GenericWork.  Typically used to link to component parts, such as a book linking to a page.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://projecthydra.org/ns/works#"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.openarchives.org/ore/terms/aggregates"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://projecthydra.org/ns/works#GenericWork"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#contains">
+    <rdfs:label xml:lang="en">Contains</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to GenericCollections and GenericWorks contained by this AdministrativeSet.  Contains is a transitive relationship.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://projecthydra.org/ns/works#"/>
+    <rdfs:subPropertyOf rdf:resource="http://projecthydra.org/ns/works#hasMember"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#AdministrativeSet"/>
+    <rdfs:range rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://projecthydra.org/ns/works#hasFile">
+    <rdfs:label xml:lang="en">Has File</rdfs:label>
+    <rdfs:comment xml:lang="en">Links to a GenericFile contained by this GenericResource.  Typically used to link to a content file, but also used for linking to metadata, policy/workflow documentation, etc.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://projecthydra.org/ns/works#"/>
+    <rdfs:subPropertyOf rdf:resource="http://projecthydra.org/ns/works#contains"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://projecthydra.org/ns/works#GenericFile"/>
+  </rdf:Description>
+</rdf:RDF>

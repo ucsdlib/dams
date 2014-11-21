@@ -1,0 +1,326 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dcterms="http://purl.org/dc/terms/"
+         xmlns:edm="http://www.europeana.eu/schemas/edm/"
+         xmlns:hydra="http://projecthydra.org/ns/works#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#">
+    <dcterms:title xml:lang="en">UCSD DAMS ontology, version 5</dcterms:title>
+    <dcterms:publisher rdf:resource="http://library.ucsd.edu/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-21</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#eventDate">
+    <rdfs:label xml:lang="en">Event Date</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#collectionDate">
+    <rdfs:label xml:lang="en">Collection Date</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.europeana.eu/schemas/edm/TimeSpan"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#area">
+    <rdfs:label xml:lang="en">Area</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#depiction">
+    <rdfs:label xml:lang="en">Depiction</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#exhibit">
+    <rdfs:label xml:lang="en">Exhibit</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#findingAid">
+    <rdfs:label xml:lang="en">Finding Aid</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#locus">
+    <rdfs:label xml:lang="en">Locus</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#newsRelease">
+    <rdfs:label xml:lang="en">News Release</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#stratum">
+    <rdfs:label xml:lang="en">Stratum</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/relation"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#arrangement">
+    <rdfs:label xml:lang="en">Arrangement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#bibliography">
+    <rdfs:label xml:lang="en">Bibliography</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#biography">
+    <rdfs:label xml:lang="en">Biography</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#classification">
+    <rdfs:label xml:lang="en">Classification</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#credits">
+    <rdfs:label xml:lang="en">Credits</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#custodialHistory">
+    <rdfs:label xml:lang="en">Custodial History</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#digitalOrigin">
+    <rdfs:label xml:lang="en">Digital Origin</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#edition">
+    <rdfs:label xml:lang="en">Edition</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#finds">
+    <rdfs:label xml:lang="en">Finds</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#generalNote">
+    <rdfs:label xml:lang="en">General Note</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#inscription">
+    <rdfs:label xml:lang="en">Inscription</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#limits">
+    <rdfs:label xml:lang="en">Limits</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#localAttribution">
+    <rdfs:label xml:lang="en">Local Attribution</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#locationOfOriginals">
+    <rdfs:label xml:lang="en">Location of Originals</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#materialDetails">
+    <rdfs:label xml:lang="en">Material Details</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#performers">
+    <rdfs:label xml:lang="en">Performers</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#physicalDescription">
+    <rdfs:label xml:lang="en">Physical Description</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#publication">
+    <rdfs:label xml:lang="en">Publication</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#relationshipToOtherLoci">
+    <rdfs:label xml:lang="en">Relationship to Other Loci</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#scopeAndContent">
+    <rdfs:label xml:lang="en">Scope and Content</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#series">
+    <rdfs:label xml:lang="en">Series</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#statementOfResponsibility">
+    <rdfs:label xml:lang="en">Statement of Responsibility</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#storageMethod">
+    <rdfs:label xml:lang="en">Storage Method</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#techincalRequirements">
+    <rdfs:label xml:lang="en">Technical Requirements</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#thesis">
+    <rdfs:label xml:lang="en">Thesis</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#venue">
+    <rdfs:label xml:lang="en">Venue</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#waterDepth">
+    <rdfs:label xml:lang="en">Water Depth</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#otherRights">
+    <rdfs:label xml:lang="en">Other Rights</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#advisory">
+    <rdfs:label xml:lang="en">Advisory</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/rights"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://library.ucsd.edu/ontology/dams5#subtitle">
+    <rdfs:label xml:lang="en">Subtitle</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://library.ucsd.edu/ontology/dams5#"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+    <rdfs:domain rdf:resource="http://projecthydra.org/ns/works#GenericResource"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+</rdf:RDF>
