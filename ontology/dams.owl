@@ -370,6 +370,16 @@
     
 
 
+    <!-- http://library.ucsd.edu/ontology/dams/#hasAssembledCollection -->
+
+    <owl:ObjectProperty rdf:about="&dams;hasAssembledCollection">
+        <rdfs:comment>Links from a parent Collection to a child AssembledCollection</rdfs:comment>
+        <rdfs:domain rdf:resource="&dams;Collection"/>
+        <rdfs:range rdf:resource="&dams;AssembledCollection"/>
+    </owl:ObjectProperty>
+
+
+
     <!-- http://library.ucsd.edu/ontology/dams/#hasProvenanceCollection -->
 
     <owl:ObjectProperty rdf:about="&dams;hasProvenanceCollection">
@@ -1873,6 +1883,12 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
 
     <owl:Class rdf:about="&dams;AssembledCollection">
         <rdfs:subClassOf rdf:resource="&dams;Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&dams;hasAssembledCollection"/>
+                <owl:allValuesFrom rdf:resource="&dams;AssembledCollection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&dams;hasProvenanceCollection"/>
