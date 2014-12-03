@@ -681,6 +681,36 @@
             </owl:Class>
         </rdfs:domain>
     </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&dams;rightsHolderConference">
+        <rdfs:comment>Links from an Object to a Conference Name rights holder .</rdfs:comment>
+        <rdfs:range rdf:resource="&dams;ConferenceName"/>
+        <rdfs:domain rdf:resource="&dams;Object"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;rightsHolder"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&dams;rightsHolderCorporate">
+        <rdfs:comment>Links from an Object to a Corporate Name rights holder .</rdfs:comment>
+        <rdfs:range rdf:resource="&dams;CorporateName"/>
+        <rdfs:domain rdf:resource="&dams;Object"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;rightsHolder"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&dams;rightsHolderFamily">
+        <rdfs:comment>Links from an Object to a Family Name rights holder .</rdfs:comment>
+        <rdfs:range rdf:resource="&dams;FamilyName"/>
+        <rdfs:domain rdf:resource="&dams;Object"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;rightsHolder"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&dams;rightsHolderName">
+        <rdfs:comment>Links from an Object to a generic Name rights holder .</rdfs:comment>
+        <rdfs:range rdf:resource="&dams;Name"/>
+        <rdfs:domain rdf:resource="&dams;Object"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;rightsHolder"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="&dams;rightsHolderPersonal">
+        <rdfs:comment>Links from an Object to a Personal Name rights holder .</rdfs:comment>
+        <rdfs:range rdf:resource="&dams;PersonalName"/>
+        <rdfs:domain rdf:resource="&dams;Object"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;rightsHolder"/>
+    </owl:ObjectProperty>
     
 
 
