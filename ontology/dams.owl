@@ -891,6 +891,16 @@
     
 
 
+    <!-- http://library.ucsd.edu/ontology/dams/#code -->
+
+    <owl:DatatypeProperty rdf:about="&dams;code">
+        <rdfs:comment>Short name for the administrative unit.  For example, a name of &quot;Research Data Curation&quot; may have a code of &quot;RCI&quot;.</rdfs:comment>
+        <rdfs:domain rdf:resource="&dams;Unit"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://library.ucsd.edu/ontology/dams/#compositionLevel -->
 
     <owl:DatatypeProperty rdf:about="&dams;compositionLevel">
@@ -1664,16 +1674,6 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
     
 
 
-    <!-- http://library.ucsd.edu/ontology/dams/#unitCode -->
-
-    <owl:DatatypeProperty rdf:about="&dams;unitCode">
-        <rdfs:comment>Short name for the administrative unit.  For example, a name of &quot;Research Data Curation&quot; may have a code of &quot;RCI&quot;.</rdfs:comment>
-        <rdfs:domain rdf:resource="&dams;Unit"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://library.ucsd.edu/ontology/dams/#unitDescription -->
 
     <owl:DatatypeProperty rdf:about="&dams;unitDescription">
@@ -1682,6 +1682,16 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
+
+
+    <!-- http://library.ucsd.edu/ontology/dams/#unitGroup -->
+
+    <owl:DatatypeProperty rdf:about="&dams;unitGroup">
+        <rdfs:comment>The name of the access control group associated with this Unit.</rdfs:comment>
+        <rdfs:domain rdf:resource="&dams;Unit"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+
 
 
     <!-- http://library.ucsd.edu/ontology/dams/#unitName -->
