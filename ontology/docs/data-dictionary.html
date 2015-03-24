@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>DAMS4 Data Dictionary</title>
   <style type="text/css">
@@ -185,7 +185,8 @@
 <td><p>The identification of a library unit (or non-library data provider) that is responsible for supplying content to the DAMS and for administering that content over time, including answering queries from users.<br/><br/>All objects in the DAMS must be linked to one and only one administrative unit.</p></td>
 <td><p>&#xA0;</p></td>
 <td><p><a href="#dams-object">Object</a> (hasObject 0-m)<br/><span style="text-decoration: underline;"><a href="#dams-event">DAMS Event</a> (event 1-m)</span></p></td>
-<td><p>Mandatory event: Administrative unit record creation.<br/><br/><span style="color: rgb(0,128,0);">Will revisit the need for Agency Code and Country Code properties. These attributes may be conducive for sharing records.</span></p></td>
+<td><p>Mandatory event: Administrative unit record creation.<br/><br/>
+</p></td>
 </tr>
 <tr>
 <td><p>&#xA0;</p></td>
@@ -260,9 +261,23 @@
   <td><p>&#xA0;</p></td>
   <td><p>typeOfResource (1-m) <strong>(required)</strong></p></td>
   <td><p>Basic character of the work.</p></td>
-  <td><p id="typeOfResourceCV">C.V (mods): text, cartographic, notated music, sound recording-musical, sound recording-nonmusical,sound recording, still image, moving image, three dimensional object, software, multimedia, mixed material</p></td>
+  <td><p>Value List:</p>
+    <p>cartographic<br />
+      data<br />
+      mixed material<br />
+      moving image<br />
+      multimedia<br />
+      notated movement<br />
+      notated music<br />
+      software<br />
+      sound recording<br />
+      sound recording-musical<br />
+      sound recording-nonmusical<br />
+      still image<br />
+      text<br />
+      three dimensional object</p>    <p id="typeOfResourceCV">&nbsp;</p></td>
   <td><p>&#xA0;</p></td>
-  <td><p>May be repeated for collections that contain multiple types.</p></td>
+  <td><p>&nbsp;</p></td>
 </tr>
 <tr>
 <td><p>&#xA0;</p></td>
@@ -296,9 +311,7 @@
 </p>
 </td>
 <td>
-<p>Mandatory event: collection record creation. <span style="color: rgb(0,128,0);">Collection relationships need to be defined by policy TBD.</span>
-<br/> relatedCollection -&gt; peer collection <br/> hasCollection -&gt; child collection <br/> collection -&gt; parent collection <br/> Title and Language: cardinality overrides superclass.<br/><br/>Note: only required note is ScopeContentNote<br/><br/><span style="color: rgb(0,128,0);">additional requirements TBD</span>
-</p>
+<p>Title and Language: cardinality overrides superclass.</p>
 </td>
 </tr>
 <tr>
@@ -337,7 +350,8 @@
   <td><p>&#xA0;</p></td>
   <td><p>visibility</p></td>
   <td><p>Access control status of for the collection object, used to determine whether a given user should see this collection listed in a user interface.</p></td>
-  <td><p>C.V: curator, local, public</p></td>
+  <td><p>Value List:</p>
+    <p>curator, local, public</p></td>
   <td><p>&#xA0;</p></td>
   <td><p>&#xA0;</p></td>
 </tr>
@@ -586,9 +600,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>Every object must be linked to one, and only one, Administrative unit. It may be linked to as many collections as are pertinent.<br/><br/><span style="color: rgb(0,128,0);">
-<span style="text-decoration: line-through;">Must have at least one child component or file.</span>
-</span><span style="color: rgb(0,128,0);">DAMS Object requirements need to be changed to reflect this (RCI Levy &amp; SIO examples)</span><br/><br/>Mandatory event: object creation.<br/><br/>Title and Language: cardinality overrides superclass.</p>
+<p>Every object must be linked to one, and only one, Administrative unit. It may be linked to as many collections as are pertinent.<br/><br/>Mandatory event: object creation.<br/><br/>Title and Language: cardinality overrides superclass.</p>
 </td>
 </tr>
 <tr>
@@ -617,7 +629,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Controlled vocabulary should be considered for extension and/or modification.</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -641,7 +653,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>A logical or physical part of an object and contained exclusively within the object. The component may consist of metadata and one or more content files bound together within the context of the object. A component that has no directly associated content files is a logical component, whereas a component that has associated content files is a physical component. There is no constraint on how many components may occur at any given level or how deep the component hierarchy may go.</p>
+<p>A logical or physical part of an object and contained exclusively within the object. The component may consist of metadata and one or more content files bound together within the context of the object. . There is no constraint on how many components may occur at any given level or how deep the component hierarchy may go.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -651,7 +663,8 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>Components are bounded by, unique to an object context and only link to other objects having the same object context. Must link to the object the component is associated with. If the child of another component, must also link to it.<br/><br/>Must have at least one child component or file.<br/><br/>Must link to parent component if there is one.<br/><br/>Mandatory event: component record creation.</p>
+<p>Must link to the object the component is associated with. If the child of another component, must also link to it.<br/><br/>
+  <s>Must have at least one child component or file.</s><br/><br/>Must link to parent component if there is one.<br/><br/>Mandatory event: component record creation.</p>
 </td>
 </tr>
 <tr>
@@ -711,7 +724,8 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>&#xA0;</p> 
+Depricated ??
 </td>
 </tr>
 <tr>
@@ -770,13 +784,12 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p><a href="#dams-object">Object</a> (object 1)<br/><a href="#dams-component">Component</a> (component 0-1)<br/><a href="#dams-source-capture">Source Capture</a> (sourceCapture 0-1)<br/><a href="#dams-other-rights">Other Rights</a> (otherRights 0-1)<br/><span style="text-decoration: underline;"><a href="#dams-event">DAMS Event</a> (event 1-m)</span>
+<p><a href="#dams-object">Object</a> (object 1)(??)<br/><a href="#dams-component">Component</a> (component 0-1)<br/><a href="#dams-source-capture">Source Capture</a> (sourceCapture 0-1)<br/><a href="#dams-other-rights">Other Rights</a> (otherRights 0-1)<br/><span style="text-decoration: underline;"><a href="#dams-event">DAMS Event</a> (event 1-m)</span>
 </p>
 </td>
 <td>
-<p>Ontology: METS<br/><br/>Mandatory event: file ingest.<br/><br/>Must link to the object the file is associated with. If associated with a component, must also link to it.<br/><br/>Mandatory checksum: initial ingest checksum. <span style="color: rgb(0,128,0);">Currently have best coverage in crc32, switch to sha256?</span>
-</p>
-</td>
+<p>Mandatory event: file ingest.<br/><br/>
+  Must link to the object or component the file is associated with. <br/><br/>Mandatory checksum: initial ingest checksum.</p></td>
 </tr>
 <tr>
 <td>
@@ -800,7 +813,27 @@ File (hasFile 0-m)<br/>
 </td>
 <td>
 <p>
-<strong>File Use CV:</strong><br/> image-source, image-service, image-huge, image-large, image-preview, image-thumbnail, image-icon, image-alternate, document-source, document-service, document-alternate, audio-source, audio-service, audio-alternate, video-source, video-service, video-alternate, data-source, data-service, data-alternate (see <a href="file-use-vocabulary.html">File Use Vocabulary</a>)</p>
+<strong>File Use CV:</strong><br/>
+image-source<br />
+image-service <br />
+image-huge<br />
+image-large<br />
+image-preview<br />
+image-thumbnail<br />
+image-icon<br />
+image-alternate<br />
+document-source<br />
+document-service<br />
+document-alternate<br />
+audio-source<br />
+audio-service <br />
+audio-alternate<br />
+video-source<br />
+video-service <br />
+video-alternate<br />
+data-source<br />
+data-service<br />
+data-alternate</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -878,9 +911,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(0,128,0);">Necessary?</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -911,9 +942,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(0,128,0);">Necessary?</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -943,9 +972,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(0,128,0);">Necessary?</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1427,18 +1454,19 @@ File (hasFile 0-m)<br/>
 </td>
 <td>
 <p>
-<strong>Date Type CV:</strong><br/><br/>broadcast <br/> captured <br/> copyright <br/> creation <br/><span style="color: rgb(255,153,0);">creation-date</span>
-<br/><span style="color: rgb(255,153,0);">creation-date-earliest</span>
-<br/><span style="color: rgb(255,153,0);">creation-date-latest</span>
-<br/><span style="color: rgb(255,153,0);">creation-date-date qualifer</span>
-<br/> deaccession <br/> issued <br/> modified <br/> published <br/> other (other type = ?) <br/> valid</p>
+<strong>Date Type CV:</strong><br/>
+collected<br />
+copyright<br />
+creation<br />
+issued<br />
+event<br/>
+</p>
 </td>
 <td>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(0,128,0);">How do we differentiate between inclusive and bulk dates? It should be possible to express both.</span><br/><br/><span style="color: rgb(255,153,0);">VRA has additional type values. may need sameAs relationships to cover overlaps.</span><br/><br/><span style="color: rgb(255,153,0);">The VRA date may be capable of being managed via our MODS encoding, in that a questionable set of dates for earliest and latest dates can be recorded in the date expression, while the questionable earliest and latest dates can be encoded as begin and end dates.&#xA0;</span><br/><br/>We need to include a property qualifier (types = approximate, inferred, questionable).&#xA0;<br/><br/>We also may need a date for key date, which is typically the normalized version of the start date (so it may not be necessary).&#xA0;</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1459,7 +1487,11 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>For example "Easter"</p>
+<p>Examples:</p> 
+<p>November 12, 2012<br/>
+circa 1887<br/>
+Easter<br/>
+12/31/1952</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1468,8 +1500,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>&#xA0;</p>
-</td>
+<p>See <a href="http://tpot.ucsd.edu/metadata-services/mas/bp-providers.html#date">Metadata Best Practices for DAMS Data Providers</a> for more description of usage.</p></td>
 </tr>
 <tr>
 <td>
@@ -1489,10 +1520,11 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>Normalized version of the key date used in machine processing and not displayed in the UI.</p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>Encoded according to <a href="http://www.w3.org/TR/NOTE-datetime">ISO8601</a> format</p>
+<p>In brief: YYYY-MM-DD</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1519,10 +1551,12 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>Normalized version of the key date used in machine processing and not displayed in the UI.</p>
+<p>For single point dates, such as November 12, 2012, the endDate will be the same as the beginDate.</p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>Encoded according to <a href="http://www.w3.org/TR/NOTE-datetime">ISO8601</a> format</p>
+<p>In brief: YYYY-MM-DD</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1559,9 +1593,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(0,128,0);">could be implemented as typed literal or separate property.</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1585,7 +1617,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>A description of some facet of a collection, object, or object component. Facets may range form abstract and scope content notes to specific aspects such as rights status.</p>
+<p>A description of some facet of a collection, object, or object component.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1596,7 +1628,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>mods:originInfo will be created as an unstructured Note.</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1623,154 +1655,40 @@ File (hasFile 0-m)<br/>
 <p>
 <strong>Note Type CV:</strong>
 </p>
-<ol>
-<li>abstract</li>
-<li>appraisal</li>
-<li>arrangement</li>
-<li>biography/history</li>
-<li>citation</li>
-<li>computer / data type conditions governing access</li>
-<li>conditions governing use</li>
-<li>creation/production credits</li>
-<li>custodial history</li>
-<li>dimensions</li>
-<li>dissertation</li>
-<li>existence and location of copies</li>
-<li>existence and location of originals</li>
-<li>funding information</li>
-<li>general note</li>
-<li>general physical description</li>
-<li>geographic coverage</li>
-<li>immediate source of acquisition</li>
-<li>identifier</li>
-<li>inscription</li>
-<li>language of materials</li>
-<li>location</li>
-<li>material specific details</li>
-<li>methodology note</li>
-<li>numbering peculiarities</li>
-<li>physical characteristics and technical requirements</li>
-<li>participant/performer</li>
-<li>physical facet</li>
-<li>preferred citation</li>
-<li>publication</li>
-<li>related materials</li>
-<li>scope and content</li>
-<li>separated materials</li>
-</ol>
+  <p data-mce-style="text-align: left;">arrangement<br />
+    bibliography<br />
+    biography<br />
+    classification<br />
+    credits<br />
+    custodial history<br />
+    description<br />
+    digital origin<br/>
+    edition<br />
+    extent<br />
+    identifier <br />
+    inscription<br />
+    local attribution<br />
+    location of originals<br />
+    material details<br />
+    note<br />
+    performers<br />
+    physical description<br />
+    preferred citation<br />
+    publication<br />
+    scope and content<br />
+    series<br />
+    statement of responsibility<br />
+    table of contents<br />
+    technical requirements<br />
+    thesis<br />
+    venue</p>
+
 </td>
 <td>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Use type as display label when a displayLabel value is not provided by a data creator. Otherwise, display the type value as displayLabel to end user.<br/><br/><span style="color: rgb(0,128,0);">Augment type list for: VRA, EAD, MODS</span><br/><br/>Note types with analogs:&#xA0;<br/><br/>EAD <br/><span style="color: rgb(153,51,0);">Local</span>
-<br/><span style="color: rgb(51,102,255);">MARC</span>
-<br/><span style="color: rgb(153,204,0);">MODS</span>
-<br/><span style="color: rgb(255,153,0);">VRA</span>
-<br/> *=unlikely to be used in domain</p>
-<ol>
-<li>abstract (<span style="color: rgb(51,102,255);">520</span>)</li>
-<li>*accruals (<span style="color: rgb(51,102,255);">584</span>, <span style="color: rgb(153,204,0);">accrual method, accrual policy</span>)</li>
-<li>appraisal</li>
-<li>arrangement (<span style="color: rgb(51,102,255);">351</span>)</li>
-<li>*<span style="color: rgb(51,102,255);">audience target (521</span>)</li>
-<li>*<span style="color: rgb(51,102,255);">awards note (586)</span>
-</li>
-<li>*bibliography (<span style="color: rgb(51,102,255);">504, 581</span>, <span style="color: rgb(153,204,0);">publications</span>)</li>
-<li>*<span style="color: rgb(51,102,255);">binding information (563)</span>
-</li>
-<li>biography/history (<span style="color: rgb(51,102,255);">545</span>, <span style="color: rgb(153,204,0);">biographical/historical</span>)</li>
-<li>*<span style="color: rgb(51,102,255);">case file characteristics (565</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">citation (510,</span><span style="color: rgb(255,153,0);">textref,</span><span style="color: rgb(153,204,0);">citation/reference</span>
-<span style="color: rgb(255,153,0);">)</span>
-</li>
-<li>
-<span style="color: rgb(51,102,255);">computer / data type (516)</span>
-</li>
-<li>conditions governing access (<span style="color: rgb(51,102,255);">506</span>, <span style="color: rgb(153,204,0);">restriction</span>)</li>
-<li>conditions governing use (<span style="color: rgb(51,102,255);">540, 542</span>, <span style="color: rgb(255,153,0);">rights</span>
-</li>
-<li>*<span style="color: rgb(51,102,255);">copy and version identification (562,</span><span style="color: rgb(153,204,0);">version</span>
-<span style="color: rgb(51,102,255);">)</span>
-</li>
-<li>
-<span style="color: rgb(51,102,255);">creation/production credits (508,</span><span style="color: rgb(153,204,0);">creation/production credits</span>
-<span style="color: rgb(51,102,255);">)</span>
-</li>
-<li>custodial history (<span style="color: rgb(51,102,255);">561,</span><span style="color: rgb(153,204,0);">ownership</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">data quality (514)</span>
-</li>
-<li>*<span style="color: rgb(51,102,255);">date / time for event (518,</span><span style="color: rgb(153,204,0);">venue</span>
-<span style="color: rgb(51,102,255);">)</span>
-</li>
-<li>dimensions (<span style="color: rgb(255,153,0);">measurements</span>
-</li>
-<li>
-<span style="color: rgb(51,102,255);">dissertation (502,</span><span style="color: rgb(153,204,0);">thesis</span>
-<span style="color: rgb(51,102,255);">)</span>
-</li>
-<li>*<span style="color: rgb(51,102,255);">documentation information (556</span>)</li>
-<li>*<span style="color: rgb(51,102,255);">entity and attribute information (552</span>)</li>
-<li>*<span style="color: rgb(51,102,255);">exhibitions note (585,</span><span style="color: rgb(153,204,0);">exhibitions</span>
-<span style="color: rgb(51,102,255);">)</span>
-</li>
-<li>existence and location of copies (<span style="color: rgb(51,102,255);">530 535</span>, <span style="color: rgb(255,153,0);">location,</span><span style="color: rgb(153,204,0);">additional physical form</span>)</li>
-<li>existence and location of originals (<span style="color: rgb(51,102,255);">534, 535</span>, <span style="color: rgb(255,153,0);">location,</span><span style="color: rgb(153,204,0);">original location</span>
-<span style="color: rgb(153,204,0);">, original version</span>)</li>
-<li>*file plan</li>
-<li>*<span style="color: rgb(51,102,255);">former title complexity (547</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">funding information (536,</span><span style="color: rgb(153,204,0);">funding</span>)</li>
-<li>general note (<span style="color: rgb(51,102,255);">500)</span>
-</li>
-<li>general physical description</li>
-<li>
-<span style="color: rgb(51,102,255);">geographic coverage (522</span>)</li>
-<li>immediate source of acquisition (<span style="color: rgb(51,102,255);">541</span>, <span style="color: rgb(255,153,0);">source,</span><span style="color: rgb(153,204,0);">acquisition</span>)</li>
-<li>
-<span style="color: rgb(153,204,0);">identifier</span>
-</li>
-<li>
-<span style="color: rgb(51,102,255);">*issuing body (550</span>)</li>
-<li>language of materials (<span style="color: rgb(51,102,255);">546</span>, <span style="color: rgb(153,204,0);">language</span>)</li>
-<li>*legal status</li>
-<li>*<span style="color: rgb(51,102,255);">linking entry complexity (580</span>)</li>
-<li>location</li>
-<li>material specific details</li>
-<li>
-<span style="color: rgb(51,102,255);">methodology note (567</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">numbering peculiarities (515</span>, <span style="color: rgb(153,204,0);">numbering</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">online finding aid (555</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">p</span>
-<span style="color: rgb(51,102,255);">articipant/performer (511</span>, <span style="color: rgb(153,204,0);">performers</span>)</li>
-<li>physical characteristics and technical requirements (<span style="color: rgb(51,102,255);">538, 300, 340,</span><span style="color: rgb(255,153,0);">material</span>, <span style="color: rgb(153,204,0);">system details</span>)</li>
-<li>physical facet</li>
-<li>preferred citation (<span style="color: rgb(51,102,255);">524,</span><span style="color: rgb(153,204,0);">preferred citation</span>)</li>
-<li>*processing information</li>
-<li>publication</li>
-<li>related materials (<span style="color: rgb(51,102,255);">544</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">*report type and date (513</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">*reproduction note (533,</span><span style="color: rgb(153,204,0);">reproduction</span>
-<span style="color: rgb(51,102,255);">)</span>
-</li>
-<li>scope and content (<span style="color: rgb(51,102,255);">520,</span><span style="color: rgb(255,153,0);">description</span>)</li>
-<li>separated materials</li>
-<li>
-<span style="color: rgb(51,102,255);">*study program information (526</span>)</li>
-<li>
-<span style="color: rgb(51,102,255);">*supplement note (525)</span>
-</li>
-<li>
-<span style="color: rgb(51,102,255);">*with note (501)</span>
-</li>
-</ol>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -1794,14 +1712,16 @@ File (hasFile 0-m)<br/>
 <p>Free text qualifier of the note type.</p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>identifier <span data-mce-style="color: #008000;">(Display labels for publicly viewable identifiers: accession number, <span data-mce-style="color: #008000;">DOI, IGSN, </span> <span data-mce-style="color: #008000;">sample number – </span></span></p>
+<p><span data-mce-style="color: #008000;">Display labels for curator viewable identifiers: ARK, collection number, call number, filename,   local, negative, OCLC number, roger record, sequence, locus number, EDM,   basket number, registration number)</span></p>
+<p>local attribution<span data-mce-style="color: #008000;"> (Display label: Digital object made available by)</span></p>
+<p>material details  <span data-mce-style="color: #008000;">(Display labels: storage method, water depth, limits, finds, relationshipToOtherLoci)</span></p>
 </td>
 <td>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>&#xA0;</p>
-</td>
+<p>Should we reconsider our usage of displayLabel in 4.2? They are in most cases, sub-types rather than free text labels.</p></td>
 </tr>
 <tr>
 <td>
@@ -1830,8 +1750,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>no = public, yes = custodial Administrative unit</p>
-</td>
+<p>Are we using this ??</p></td>
 </tr>
 <tr>
 <td>
@@ -1882,8 +1801,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>&#xA0;</p>
-</td>
+<p>Currently used for encoding a brief description of the collection for display in search and browse results.</p></td>
 <td>
 <p>&#xA0;</p>
 </td>
@@ -1891,7 +1809,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>Property should be modified in 4.2 for better alignment between the property label and function, and reduce confusion between a note with a type of scope and contents and a ScopeContentNote.</p>
 </td>
 </tr>
 <tr>
@@ -1913,7 +1831,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>&nbsp;</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1922,9 +1840,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(0,128,0);">investigate automating this value/property</span>
-</p>
+<p>Depreciated ??</p>
 </td>
 </tr>
 <tr>
@@ -1946,7 +1862,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>&#xA0;</p>
+<p>&nbsp;</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -1955,9 +1871,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(0,128,0);">should be populated by Administrative Unit for an Object.</span>
-</p>
+<p>Depreciated ??</p>
 </td>
 </tr>
 <tr>
@@ -2083,6 +1997,7 @@ File (hasFile 0-m)<br/>
 <p>
 <strong>Reference System CV:</strong><br/> WGS84, WGS72, WGS66...</p>
 </td>
+
 <td>
 <p>&#xA0;</p>
 </td>
@@ -2117,9 +2032,12 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</span>
-</p>
+Encode in decimal degree format using the following convetions:
+  <ul>
+  <li>point -  two comma separated  values (9.355,176.78)</li>
+<li>line - two point pairs (9.355,176.78  19.4,176.8)</li>
+<li>polygon - four or more pairs with the first and last being the  same (2,172.45 2,173.25 1.33,173.25 1.33,172.45 2,172.45)</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -2149,9 +2067,12 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</span>
-</p>
+<p>Encode in decimal degree format using the following convetions: </p>
+<ul>
+  <li>point -  two comma separated  values (9.355,176.78)</li>
+  <li>line - two point pairs (9.355,176.78  19.4,176.8)</li>
+  <li>polygon - four or more pairs with the first and last being the  same (2,172.45 2,173.25 1.33,173.25 1.33,172.45 2,172.45)</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -2181,9 +2102,12 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">Need content standard for data being entered (delimiters between lat, long and alt and between coordinate sets).</span>
-</p>
+<p>Encode in decimal degree format using the following convetions: </p>
+<ul>
+  <li>point -  two comma separated  values (9.355,176.78)</li>
+  <li>line - two point pairs (9.355,176.78  19.4,176.8)</li>
+  <li>polygon - four or more pairs with the first and last being the  same (2,172.45 2,173.25 1.33,173.25 1.33,172.45 2,172.45)</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -2218,9 +2142,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">We may need to either write policy to enforce relationships between classes (object to object, collection to collection, etc.) or subclass Related Resource to enforce relationships.</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -2275,15 +2197,22 @@ File (hasFile 0-m)<br/>
 </td>
 <td>
 <p>
-<strong>Related Resource CV:</strong><br/> online exhibit, source, parallel description, depicts, derived from</p>
+<strong>Related Resource CV:</strong><br/>
+depiction<br />
+journal entry<br />
+news release<br />
+online exhibit<br />
+online finding aid<br />
+related<br />
+area<br />
+locus<br />
+stratum</p>
 </td>
 <td>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">VRA relationship value list? Types TBD.</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -2313,7 +2242,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>Renamed from title to avoid conflict with DAMSResource link to Title.</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -2710,7 +2639,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>boilerplate text stating the content is made available for educational purposes.</p>
+<p>Boilerplate text stating the content is made available for educational purposes.</p>
 </td>
 <td>
 <p>&#xA0;</p>
@@ -2740,7 +2669,7 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>boilerplate copyright note referencing copyright status and jurisdiction.</p>
+<p>Boilerplate copyright note referencing copyright status and jurisdiction.</p>
 </td>
 <td>
 <p>
@@ -2751,9 +2680,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">estimate that there will be 6 of these Note objects.</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -2789,7 +2716,9 @@ File (hasFile 0-m)<br/>
 </p>
 </td>
 <td>
-<p>Statutes typically limit access to content in some way, often because the content is of a type protected by privacy / confidentiality laws, e.g. FERPA, HIPA, etc.<br/><br/><span style="color: rgb(51,153,102);">Currently we do not include in the DAMS any content subject to statutory regulation. That, of course, can change.</span><br/><br/>Statues link to a permissions and / or restriction records, and they link to dates. Thus, statutes link indirectly to dates.<br/><br/>Required Rights Action: whether the statute allows or prohibits display.</p>
+<p>Statutes typically limit access to content in some way, often because the content is of a type protected by privacy / confidentiality laws, e.g. FERPA, HIPA, etc.<br/><br/>Statues link to a permissions and / or restriction records, and they link to dates. Thus, statutes link indirectly to dates.<br/><br/>Required Rights Action: whether the statute allows or prohibits display.</p>
+<p><br/>
+  Currently we do not include in the DAMS any content subject to statutory regulation. That, of course, can change.</p>
 </td>
 </tr>
 <tr>
@@ -3008,11 +2937,12 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p><a href="#dams-relationship">Relationship</a> (relationship 1)<br/><a href="#dams-rights-action">Rights Action</a> (permission, restriction 1-m)<br/><span style="text-decoration: underline;"><a href="#dams-event">DAMS Event</a> (event 0-m)</span>
+<p><a href="#dams-rights-action">Rights Action</a> (permission, restriction 1-m)<br/><span style="text-decoration: underline;"><a href="#dams-event">DAMS Event</a> (event 0-m)</span>
 </p>
 </td>
 <td>
-<p>We currently do not use Other Rights in the DAMS, but that is because this element was only recently added to PREMIS. We do have objects that have been restricted due to institutional policy, the culturally sensitive objects in Lambert being a case in point. We also have objects that UCSD has decided to display under the principles of fair use.<br/><br/>Other Rights, like other right types, link indirectly to dates via Rights Action.<br/><br/>Required Relationship: decision maker.</p>
+<p>We currently do not use Other Rights in the DAMS, but that is because this element was only recently added to PREMIS. We do have objects that have been restricted due to institutional policy, the culturally sensitive objects in Lambert being a case in point. We also have objects that UCSD has decided to display under the principles of fair use.<br/><br/>
+  Other Rights, like other right types, link indirectly to dates via Rights Action.</p>
 </td>
 </tr>
 <tr>
@@ -3040,15 +2970,15 @@ File (hasFile 0-m)<br/>
 </td>
 <td>
 <p>
-<strong>Other Rights Basis CV:</strong><br/> fair use, cultural sensitivity</p>
+<strong>Other Rights Basis CV:</strong><br/> 
+fair use<br />
+cultural sensitivity</p>
 </td>
 <td>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">We might want to construct a controlled vocabulary for this. There are likely only a few institutional policies / situations that apply</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -3173,9 +3103,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">same beginDate property from Date class</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -3205,9 +3133,7 @@ File (hasFile 0-m)<br/>
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">same endDate property from Date class</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -3232,7 +3158,7 @@ File (hasFile 0-m)<br/>
 </td>
 <td>
 <p>
-<strong>Rights Action CV:</strong><br/> display, migrate, replicate, modify, etc.</p>
+<strong>Rights Action CV:</strong><br/> display<br/>migrate<br/>replicate<br/>modify</p>
 <p>Values currently acted on for determining access control in damsrepo: display, localDisplay, metadataDisplay.</p>
 </td>
 <td>
@@ -3403,9 +3329,7 @@ augmentation--content, creation--class-instance, deletion--class-instance, creat
 <p>&#xA0;</p>
 </td>
 <td>
-<p>
-<span style="color: rgb(51,153,102);">same endDate property from Date class</span>
-</p>
+<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
