@@ -110,6 +110,16 @@
     
 
 
+    <!-- http://library.ucsd.edu/ontology/dams/#commonName -->
+
+    <owl:ObjectProperty rdf:about="&dams;commonName">
+        <rdfs:range rdf:resource="&dams;CommonName"/>
+        <rdfs:domain rdf:resource="&dams;DAMSResource"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;subject"/>
+    </owl:ObjectProperty>
+
+
+
     <!-- http://library.ucsd.edu/ontology/dams/#complexSubject -->
 
     <owl:ObjectProperty rdf:about="&dams;complexSubject">
@@ -600,18 +610,7 @@
         <rdfs:domain rdf:resource="&dams;DAMSResource"/>
         <rdfs:range rdf:resource="&dams;RelatedResource"/>
     </owl:ObjectProperty>
-    
 
-
-    <!-- http://library.ucsd.edu/ontology/dams/#relatedTitle -->
-
-    <owl:ObjectProperty rdf:about="&dams;relatedTitle">
-        <rdfs:comment>Links a Title to another form of the same Title (e.g., transliterated,
-       translated, abbreviated, etc.).</rdfs:comment>
-        <rdfs:domain rdf:resource="&dams;Title"/>
-        <rdfs:range rdf:resource="&dams;Title"/>
-    </owl:ObjectProperty>
-    
 
 
     <!-- http://library.ucsd.edu/ontology/dams/#relationship -->
@@ -1001,14 +1000,7 @@
         <rdfs:comment>User display value.  If the source vocabulary contains both coded and
       human-readable forms, use the human-readable form here.</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&dams;Note"/>
-                    <rdf:Description rdf:about="&dams;Title"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="&dams;Note"/>
     </owl:DatatypeProperty>
     
 
@@ -1100,14 +1092,6 @@
     
 
 
-    <!-- http://library.ucsd.edu/ontology/dams/#indirectName -->
-
-    <owl:DatatypeProperty rdf:about="&dams;indirectName">
-        <rdfs:range rdf:resource="&xsd;boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://library.ucsd.edu/ontology/dams/#internalOnly -->
 
     <owl:DatatypeProperty rdf:about="&dams;internalOnly">
@@ -1115,16 +1099,6 @@
         <rdfs:comment>If true, accessible to all users or only to administrative unit and DAMS managers.</rdfs:comment>
         <rdfs:domain rdf:resource="&dams;Note"/>
         <rdfs:range rdf:resource="&xsd;boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://library.ucsd.edu/ontology/dams/#label -->
-
-    <owl:DatatypeProperty rdf:about="&dams;label">
-        <rdfs:comment>Label describing a component; can be a literal or URI referencing a Title or Date.</rdfs:comment>
-        <rdfs:domain rdf:resource="&dams;Component"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
 
@@ -1176,18 +1150,6 @@
 
     <owl:DatatypeProperty rdf:about="&dams;mimeType">
         <rdfs:domain rdf:resource="&dams;File"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://library.ucsd.edu/ontology/dams/#nonsortCharacters -->
-
-    <owl:DatatypeProperty rdf:about="&dams;nonsortCharacters">
-        <rdfs:comment>Included to facilitate generating sort form without having to build complex
-      algorithm to handle multiple languages.</rdfs:comment>
-        <rdfs:comment>Initial characters which should not affect sort order.</rdfs:comment>
-        <rdfs:domain rdf:resource="&dams;Title"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
@@ -1860,22 +1822,6 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
     
 
 
-    <!-- http://library.ucsd.edu/ontology/dams/#value -->
-
-    <owl:DatatypeProperty rdf:about="&dams;value">
-        <rdfs:comment>Primary value of a metadata element.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&dams;Note"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://library.ucsd.edu/ontology/dams/#visibility -->
 
     <owl:DatatypeProperty rdf:about="&dams;visibility">
@@ -2119,6 +2065,24 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
     
 
 
+    <!-- http://library.ucsd.edu/ontology/dams/#CommonName -->
+
+    <owl:Class rdf:about="&dams;CommonName">
+        <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
+        <rdfs:comment>Describes the common or vernacular name of a species.</rdfs:comment>
+        <rdfs:seeAlso>Darwin Core vernacularName http://rs.tdwg.org/dwc/terms/vernacularName</rdfs:seeAlso>
+    </owl:Class>
+
+
+
+    <!-- http://library.ucsd.edu/ontology/dams/#CommonNameElement -->
+
+    <owl:Class rdf:about="&dams;CommonNameElement">
+        <rdfs:subClassOf rdf:resource="&mads;Element"/>
+    </owl:Class>
+
+
+
     <!-- http://library.ucsd.edu/ontology/dams/#Component -->
 
     <owl:Class rdf:about="&dams;Component">
@@ -2159,7 +2123,7 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;label"/>
+                <owl:onProperty rdf:resource="&rdfs;label"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -2558,7 +2522,7 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;value"/>
+                <owl:onProperty rdf:resource="&rdf;value"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -2906,7 +2870,7 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
         <rdfs:subClassOf rdf:resource="&dams;DAMSThing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&dams;value"/>
+                <owl:onProperty rdf:resource="&rdf;value"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
@@ -3538,6 +3502,8 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
 
     <owl:Class rdf:about="&dams;ScientificName">
         <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
+        <rdfs:comment>Describes the scientific name of a species.</rdfs:comment>
+        <rdfs:seeAlso>Darwin Core scientificName http://rs.tdwg.org/dwc/terms/scientificName</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3705,12 +3671,6 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
     <owl:Class rdf:about="&dams;TechniqueElement">
         <rdfs:subClassOf rdf:resource="&mads;Element"/>
     </owl:Class>
-    
-
-
-    <!-- http://library.ucsd.edu/ontology/dams/#Title -->
-
-    <owl:Class rdf:about="&dams;Title"/>
     
 
 
