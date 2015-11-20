@@ -200,6 +200,16 @@
     
 
 
+    <!-- http://library.ucsd.edu/ontology/dams/#cruise -->
+
+    <owl:ObjectProperty rdf:about="&dams;cruise">
+        <rdfs:domain rdf:resource="&dams;DAMSResource"/>
+        <rdfs:range rdf:resource="&dams;Cruise"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;subject"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://library.ucsd.edu/ontology/dams/#culturalContext -->
 
     <owl:ObjectProperty rdf:about="&dams;culturalContext">
@@ -409,6 +419,15 @@
     </owl:ObjectProperty>
     
 
+
+    <!-- http://library.ucsd.edu/ontology/dams/#lithology -->
+
+    <owl:ObjectProperty rdf:about="&dams;lithology">
+        <rdfs:domain rdf:resource="&dams;DAMSResource"/>
+        <rdfs:range rdf:resource="&dams;Lithology"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;subject"/>
+    </owl:ObjectProperty>
+    
 
     <!-- http://library.ucsd.edu/ontology/dams/#language -->
 
@@ -744,6 +763,15 @@
     </owl:ObjectProperty>
     
 
+
+    <!-- http://library.ucsd.edu/ontology/dams/#series -->
+
+    <owl:ObjectProperty rdf:about="&dams;series">
+        <rdfs:domain rdf:resource="&dams;DAMSResource"/>
+        <rdfs:range rdf:resource="&dams;Series"/>
+        <rdfs:subPropertyOf rdf:resource="&dams;subject"/>
+    </owl:ObjectProperty>
+    
 
     <!-- http://library.ucsd.edu/ontology/dams/#sourceCapture -->
 
@@ -2253,6 +2281,23 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
     
 
 
+    <!-- http://library.ucsd.edu/ontology/dams/#Cruise -->
+
+    <owl:Class rdf:about="&dams;Cruise">
+        <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
+        <rdfs:comment>Cruise</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://library.ucsd.edu/ontology/dams/#CruiseElement -->
+
+    <owl:Class rdf:about="&dams;CruiseElement">
+        <rdfs:subClassOf rdf:resource="&mads;Element"/>
+    </owl:Class>
+    
+
+
     <!-- http://library.ucsd.edu/ontology/dams/#CulturalContext -->
 
     <owl:Class rdf:about="&dams;CulturalContext">
@@ -2824,6 +2869,21 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
     
 
 
+    <!-- http://library.ucsd.edu/ontology/dams/#Lithology -->
+
+    <owl:Class rdf:about="&dams;Lithology">
+        <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
+        <rdfs:comment>Lithology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://library.ucsd.edu/ontology/dams/#LithologyElement -->
+
+    <owl:Class rdf:about="&dams;LithologyElement">
+        <rdfs:subClassOf rdf:resource="&mads;Element"/>
+    </owl:Class>
+    
     <!-- http://library.ucsd.edu/ontology/dams/#License -->
 
     <owl:Class rdf:about="&dams;License">
@@ -3019,7 +3079,31 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
                                                                                                                                                                                                                                                                                             <rdf:Description>
                                                                                                                                                                                                                                                                                                 <rdf:type rdf:resource="&rdf;List"/>
                                                                                                                                                                                                                                                                                                 <rdf:first rdf:datatype="&xsd;string">separated materials</rdf:first>
-                                                                                                                                                                                                                                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                                                                                                                                                        <rdf:first rdf:datatype="&xsd;string">site</rdf:first>
+                                                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                                                                                                                                                                <rdf:first rdf:datatype="&xsd;string">edition</rdf:first>
+                                                                                                                                                                                                                                                                                                                <rdf:rest>
+                                                                                                                                                                                                                                                                                                                    <rdf:Description>
+                                                                                                                                                                                                                                                                                                                        <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                                                                                                                                                                        <rdf:first rdf:datatype="&xsd;string">funding</rdf:first>
+                                                                                                                                                                                                                                                                                                                        <rdf:rest>
+                                                                                                                                                                                                                                                                                                                            <rdf:Description>
+                                                                                                                                                                                                                                                                                                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                                                                                                                                                                                                                                                                                                <rdf:first rdf:datatype="&xsd;string">related publications</rdf:first>
+                                                                                                                                                                                                                                                                                                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                                                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                                                                </rdf:rest>
+                                                                                                                                                                                                                                                                                                            </rdf:Description>
+                                                                                                                                                                                                                                                                                                        </rdf:rest>
+                                                                                                                                                                                                                                                                                                    </rdf:Description>
+                                                                                                                                                                                                                                                                                                </rdf:rest>
                                                                                                                                                                                                                                                                                             </rdf:Description>
                                                                                                                                                                                                                                                                                         </rdf:rest>
                                                                                                                                                                                                                                                                                     </rdf:Description>
@@ -3530,6 +3614,22 @@ Video: codec, resoltion in pixels, bitrate and framerate, plus audio quality if 
     </owl:Class>
     
 
+
+    <!-- http://library.ucsd.edu/ontology/dams/#Series -->
+
+    <owl:Class rdf:about="&dams;Series">
+        <rdfs:subClassOf rdf:resource="&mads;SimpleType"/>
+        <rdfs:comment>Series</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://library.ucsd.edu/ontology/dams/#SeriesElement -->
+
+    <owl:Class rdf:about="&dams;SeriesElement">
+        <rdfs:subClassOf rdf:resource="&mads;Element"/>
+    </owl:Class>
+    
 
     <!-- http://library.ucsd.edu/ontology/dams/#SourceCapture -->
 
